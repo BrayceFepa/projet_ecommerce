@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Akshar:wght@300;400;500&family=Dosis:wght@400;500;600&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=League+Spartan:wght@589&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  text-transform: capitalize;
+  text-decoration: none;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  transition: all 0.2s linear;
+}
+
+html {
+  font-size: 62.5%;
+}
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+html::-webkit-scrollbar-track {
+  background: #eee;
+}
+html::-webkit-scrollbar-thumb {
+  background: #0984e3;
+  border-radius: 5rem;
+}
+
+body {
+  background: #eee;
+}
+
+section {
+  padding: 3rem 9%;
+}
+
+.header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+  background: #0984e3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 9%;
+}
+.header .logo {
+  font-size: 2.5rem;
+  color: #fff;
+  font-weight: 0.2rem solid #333;
+  text-decoration: none;
+}
+.header .logo i {
+  color: gold;
+}
+.header .search-form {
+  height: 5rem;
+  width: 50rem;
+  background: #fff;
+  border-radius: 5rem;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+}
+.header .search-form input {
+  width: 100%;
+  color: #666;
+  font-size: 1.7rem;
+  padding-right: 1rem;
+  text-transform: none;
+}
+.header .search-form label {
+  font-size: 2rem;
+  color: #666;
+  cursor: pointer;
+}
+.header .search-form label:hover {
+  color: #0984e3;
+}
+.header .icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.header .icons .cart {
+  position: relative;
+}
+.header .icons .cart #number {
+  position: absolute;
+  top: -1rem;
+  right: -1.7rem;
+  font-size: 1.6rem;
+  background: gold;
+  border-radius: 50%;
+  display: inline-block;
+  height: 2rem;
+  width: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.2rem;
+  color: #333;
+}
+.header .icons a,
+.header .icons div {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-left: 2rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+.header .icons a:hover,
+.header .icons div:hover {
+  color: gold;
+}
+
+#search-btn {
+  display: none;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -110%;
+  background: #fff;
+  height: 100%;
+  width: 30rem;
+  z-index: 10000;
+}
+.sidebar.active {
+  left: 0;
+  box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.2);
+}
+.sidebar #side-bar {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  color: #666;
+  font-size: 4rem;
+  cursor: pointer;
+}
+.sidebar #side-bar:hover {
+  transform: rotate(90deg);
+  color: #333;
+}
+.sidebar .user {
+  background: #eee;
+  padding: 2rem;
+  text-align: center;
+}
+.sidebar .user img {
+  height: 17rem;
+  width: 17rem;
+  border: 1rem solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  margin-bottom: 0.5rem;
+}
+.sidebar .user h3 {
+  padding: 0.5rem 0;
+  font-size: 1.7rem;
+  color: #666;
+}
+.sidebar .user a {
+  font-size: 1.5rem;
+  color: #0984e3;
+}
+.sidebar .user a:hover {
+  color: #333;
+}
+.sidebar .navbar {
+  padding-top: 1rem;
+}
+.sidebar .navbar a {
+  display: block;
+  font-size: 1.7rem;
+  color: #666;
+  padding: 1rem 2rem;
+}
+.sidebar .navbar a i {
+  padding-right: 0.5rem;
+}
+.sidebar .navbar a:hover {
+  color: #0984e3;
+}
+.sidebar .navbar a:hover i {
+  padding-right: 2rem;
+}
+
+.quick-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background: #333;
+  justify-content: space-between;
+}
+.quick-links .logo {
+  font-size: 2.5rem;
+  color: #fff;
+  font-weight: 0.2rem solid #333;
+  text-decoration: none;
+}
+.quick-links .logo i {
+  color: gold;
+}
+.quick-links .links a {
+  margin: 0 1rem;
+  font-size: 1.7rem;
+  color: #fff;
+  text-decoration: none;
+}
+.quick-links .links a:hover {
+  color: gold;
+}
+.quick-links .share a {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-left: 2rem;
+  text-decoration: none;
+}
+.quick-links .share a:hover {
+  color: gold;
+}
+
+.credit {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background: #fff;
+  justify-content: space-between;
+}
+.credit p {
+  font-size: 2rem;
+  color: #666;
+}
+.credit p span {
+  color: #0984e3;
+}
+.credit img {
+  height: 4rem;
+  filter: drop-shadow(0 0 0.1rem #333);
+}/*# sourceMappingURL=style.css.map */
