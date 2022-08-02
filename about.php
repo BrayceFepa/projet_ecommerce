@@ -18,11 +18,11 @@
 
   <!-- Custom css path -->
   <link rel="stylesheet" href="css/style.css" />
+
+
 </head>
 
 <body>
-
-
   <!-- Header section starts  -->
 
   <header class="header">
@@ -47,35 +47,39 @@
       </span>
 
     </div>
-
   </header>
 
   <!-- Header section ends  -->
 
 
+
   <!-- Sidebar section starts  -->
 
-  <div class="sidebar">
-    <div id="side-bar" class="fa fa-times"></div>
+  <div class="side-bar">
+
+    <div id="close-side-bar" class="fa fa-times"></div>
+
     <div class="user">
-      <img src="images/Fepa1.png" alt="">
-      <h3>brayce fepa</h3>
-      <a href="#">log out</a>
+      <img src="images/user-img.png" alt="">
+      <h3>user 1</h3>
+      <a href="#">Logout</a>
     </div>
 
     <nav class="navbar">
-      <a href="home.html"> <i class="fa fa-angle-right"></i> home </a>
-      <a href="about.html"> <i class="fa fa-angle-right"></i> about </a>
-      <a href="products.html"> <i class="fa fa-angle-right"></i> products </a>
-      <a href="contacts.html"> <i class="fa fa-angle-right"></i> contacts </a>
-      <a href="login.html"> <i class="fa fa-angle-right"></i> login </a>
-      <a href="register.html"> <i class="fa fa-angle-right"></i> register </a>
-      <a href="cart.html"> <i class="fa fa-angle-right"></i> cart </a>
+      <div>
+        <a href="home.php"> <i class="fa fa-angle-right"></i> home</a>
+        <a href="about.php"> <i class="fa fa-angle-right"></i> about</a>
+        <a href="products.php"> <i class="fa fa-angle-right"></i> products</a>
+        <a href="contacts.php"> <i class="fa fa-angle-right"></i> contacts</a>
+        <a href="login.php"> <i class="fa fa-angle-right"></i> login</a>
+        <a href="register.php"> <i class="fa fa-angle-right"></i> register</a>
+        <a href="cart.php"> <i class="fa fa-angle-right"></i> cart</a>
+      </div>
     </nav>
+
   </div>
 
   <!-- Sidebar section ends  -->
-
 
 
 
@@ -108,14 +112,17 @@
   </section>
   <!-- Footer section ends -->
 
-  <!-- swiper js link  -->
-  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+
 
   <!-- JavaScript Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 
+  <!-- swiper js link  -->
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
   <!-- Custom js file path -->
-  <script src="js/script.js"></script>
+  <script src="js/jscript.js"></script>
 </body>
 
 </html>

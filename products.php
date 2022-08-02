@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About</title>
+    <title>Products</title>
 
     <!-- Font awesom cdn links -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -18,6 +18,7 @@
 
     <!-- Custom css path -->
     <link rel="stylesheet" href="css/style.css" />
+
 
 </head>
 
@@ -51,25 +52,31 @@
     <!-- Header section ends  -->
 
 
+
     <!-- Sidebar section starts  -->
 
-    <div class="sidebar">
-        <div id="side-bar" class="fa fa-times"></div>
+    <div class="side-bar">
+
+        <div id="close-side-bar" class="fa fa-times"></div>
+
         <div class="user">
-            <img src="images/Fepa1.png" alt="">
-            <h3>brayce fepa</h3>
-            <a href="#">log out</a>
+            <img src="images/user-img.png" alt="">
+            <h3>user 1</h3>
+            <a href="#">Logout</a>
         </div>
 
         <nav class="navbar">
-            <a href="home.html"> <i class="fa fa-angle-right"></i> home </a>
-            <a href="about.html"> <i class="fa fa-angle-right"></i> about </a>
-            <a href="products.html"> <i class="fa fa-angle-right"></i> products </a>
-            <a href="contacts.html"> <i class="fa fa-angle-right"></i> contacts </a>
-            <a href="login.html"> <i class="fa fa-angle-right"></i> login </a>
-            <a href="register.html"> <i class="fa fa-angle-right"></i> register </a>
-            <a href="cart.html"> <i class="fa fa-angle-right"></i> cart </a>
+            <div>
+                <a href="home.php"> <i class="fa fa-angle-right"></i> home</a>
+                <a href="about.php"> <i class="fa fa-angle-right"></i> about</a>
+                <a href="products.php"> <i class="fa fa-angle-right"></i> products</a>
+                <a href="contacts.php"> <i class="fa fa-angle-right"></i> contacts</a>
+                <a href="login.php"> <i class="fa fa-angle-right"></i> login</a>
+                <a href="register.php"> <i class="fa fa-angle-right"></i> register</a>
+                <a href="cart.php"> <i class="fa fa-angle-right"></i> cart</a>
+            </div>
         </nav>
+
     </div>
 
     <!-- Sidebar section ends  -->
@@ -115,7 +122,7 @@
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
     <!-- Custom js file path -->
-    <script src="js/script.js"></script>
+    <script src="js/jscript.js"></script>
 </body>
 
 </html>

@@ -115,8 +115,8 @@ section {
 
             #number{
                 position: absolute;
-                top: -1rem;
-                right: -1.7rem;
+                top: -.1rem;
+                right: -3rem;
                 font-size: 1.6rem;
                 background: $gold;
                 border-radius: 50%;
@@ -127,7 +127,9 @@ section {
                 justify-content: center;
                 align-items: center;
                 padding: 1.2rem;
-                color: $black;
+                color: $light-color;
+                font-weight: bold;
+                cursor: pointer;
             }
         }
     }
@@ -152,83 +154,88 @@ section {
     display: none;
 }
 
-.sidebar {
+
+.side-bar{
     position: fixed;
     top: 0;
     left: -110%;
-    background: $white;
     height: 100%;
-    width: 30rem;
+    width: 30rem;background: $white;
     z-index: 10000;
+    
 
-    &.active {
+    &.active{
+        box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.7);
         left: 0;
-        box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.2);
     }
 
-    #side-bar {
+    #close-side-bar{
         position: absolute;
         top: 1rem;
         right: 2rem;
-        color: $light-color;
         font-size: 4rem;
         cursor: pointer;
+        color: $light-color;
 
-        &:hover {
+        &:hover{
             transform: rotate(90deg);
             color: $black;
         }
     }
 
-    .user {
-        background: $light-bg;
+    .user{
         padding: 2rem;
+        background: $light-bg;
         text-align: center;
 
-        img {
+        img{
             height: 17rem;
             width: 17rem;
-            border: 1rem solid $white;
             border-radius: 50%;
+            border: 1rem solid $white;
             box-shadow: $box-shadow;
-            margin-bottom: .5rem;
+
         }
 
-        h3 {
+        h3{
             padding: .5rem 0;
             font-size: 1.7rem;
             color: $light-color;
+            margin-top: 1rem;
         }
-
-        a {
+        a{
             font-size: 1.5rem;
             color: $blue;
+            text-decoration: none;
+            padding: 0;
 
-            &:hover {
+            &:hover{
                 color: $black;
             }
         }
     }
 
-    .navbar {
+    .navbar{
         padding-top: 1rem;
 
-        a {
+        a{
             display: block;
+            padding: 1rem 2rem;
             font-size: 1.7rem;
             color: $light-color;
-            padding: 1rem 2rem;
+            text-decoration: none;
+            margin: 0;
 
-            i {
-                padding-right: .5rem;
-            }
-
-            &:hover {
+            &:hover{
                 color: $blue;
 
-                i {
+                i{
                     padding-right: 2rem;
                 }
+            }
+
+            i{
+                padding-right: 0.5rem;
             }
         }
     }
