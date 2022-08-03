@@ -195,6 +195,83 @@ section {
   padding-right: 0.5rem;
 }
 
+.category .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: 2rem;
+}
+.category .box-container .box {
+  text-align: center;
+  border-radius: 0.5rem;
+  border: 0.2rem solid #333;
+  padding: 2rem;
+  background: #fff;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+}
+.category .box-container .box:hover {
+  background: #333;
+}
+.category .box-container .box:hover h3 {
+  color: #fff;
+}
+.category .box-container .box img {
+  height: 7rem;
+  margin-bottom: 0.5rem;
+}
+.category .box-container .box h3 {
+  font-size: 1.7rem;
+  color: #333;
+}
+
+.products .container .box {
+  padding: 1.5rem;
+  border: 0.2rem solid #333;
+  background: #fff;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+}
+.products .container .box:hover .image .hover-img {
+  display: inline-block;
+}
+.products .container .box:hover .image .main-img {
+  display: none;
+}
+.products .container .box .image img {
+  -webkit-animation: fadeIn 0.2s linear;
+          animation: fadeIn 0.2s linear;
+  height: 25rem;
+}
+.products .container .box .image .hover-img {
+  display: none;
+}
+.products .container .box .image .icons .btn {
+  padding: 1.3rem 1.5rem;
+  font-size: 1.7rem;
+  border: none;
+  outline: none;
+}
+.products .container .box .image .icons .btn:hover {
+  background: #333;
+}
+.products .container .box .image .content .card-title {
+  font-size: 2rem;
+  color: #333;
+}
+.products .container .box .image .content .price {
+  font-size: 2rem;
+  color: #0984e3;
+}
+.products .container .box .image .content .price span {
+  color: #666;
+  font-size: 1.5rem;
+  text-decoration: line-through;
+}
+.products .container .box .image .content .stars i {
+  font-size: 1.8rem;
+  color: #0984e3;
+}
+
 .quick-links {
   display: flex;
   align-items: center;

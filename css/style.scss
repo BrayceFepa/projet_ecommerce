@@ -243,6 +243,117 @@ section {
 
 
 
+.category{
+
+    .box-container{
+        @include grid(13rem);
+
+        .box{
+            text-align: center;
+            border-radius: .5rem;
+            border: $border;
+            padding: 2rem;
+            background: $white;
+            box-shadow: $box-shadow;
+            text-decoration: none;
+
+            &:hover{
+                background: $black;
+
+                h3{
+                    color: $white;
+                }
+            }
+
+            img{
+                height: 7rem;
+                margin-bottom: 0.5rem;
+            }
+
+            h3{
+                font-size: 1.7rem;
+                color: $black;
+            }
+        }
+    }
+}
+
+.products{
+
+    .container{
+
+        .box{
+            padding: 1.5rem;
+            border: $border;
+            background: $white;
+            box-shadow: $box-shadow;
+            border-radius: .5rem;
+
+            &:hover .image{
+                .hover-img{
+                    display: inline-block;
+                }
+                .main-img{
+                    display: none;
+                }
+            }
+
+            .image{
+                img{
+                    animation: fadeIn .2s linear;
+                    height: 25rem;
+                }
+
+                .hover-img{
+                    display: none;
+                }
+
+                .icons{
+                    .btn{
+                        padding: 1.3rem 1.5rem;
+                        font-size: 1.7rem;
+                        border: none;
+                        outline: none;
+
+                        &:hover{
+                            background: $black;
+                        }
+                    }
+                }
+
+                .content{
+
+                    .card-title {
+                            font-size: 2rem;
+                            color: $black;
+                        }
+                    
+                        .price {
+                            font-size: 2rem;
+                            color: $blue;
+                    
+                            span {
+                                color: $light-color;
+                                font-size: 1.5rem;
+                                text-decoration: line-through;
+                            }
+                        }
+
+                        .stars{
+                            i{
+                                font-size: 1.8rem;
+                                color: $blue;
+                            }
+                        }
+                }
+                
+            }
+        }
+    }
+}
+
+
+
 
 .quick-links {
     display: flex;

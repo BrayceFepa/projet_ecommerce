@@ -89,13 +89,13 @@
     <a href="home.html" class="logo"> <i class="fa fa-shop"></i> TWF mobile store </a>
 
     <div class="links">
-      <a href="home.html"> home </a>
-      <a href="about.html"> about </a>
-      <a href="products.html"> products </a>
-      <a href="contacts.html"> contacts </a>
-      <a href="login.html"> login </a>
-      <a href="register.html"> register </a>
-      <a href="cart.html"> cart </a>
+      <a href="home.php"> home </a>
+      <a href="about.php"> about </a>
+      <a href="products.php"> products </a>
+      <a href="contacts.php"> contacts </a>
+      <a href="login.php"> login </a>
+      <a href="register.php"> register </a>
+      <a href="cart.php"> cart </a>
     </div>
 
     <div class="share">

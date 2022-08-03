@@ -1,3 +1,13 @@
+<?php
+
+require_once('./php/createDB.php');
+require_once('./php/components.php');
+
+//create instance of createDB class
+$database = new createDB("Productsdb", "gestionnaires");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -82,6 +92,58 @@
     <!-- Sidebar section ends  -->
 
 
+    <!-- Category section starts -->
+
+    <section class="category">
+
+        <h1 class="heading">nos <span>categoies</span> de produits</h1>
+
+        <div class="box-container">
+
+            <?php
+
+            $result = $database->getData();
+            while ($row = mysqli_fetch_assoc($result)) {
+                categories($row['categ_name'], $row['categ_img']);
+            }
+
+            ?>
+
+        </div>
+
+    </section>
+
+    <!-- Category section ends -->
+
+
+    <!-- product section starts -->
+
+    <section class="products">
+
+        <h1 class="heading">nos <span>produits</span></h1>
+
+        <div class="container">
+
+            <div class="row g-3">
+
+                <?php
+
+                $result2 = $database->getProduct();
+                $result3 = $database->getProductHov();
+                while ($row2 = mysqli_fetch_assoc($result2)) {
+                    products($row2['product_name'], $row2['product_price'], $row2['product_img'], $row2['product_img']);
+                }
+
+                ?>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- product section ends -->
 
 
     <!-- Footer section starts -->
@@ -89,13 +151,13 @@
         <a href="home.html" class="logo"> <i class="fa fa-shop"></i> TWF mobile store </a>
 
         <div class="links">
-            <a href="home.html"> home </a>
-            <a href="about.html"> about </a>
-            <a href="products.html"> products </a>
-            <a href="contacts.html"> contacts </a>
-            <a href="login.html"> login </a>
-            <a href="register.html"> register </a>
-            <a href="cart.html"> cart </a>
+            <a href="home.php"> home </a>
+            <a href="about.php"> about </a>
+            <a href="products.php"> products </a>
+            <a href="contacts.php"> contacts </a>
+            <a href="login.php"> login </a>
+            <a href="register.php"> register </a>
+            <a href="cart.php"> cart </a>
         </div>
 
         <div class="share">
