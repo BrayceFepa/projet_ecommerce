@@ -742,6 +742,104 @@ html{
 }
 
 .about {
+
+
+.infos-container{
+    .box-container{
+        @include grid(31rem);
+        .box{
+            background: $white;
+            border-radius:.5rem;
+            text-align: center;
+            padding: 2rem;
+            border:$border;
+            box-shadow:$box-shadow;
+
+            i{
+                height: 7.5rem;
+                width:7.5rem ;
+                line-height: 7.5rem ;
+                font-size: 2.5rem;
+                border-radius: 50%;
+                margin-bottom: .5rem;
+                background: $blue;
+                color: $white;
+            }
+
+            h3{
+                font-size: 2rem ;
+                padding: .5rem 0;
+                color:$black;
+            }
+
+            p{
+                font-size: 1.5rem;
+                line-height:2 ;
+                color: $light-color;
+
+            }
+        
+        }
+    }
+}
+.contact{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    form{
+        flex: 1 1 42rem;
+    }
+
+    h3{
+        font-size: 3rem;
+        text-transform: uppercase;
+        color:$black ;
+        padding-bottom: 1rem ;
+    }
+
+    p{
+        font-size: 1.5rem;
+        color:$light-color ;
+        padding: 1rem 0 ;
+        line-height: 2;
+    }
+    
+    .inputBox{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        input{
+            width: 49%;
+
+        }
+    }
+    .inputBox input, textarea{
+       padding: 1.2rem 1.4rem; 
+       border-radius: .5rem;
+       box-shadow: $box-shadow;
+       border: $border;
+       background: $white;
+       text-transform:none;
+       color: $light-color;
+       font-size: 1.5rem ;
+       margin: .7rem 0;
+    }
+
+    textarea{
+        height: 15rem;
+        resize: none;
+        width: 100% ;
+    }
+
+    .map{
+        flex: 1 1 42rem;
+        width: 100%;
+    }
+}
+.newsletter{
+    background-color: $blue;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -871,3 +969,42 @@ html{
         }
     }
 }
+    .content{
+        flex: 1 1 42rem;
+    }
+
+    h3{
+        font-size: 6rem;
+        color: $white;
+        text-transform: uppercase;
+    }
+
+    p{
+        font-size: 2.2rem;
+        color: $white;
+    }
+
+    form{
+        flex: 1 1 42rem;
+        background: $white;
+        display: flex;
+        padding:5rem ;
+        border-radius:.5rem;
+        
+
+        .email{
+            width: 100%;
+            padding: 0 1.4rem;
+            text-transform: none;
+            color: $light-color;
+            font-size: 1.6rem;
+            
+        }
+        .btn{
+            margin-top:0 ;
+        }
+
+    }
+}      
+
+
