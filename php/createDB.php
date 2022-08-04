@@ -70,16 +70,7 @@ class createDB
 
     public function getProduct()
     {
-        $sql = "SELECT * FROM products ";
-        $result = mysqli_query($this->con, $sql);
-        if (mysqli_num_rows($result) > 0) {
-            return $result;
-        }
-    }
-
-    public function getProductHov()
-    {
-        $sql = "SELECT * FROM product_hover";
+        $sql = "SELECT * FROM products";
         $result = mysqli_query($this->con, $sql);
         if (mysqli_num_rows($result) > 0) {
             return $result;

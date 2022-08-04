@@ -282,12 +282,19 @@ section {
 
     .container{
 
+        .row{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
         .box{
-            padding: 1.5rem;
+            padding: 1rem;
             border: $border;
             background: $white;
             box-shadow: $box-shadow;
             border-radius: .5rem;
+            width: 30rem;
 
             &:hover .image{
                 .hover-img{
@@ -301,7 +308,7 @@ section {
             .image{
                 img{
                     animation: fadeIn .2s linear;
-                    height: 25rem;
+                    height: 20rem;
                 }
 
                 .hover-img{
@@ -310,8 +317,8 @@ section {
 
                 .icons{
                     .btn{
-                        padding: 1.3rem 1.5rem;
-                        font-size: 1.7rem;
+                        padding: 1.1rem 1.2rem;
+                        font-size: 1.5rem;
                         border: none;
                         outline: none;
 
@@ -324,17 +331,18 @@ section {
                 .content{
 
                     .card-title {
-                            font-size: 2rem;
+                            font-size: 1.6rem;
                             color: $black;
                         }
                     
                         .price {
-                            font-size: 2rem;
+                            font-size: 1.6rem;
                             color: $blue;
+                            font-weight: bold;
                     
                             span {
                                 color: $light-color;
-                                font-size: 1.5rem;
+                                font-size: 1.2rem;
                                 text-decoration: line-through;
                             }
                         }
@@ -348,6 +356,73 @@ section {
                 }
                 
             }
+        }
+    }
+}
+
+.register,
+.login{
+
+    form{
+        max-width: 40rem;
+        border-radius: .5rem;
+        padding: 2rem;
+        background: $white;
+        box-shadow: $box-shadow;
+        border: $border;
+        margin: 1rem auto;
+
+        h3{
+            font-size: 2.5rem;
+            padding: 1rem;
+            color: $black;
+            text-transform: uppercase;
+        }
+
+        .box{
+            width: 100%;
+            padding: 1.2rem 1.4rem;
+            border-radius: .5rem;
+            border: $border;
+            font-size: 1.6rem;
+            color: $light-color;
+            text-transform: none;
+            margin: .7rem 0;
+        }
+
+        .remember{
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding-top: 1.5rem;
+            padding-bottom: 1rem;
+
+            label{
+                font-size: 1.5rem;
+                color: $light-color;
+                cursor: pointer;
+            }
+        }
+
+        .btn{
+            width: 100%;
+            text-align: center;
+
+            &.link{
+                background: $black;
+
+                &:hover{
+                    background: $blue;
+                }
+            }
+        }
+
+        p{
+            padding-top: 2rem;
+            font-size: 1.5rem;
+            color: $light-color;
+            text-align: center;
+            padding-bottom: 1rem;
         }
     }
 }

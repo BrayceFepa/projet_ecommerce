@@ -82,6 +82,26 @@
     <!-- Sidebar section ends  -->
 
 
+    <!-- login form section starts  -->
+
+    <section class="login">
+
+        <form action="">
+            <h3>login now </h3>
+            <input type="email" name="" placeholder="entrer votre email" id="" class="box">
+            <input type="password" name="" placeholder="entrer votre mot de passe" id="" class="box">
+            <div class="remember">
+                <input type="checkbox" name="" id="remember-me">
+                <label for="remember-me">me rappeler</label>
+            </div>
+            <input type="submit" value="login now" class="btn btn-primary">
+            <p>vous n'avez pas de compte ?</p>
+            <a href="register.php" class="btn btn-primary link">register now</a>
+        </form>
+
+    </section>
+
+    <!-- login form section ends  -->
 
 
     <!-- Footer section starts -->

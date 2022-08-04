@@ -82,6 +82,24 @@
     <!-- Sidebar section ends  -->
 
 
+    <!-- register form section starts  -->
+
+    <section class="register">
+
+        <form action="" method="POST">
+            <h3>register now </h3>
+            <input type="text" name="name" placeholder="entrer votre name" id="" class="box">
+            <input type="email" name="email" placeholder="entrer votre email" id="" class="box">
+            <input type="password" name="password" placeholder="entrer votre mot de passe" id="" class="box">
+            <input type="password" name="" placeholder="entrer votre mot de passe `a nouveau" id="" class="box">
+            <input type="submit" value="register now" class="btn btn-primary">
+            <p>vous avez déjà un compte ?</p>
+            <a href="login.php" class="btn btn-primary link">login now</a>
+        </form>
+
+    </section>
+
+    <!-- register form section ends  -->
 
 
     <!-- Footer section starts -->

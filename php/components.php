@@ -20,14 +20,14 @@ function products($product_name, $product_price, $product_img, $product_hov)
 {
 
     $product = "
-    
-        <div class=\"box col-md-4 col-sm-6 text-center\">
-                    <div class=\"image\">
+            
+                <div class=\"box col-lg-4 col-sm-6 mx-3\">
+                    <div class=\"image text-center\">
                         <img src=\"$product_img\" class=\"main-img\" alt=\"\">
                         <img src=\"$product_hov\" class=\"hover-img\" alt=\"\">
 
                         <div class=\"icons\">
-                            <a href=\"#\" class=\"btn btn-primary\">Add to cart <i class=\"fas fa-shopping-cart\"></i></a>
+                            <button type=\"submit\" name=\"add\" class=\"btn btn-primary\">Add to cart <i class=\"fas fa-shopping-cart\"></i></button>
                         </div>
 
                         <div class=\"content\">
@@ -43,6 +43,7 @@ function products($product_name, $product_price, $product_img, $product_hov)
                         </div>
                     </div>
                 </div>
+            
 
     ";
 

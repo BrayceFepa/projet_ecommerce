@@ -121,25 +121,26 @@ $database = new createDB("Productsdb", "gestionnaires");
     <section class="products">
 
         <h1 class="heading">nos <span>produits</span></h1>
+        <form action="products.php" method="POST">
 
-        <div class="container">
+            <div class="container">
 
-            <div class="row g-3">
+                <div class="row g-4">
 
-                <?php
+                    <?php
 
-                $result2 = $database->getProduct();
-                $result3 = $database->getProductHov();
-                while ($row2 = mysqli_fetch_assoc($result2)) {
-                    products($row2['product_name'], $row2['product_price'], $row2['product_img'], $row2['product_img']);
-                }
+                    $result2 = $database->getProduct();
+                    while ($row2 = mysqli_fetch_assoc($result2)) {
+                        products($row2['product_name'], $row2['product_price'], $row2['product_img'], $row2['product_hover']);
+                    }
 
-                ?>
+                    ?>
 
+
+                </div>
 
             </div>
-
-        </div>
+        </form>
 
     </section>
 
