@@ -12,7 +12,7 @@
   transition: all 0.2s linear;
 }
 
-$blue: #0984e3;
+$blue: #c803da;
 $black: #333;
 $white: #fff;
 $gold: gold;
@@ -71,7 +71,7 @@ section {
     text-decoration: none;
 
     i {
-      color: $gold;
+      color: $white;
     }
   }
 
@@ -116,7 +116,7 @@ section {
         top: -0.1rem;
         right: -3rem;
         font-size: 1.6rem;
-        background: $gold;
+        background: $white;
         border-radius: 50%;
         display: inline-block;
         height: 2rem;
@@ -125,7 +125,7 @@ section {
         justify-content: center;
         align-items: center;
         padding: 1.2rem;
-        color: $light-color;
+        color: $blue;
         font-weight: bold;
         cursor: pointer;
       }
@@ -777,7 +777,7 @@ section {
                 cursor: pointer;
 
                 &:hover {
-                    colol: $black;
+                    color: $black;
                 }
             }
 
