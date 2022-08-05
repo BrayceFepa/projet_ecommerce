@@ -27,7 +27,7 @@
 
     <header class="header">
         <a href="home.html" class="logo">
-            <i class="fa fa-shop"></i> TWF mobile store
+            <i class="fa fa-shop"></i> BAMBU
         </a>
 
         <form action="" class="search-form">
@@ -83,9 +83,9 @@
 
 
     <!-- contact info section starts -->
-<section class="infos-container">
+    <section class="infos-container">
 
-<div class="box-container">
+        <div class="box-container">
 
 <div class="box">
     <i class="fas fa-map"></i>
@@ -106,61 +106,62 @@
     <p>+237-654-831-981</p>
 </div>
 
-</div>
+        </div>
 
-</section>
+    </section>
 
-<!-- contact info section ends -->
+    <!-- contact info section ends -->
 
 
-<!-- contact section starts -->
-<section class="contact">
-    <form action="">
-        <h3>get in touch</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic unde tempore cum sapiente repudiandae,
-             eligendi nisi vel fugit eos quibusdam.</p>
-             <div class="inputBox">
-                 <input type="text" placeholder="your name">
-                 <input type="email" placeholder="your email">
-             </div>
+    <!-- contact section starts -->
+    <section class="contact">
+        <form action="">
+            <h3>get in touch</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic unde tempore cum sapiente repudiandae,
+                eligendi nisi vel fugit eos quibusdam.</p>
+            <div class="inputBox">
+                <input type="text" placeholder="your name">
+                <input type="email" placeholder="your email">
+            </div>
 
-             <div class="inputBox">
-                 <input type="phone" placeholder="your phone">
-                 <input type="text" placeholder="subject">
-             </div>
+            <div class="inputBox">
+                <input type="phone" placeholder="your phone">
+                <input type="text" placeholder="subject">
+            </div>
 
-             <textarea name="" placeholder="your message" id="" cols="30" rows="10"></textarea>
-             <input type="submit" value="send message" class="btn btn-primary"> 
-    </form>
+            <textarea name="" placeholder="your message" id="" cols="30" rows="10"></textarea>
+            <input type="submit" value="send message" class="btn">
+        </form>
 
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63694.159013965655!2d11.478759992525932!3d3.8348650805299562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x108bcf08f91e51a3%3A0xf6edc284684d1184!2sINFFDP!5e0!3m2!1sfr!2scm!4v1659693464930!5m2!1sfr!2scm" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-</section>
 
-<!-- contact section ends -->
+    </section>
+
+    <!-- contact section ends -->
 
 
 
-<!-- newsletter section starts -->
+    <!-- newsletter section starts -->
 
-<section class="newsletter">
-    <div class="content">
-        <h3>newsletter</h3>
-        <p>suscribe for wekly newsletter.</p>
-    </div>
-     
-    <form action="">
-    <input type="email" name=" " placeholder="enter your email"  id=" " class=email>
-    <input type="submit" value="subscribe" class="btn">
-    </form>  
-</section>
-<!-- newsletter section ends -->
+    <section class="newsletter">
+        <div class="content">
+            <h3>newsletter</h3>
+            <p>suscribe for wekly newsletter.</p>
+        </div>
+
+        <form action="">
+            <input type="email" name=" " placeholder="enter your email" id=" " class="email">
+            <input type="submit" value="subscribe" class="btn">
+        </form>
+    </section>
+    <!-- newsletter section ends -->
 
 
 
     <!-- Footer section starts -->
     <section class="quick-links">
-        <a href="home.html" class="logo"> <i class="fa fa-shop"></i> TWF mobile store </a>
+        <a href="home.html" class="logo"> <i class="fa fa-shop"></i> BAMBU </a>
 
         <div class="links">
             <a href="home.php"> home </a>

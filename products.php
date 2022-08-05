@@ -1,10 +1,23 @@
 <?php
+session_start();
 
 require_once('./php/createDB.php');
 require_once('./php/components.php');
 
 //create instance of createDB class
 $database = new createDB("Productsdb", "gestionnaires");
+
+
+
+include 'php/config.php';
+
+
+
+$user_id = $_SESSION['user_id'];
+
+if (!isset($user_id)) {
+    header('location:login.php');
+}
 
 ?>
 
@@ -33,11 +46,22 @@ $database = new createDB("Productsdb", "gestionnaires");
 </head>
 
 <body>
+
+    <?php
+
+    if (isset($messages)) {
+        foreach ($messages as $message) {
+            echo '<div class="messages" onclick="this.remove();">' . $message . '</div>';
+        }
+    }
+
+    ?>
+
     <!-- Header section starts  -->
 
     <header class="header">
         <a href="home.html" class="logo">
-            <i class="fa fa-shop"></i> TWF mobile store
+            <i class="fa fa-shop"></i> BAMBU
         </a>
 
         <form action="" class="search-form">
@@ -96,7 +120,7 @@ $database = new createDB("Productsdb", "gestionnaires");
 
     <section class="category">
 
-        <h1 class="heading">nos <span>categoies</span> de produits</h1>
+        <h1 class="heading">nos <span>categories</span> de produits</h1>
 
         <div class="box-container">
 
@@ -121,7 +145,8 @@ $database = new createDB("Productsdb", "gestionnaires");
     <section class="products">
 
         <h1 class="heading">nos <span>produits</span></h1>
-        <form action="products.php" method="POST">
+        <form action="" method="POST">
+
 
             <div class="container">
 
@@ -149,7 +174,7 @@ $database = new createDB("Productsdb", "gestionnaires");
 
     <!-- Footer section starts -->
     <section class="quick-links">
-        <a href="home.html" class="logo"> <i class="fa fa-shop"></i> TWF mobile store </a>
+        <a href="home.html" class="logo"> <i class="fa fa-shop"></i> BAMBU </a>
 
         <div class="links">
             <a href="home.php"> home </a>
