@@ -1,10 +1,23 @@
 <?php
+session_start();
 
 require_once('./php/createDB.php');
 require_once('./php/components.php');
 
 //create instance of createDB class
 $database = new createDB("Productsdb", "gestionnaires");
+
+
+
+include 'php/config.php';
+
+
+
+$user_id = $_SESSION['user_id'];
+
+if (!isset($user_id)) {
+    header('location:login.php');
+}
 
 ?>
 
@@ -33,6 +46,17 @@ $database = new createDB("Productsdb", "gestionnaires");
 </head>
 
 <body>
+
+    <?php
+
+    if (isset($messages)) {
+        foreach ($messages as $message) {
+            echo '<div class="messages" onclick="this.remove();">' . $message . '</div>';
+        }
+    }
+
+    ?>
+
     <!-- Header section starts  -->
 
     <header class="header">
@@ -121,7 +145,8 @@ $database = new createDB("Productsdb", "gestionnaires");
     <section class="products">
 
         <h1 class="heading">nos <span>produits</span></h1>
-        <form action="products.php" method="POST">
+        <form action="" method="POST">
+
 
             <div class="container">
 

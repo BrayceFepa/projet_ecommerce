@@ -1,3 +1,29 @@
+<?php
+
+
+include 'php/config.php';
+session_start();
+
+if (isset($_POST['submit'])) {
+
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $pass = mysqli_real_escape_string($conn, md5($_POST['password']));
+
+    $select = mysqli_query($conn, "SELECT * FROM `clients` WHERE email = '$email' AND password = '$pass'") or die('query failed');
+
+    if (mysqli_num_rows($select) > 0) {
+        $row = mysqli_fetch_assoc($select);
+        $_SESSION['user_id'] = $row['id_client'];
+        header('location:products.php');
+    } else {
+        $messages[] = 'mot de passe ou email incorrects!';
+    }
+}
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,6 +49,16 @@
 </head>
 
 <body>
+
+    <?php
+
+    if (isset($messages)) {
+        foreach ($messages as $message) {
+            echo '<div class="messages" onclick="this.remove();">' . $message . '</div>';
+        }
+    }
+
+    ?>
     <!-- Header section starts  -->
 
     <header class="header">
@@ -86,15 +122,15 @@
 
     <section class="login">
 
-        <form action="">
+        <form action="" method="POST">
             <h3>login now </h3>
-            <input type="email" name="" placeholder="entrer votre email" id="" class="box">
-            <input type="password" name="" placeholder="entrer votre mot de passe" id="" class="box">
+            <input type="email" name="email" placeholder="entrer votre email" id="" class="box">
+            <input type="password" name="password" placeholder="entrer votre mot de passe" id="" class="box">
             <div class="remember">
                 <input type="checkbox" name="" id="remember-me">
                 <label for="remember-me">me rappeler</label>
             </div>
-            <input type="submit" value="login now" class="btn btn-primary">
+            <input type="submit" name="submit" value="login now" class="btn btn-primary">
             <p>vous n'avez pas de compte ?</p>
             <a href="register.php" class="btn btn-primary link">register now</a>
         </form>

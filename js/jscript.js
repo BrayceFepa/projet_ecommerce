@@ -8,6 +8,11 @@ document.querySelector('#close-side-bar').onclick = () => {
     sideBar.classList.remove('active');
 }
 
+let searchForm = document.querySelector('.search-form');
+document.querySelector('#search-btn').onclick = () => {
+    searchForm.classList.toggle('active');
+}
+
 console.log('bonjour');
 
 document.querySelectorAll('.accordion-container .accordion').forEach(accordion => accordion.onclick = () => {

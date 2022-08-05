@@ -1,3 +1,31 @@
+<?php
+
+
+include 'php/config.php';
+
+if (isset($_POST['submit'])) {
+
+    $name = mysqli_real_escape_string($conn, $_POST['name']);
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $pass = mysqli_real_escape_string($conn, md5($_POST['password']));
+    $cpass = mysqli_real_escape_string($conn, md5($_POST['cpassword']));
+
+    $select = mysqli_query($conn, "SELECT * FROM `clients` WHERE email = '$email' AND password = '$pass'") or die('query failed');
+
+    if (mysqli_num_rows($select) > 0) {
+        $messages[] = 'Ce compte existe déjà!';
+    } else {
+        mysqli_query($conn, "INSERT INTO `clients` (name, email, password) VALUES ('$name', '$email', '$pass')") or die('query failed!');
+        $messages[] = 'inscription réussie!';
+        header('location:login.php');
+    }
+}
+
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,6 +51,18 @@
 </head>
 
 <body>
+
+
+    <?php
+
+    if (isset($messages)) {
+        foreach ($messages as $message) {
+            echo '<div class="messages" onclick="this.remove();">' . $message . '</div>';
+        }
+    }
+
+    ?>
+
     <!-- Header section starts  -->
 
     <header class="header">
@@ -86,13 +126,13 @@
 
     <section class="register">
 
-        <form action="" method="POST">
+        <form action="register.php" method="POST">
             <h3>register now </h3>
             <input type="text" name="name" placeholder="entrer votre name" id="" class="box">
             <input type="email" name="email" placeholder="entrer votre email" id="" class="box">
             <input type="password" name="password" placeholder="entrer votre mot de passe" id="" class="box">
-            <input type="password" name="" placeholder="entrer votre mot de passe `a nouveau" id="" class="box">
-            <input type="submit" value="register now" class="btn btn-primary">
+            <input type="password" name="cpassword" placeholder="entrer votre mot de passe à nouveau" id="" class="box">
+            <input type="submit" name="submit" value="register now" class="btn btn-primary">
             <p>vous avez déjà un compte ?</p>
             <a href="login.php" class="btn btn-primary link">login now</a>
         </form>
