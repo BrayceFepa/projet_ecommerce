@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
   <meta charset="UTF-8" />
@@ -89,71 +89,75 @@
 </div>
 
 <div class="content">
-   <h3>our story</h3>
-   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, quidem earum voluptatum perferendis odio dolore recusandae ipsa, eveniet dolor magni maxime maiores. Doloremque unde voluptatibus vitae sapiente quasi quis assumenda!</p>
-   <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia deserunt totam et mollitia omnis, asperiores, distinctio nobis alias voluptatem, obcaecati saepe! Totam et eaque at amet eligendi esse consequuntur ducimus.</p>
-   <a href="#" class="btn">read more</a>
+   <h3>Notre Histoire</h3>
+   <p>Avec l'avancee des nouvelles technologies,le Monde se numerise avec plus d'un milliard de personnes connectees via les outils informatiques.Mais il existe aussi pres d'un million qui n'y ont pas acces ou ne sachant pas les utiliser.C'est pour palier a ce probleme que BAMBU a ete cree.</p>
+    <p> Fonde en 2022 par des developpeurs juniors motives,BAMBU est un site de e-commerce dedie a la vente d'outils numeriques a des prix accessibles a tous et qui propose des conseils avises sur leur utilisation.</p>
+   <a href="#" class="btn">En savoir plus</a>
 </div>
 </section>
 
 <section class="faq">
 
-<h1 class="heading">questions & <span>answers</span></h1>
+<h1 class="heading">Questions & <span>Reponses</span></h1>
 
 
 <div class="accordion-container">
 
       <div class="accordion">
           <div class="accordion-heading">
-          <h3>how to make websites?</h3>
+          <h3>OBJECTIFS</h3>
           <i class="fas fa-angle-down"></i>
       </div>
         <p class="accordion-content">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt consectetur eaque delectus repudiandae reprehenderit doloremque rerum autem enim quo ex dolorum eligendi ipsum impedit saepe, molestiae quas quaerat voluptatem natus.
+      Nous proposons a des prix abordables des appareils numeriques simples d'usage et de meilleure qualite. De plus,pour chaque produit achete, nous proposons une fiche d'utilisation simple et concise pour ceux n'ayant pas de reelles connaissances en informatique.Car,notre but principal est de permettre a tous,debutants et connaisseurs,d'entrer de plein pied dans l'univers du numerique. 
         </p>
 
   </div>
 
 <div class="accordion">
   <div class="accordion-heading">
-    <h3>how to place order online?</h3>
+    <h3>PRODUITS</h3>
     <i class="fas fa-angle-down"></i>
 </div>
 <p class="accordion-content">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt consectetur eaque delectus repudiandae reprehenderit doloremque rerum autem enim quo ex dolorum eligendi ipsum impedit saepe, molestiae quas quaerat voluptatem natus.
+Nous proposons a la vente des produits des plus grandes marques presentes sur le marche.Ordinateurs,tablettes,smartphones,appareils photo,camera,casques,etc.Des produits d'excellente qualite,efficaces et simples a utiliser,avec des prix abordables et adaptes a la realite socio-economique du pays.
 </p>
 
 </div>
 
 <div class="accordion">
   <div class="accordion-heading">
-    <h3>how to pay online?</h3>
+    <h3>PAIEMENTS</h3>
     <i class="fas fa-angle-down"></i>
 </div>
 <p class="accordion-content">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt consectetur eaque delectus repudiandae reprehenderit doloremque rerum autem enim quo ex dolorum eligendi ipsum impedit saepe, molestiae quas quaerat voluptatem natus.
+   Les paiements se font essentiellement en ligne,via smartphones ou autre appareils connectes,par carte bancaire VISA,MASTERCARD,AMERICAN EXPRESS,PAYPAL,ORANGE MONEY,MTN MOBILE MONEY.
 </p>
 
 </div>
 
 <div class="accordion">
   <div class="accordion-heading">
-    <h3>Is online payment safe?</h3>
+    <h3>SECURITE</h3>
     <i class="fas fa-angle-down"></i>
 </div>
 <p class="accordion-content">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt consectetur eaque delectus repudiandae reprehenderit doloremque rerum autem enim quo ex dolorum eligendi ipsum impedit saepe, molestiae quas quaerat voluptatem natus.
+La securite des paiements et des transactions constitue notre principale priorite.Aussi,quelque soit l'endroit ou sera effectue le paiement,au Cameroun ou a l'etranger,nous respectons les normes de securite relatifs au paiement en ligne imposees par les instances des differents Etats,tel que l'Afrique Centrale ou nous appliquons le Règlement du 21 décembre 2018 relatif aux services de paiement dans la
+zone CEMAC adoptee le 21/12/2018 a Yaoundé,ainsi que par celle de l’industrie des cartes de paiement(Payment Card Industry Data Security Standard ou PCI DSS),avec une certification qui atteste de la securite de vos donnees bancaires selon les 12 Exigences de la conformite PCI DSS.
 </p>
 
 </div>
 
 <div class="accordion">
   <div class="accordion-heading">
-    <h3>How to contact service center?</h3>
+    <h3>CONTACTS</h3>
     <i class="fas fa-angle-down"></i>
 </div>
 <p class="accordion-content">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt consectetur eaque delectus repudiandae reprehenderit doloremque rerum autem enim quo ex dolorum eligendi ipsum impedit saepe, molestiae quas quaerat voluptatem natus.
+Nous sommes disponibles 24/7 avec un service clientele a votre ecoute, quelque soit votre preocuppation.Vous pouvez nous joindre par:<br>
+Telephone:237 699 92 42 43<br>
+Email:Bambu@gmail.com<br>
+Vous pouvez aussi nous suivre sur nos comptes Facebook,Twitter,linkedin et Instagram.
 </p>
 
 </div>
