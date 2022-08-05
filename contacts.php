@@ -27,7 +27,7 @@
 
     <header class="header">
         <a href="home.html" class="logo">
-            <i class="fa fa-shop"></i> TWF mobile store
+            <i class="fa fa-shop"></i> BAMBU
         </a>
 
         <form action="" class="search-form">
@@ -82,11 +82,85 @@
     <!-- Sidebar section ends  -->
 
 
+    <!-- contact info section starts -->
+    <section class="infos-container">
+
+        <div class="box-container">
+
+            <div class="box">
+                <i class="fas fa-map"></i>
+                <h3>adresse</h3>
+                <p>mumbai, india - 400104</p>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-envelope"></i>
+                <p>shaikhanaa@gmail.com</p>
+                <p> anasbhai@gmail.com</p>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-phone"></i>
+                <h3>number</h3>
+                <p>+123-456-7890</p>
+                <p>+111-222-3333</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- contact info section ends -->
+
+
+    <!-- contact section starts -->
+    <section class="contact">
+        <form action="">
+            <h3>get in touch</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic unde tempore cum sapiente repudiandae,
+                eligendi nisi vel fugit eos quibusdam.</p>
+            <div class="inputBox">
+                <input type="text" placeholder="your name">
+                <input type="email" placeholder="your email">
+            </div>
+
+            <div class="inputBox">
+                <input type="phone" placeholder="your phone">
+                <input type="text" placeholder="subject">
+            </div>
+
+            <textarea name="" placeholder="your message" id="" cols="30" rows="10"></textarea>
+            <input type="submit" value="send message" class="btn">
+        </form>
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15076.895920873152!2d72.83196972692602!3d19.14167056419408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b63aceef0c69%3A0x2aa80cf2287dfa3b!2sJogeshwari%20West%2C%20Bombay%2C%20Maharashtra%20400047%2C%20Inde!5e0!3m2!1sfr!2scm!4v1659483036709!5m2!1sfr!2scm" allowfullscreen="" loading="lazy"></iframe>
+
+    </section>
+
+    <!-- contact section ends -->
+
+
+
+    <!-- newsletter section starts -->
+
+    <section class="newsletter">
+        <div class="content">
+            <h3>newsletter</h3>
+            <p>suscribe for wekly newsletter.</p>
+        </div>
+
+        <form action="">
+            <input type="email" name=" " placeholder="enter your email" id=" " class="email">
+            <input type="submit" value="subscribe" class="btn">
+        </form>
+    </section>
+    <!-- newsletter section ends -->
+
 
 
     <!-- Footer section starts -->
     <section class="quick-links">
-        <a href="home.html" class="logo"> <i class="fa fa-shop"></i> TWF mobile store </a>
+        <a href="home.html" class="logo"> <i class="fa fa-shop"></i> BAMBU </a>
 
         <div class="links">
             <a href="home.php"> home </a>
@@ -111,8 +185,6 @@
         <img src="images/card_img.png" alt="" />
     </section>
     <!-- Footer section ends -->
-
-
 
 
     <!-- JavaScript Bundle with Popper -->

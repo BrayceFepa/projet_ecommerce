@@ -42,6 +42,15 @@
                 FOREIGN KEY (id_commande) REFERENCES $tablename5(id_commande)
                 );
 
+                CREATE TABLE IF NOT EXISTS cart
+                (id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+                name VARCHAR(100) NOT NULL,
+                price FLOAT NOT NULL,
+                product_img VARCHAR(25) NOT NULL,
+                user_id int(100) NOT NULL,
+                quantity int(100)
+                );
+
 
                 -- insérer les images dans la table products
 

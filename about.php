@@ -27,7 +27,7 @@
 
   <header class="header">
     <a href="home.html" class="logo">
-      <i class="fa fa-shop"></i> TWF mobile store
+      <i class="fa fa-shop"></i> BAMBU
     </a>
 
     <form action="" class="search-form">
@@ -82,11 +82,7 @@
   <!-- Sidebar section ends  -->
 
 
-<section class="about">
- 
-<div class="image">
-     <img src="images/about-img.png" alt="">
-</div>
+  <section class="about">
 
 <div class="content">
    <h3>Notre Histoire</h3>
@@ -96,25 +92,30 @@
 </div>
 </section>
 
-<section class="faq">
+
+  <section class="faq">
+
 
 <h1 class="heading">Questions & <span>Reponses</span></h1>
+    
 
 
-<div class="accordion-container">
+    <div class="accordion-container">
 
       <div class="accordion">
+
           <div class="accordion-heading">
           <h3>OBJECTIFS</h3>
+       
           <i class="fas fa-angle-down"></i>
-      </div>
+        </div>
         <p class="accordion-content">
-      Nous proposons a des prix abordables des appareils numeriques simples d'usage et de meilleure qualite. De plus,pour chaque produit achete, nous proposons une fiche d'utilisation simple et concise pour ceux n'ayant pas de reelles connaissances en informatique.Car,notre but principal est de permettre a tous,debutants et connaisseurs,d'entrer de plein pied dans l'univers du numerique. 
+          Nous proposons a des prix abordables des appareils numeriques simples d'usage et de meilleure qualite. De plus,pour chaque produit achete, nous proposons une fiche d'utilisation simple et concise pour ceux n'ayant pas de reelles connaissances en informatique.Car,notre but principal est de permettre a tous,debutants et connaisseurs,d'entrer de plein pied dans l'univers du numerique. 
         </p>
 
-  </div>
+      </div>
 
-<div class="accordion">
+      <div class="accordion">
   <div class="accordion-heading">
     <h3>PRODUITS</h3>
     <i class="fas fa-angle-down"></i>
@@ -162,6 +163,19 @@ Vous pouvez aussi nous suivre sur nos comptes Facebook,Twitter,linkedin et Insta
 
 </div>
 </div>
+
+      
+
+      
+
+      
+
+      
+    </div>
+
+  </section>
+
+
 
 </section>
 
@@ -221,10 +235,71 @@ Vous pouvez aussi nous suivre sur nos comptes Facebook,Twitter,linkedin et Insta
 </div>
 
 </section>
+=======
+  <section class="review">
+
+    <h1 class="heading">clients <span>review</span></h1>
+
+    <div class="swiper review-slider">
+
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide slide">
+          <img src="images/pic-1.png" alt="">
+          <h3>John Doe</h3>
+          <span>designer</span>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum eaque explicabo aperiam facere ab! Facere, ipsa, accusamus ipsam repellat iusto, quis laboriosam pariatur exercitationem ducimus officia temporibus quasi quia itaque?</p>
+        </div>
+
+        <div class="swiper-slide slide">
+          <img src="images/pic-2.png" alt="">
+          <h3>John Doe</h3>
+          <span>designer</span>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum eaque explicabo aperiam facere ab! Facere, ipsa, accusamus ipsam repellat iusto, quis laboriosam pariatur exercitationem ducimus officia temporibus quasi quia itaque?</p>
+        </div>
+
+        <div class="swiper-slide slide">
+          <img src="images/pic-3.png" alt="">
+          <h3>John Doe</h3>
+          <span>designer</span>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum eaque explicabo aperiam facere ab! Facere, ipsa, accusamus ipsam repellat iusto, quis laboriosam pariatur exercitationem ducimus officia temporibus quasi quia itaque?</p>
+        </div>
+
+        <div class="swiper-slide slide">
+          <img src="images/pic-4.png" alt="">
+          <h3>John Doe</h3>
+          <span>designer</span>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum eaque explicabo aperiam facere ab! Facere, ipsa, accusamus ipsam repellat iusto, quis laboriosam pariatur exercitationem ducimus officia temporibus quasi quia itaque?</p>
+        </div>
+
+        <div class="swiper-slide slide">
+          <img src="images/pic-5.png" alt="">
+          <h3>John Doe</h3>
+          <span>designer</span>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum eaque explicabo aperiam facere ab! Facere, ipsa, accusamus ipsam repellat iusto, quis laboriosam pariatur exercitationem ducimus officia temporibus quasi quia itaque?</p>
+        </div>
+
+        <div class="swiper-slide slide">
+          <img src="images/pic-6.png" alt="">
+          <h3>John Doe</h3>
+          <span>designer</span>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum eaque explicabo aperiam facere ab! Facere, ipsa, accusamus ipsam repellat iusto, quis laboriosam pariatur exercitationem ducimus officia temporibus quasi quia itaque?</p>
+        </div>
+
+
+      </div>
+
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+
+    </div>
+
+  </section>
+>>>>>>> ce785ea58e3302b054746a3af195c1da15205010
 
   <!-- Footer section starts -->
   <section class="quick-links">
-    <a href="home.html" class="logo"> <i class="fa fa-shop"></i> TWF mobile store </a>
+    <a href="home.html" class="logo"> <i class="fa fa-shop"></i> BAMBU </a>
 
     <div class="links">
       <a href="home.php"> home </a>
