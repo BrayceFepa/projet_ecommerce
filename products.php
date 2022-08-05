@@ -61,7 +61,7 @@ if (!isset($user_id)) {
 
     <header class="header">
         <a href="home.html" class="logo">
-            <i class="fa fa-shop"></i> TWF mobile store
+            <i class="fa fa-shop"></i> BAMBU
         </a>
 
         <form action="" class="search-form">
@@ -120,7 +120,7 @@ if (!isset($user_id)) {
 
     <section class="category">
 
-        <h1 class="heading">nos <span>categoies</span> de produits</h1>
+        <h1 class="heading">nos <span>categories</span> de produits</h1>
 
         <div class="box-container">
 
@@ -174,7 +174,7 @@ if (!isset($user_id)) {
 
     <!-- Footer section starts -->
     <section class="quick-links">
-        <a href="home.html" class="logo"> <i class="fa fa-shop"></i> TWF mobile store </a>
+        <a href="home.html" class="logo"> <i class="fa fa-shop"></i> BAMBU </a>
 
         <div class="links">
             <a href="home.php"> home </a>

@@ -29,7 +29,7 @@ $box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 
 @keyframes fadeIn {
   0% {
-    scale: .5;
+    scale: 0.5;
     opacity: 0;
   }
 }
@@ -120,10 +120,10 @@ section {
 
       #number {
         position: absolute;
-        top: -0.1rem;
-        right: -3rem;
+        top: -1.3rem;
+        right: -1.2rem;
         font-size: 1.6rem;
-        background: $white;
+        background: $black;
         border-radius: 50%;
         display: inline-block;
         height: 2rem;
@@ -132,7 +132,7 @@ section {
         justify-content: center;
         align-items: center;
         padding: 1.2rem;
-        color: $blue;
+        color: $gold;
         font-weight: bold;
         cursor: pointer;
       }
@@ -319,6 +319,8 @@ section {
             font-size: 1.5rem;
             border: none;
             outline: none;
+            background: $blue;
+            color: $white;
 
             &:hover {
               background: $black;
@@ -347,7 +349,7 @@ section {
           .stars {
             i {
               font-size: 1.8rem;
-              color: $blue;
+              color: $gold;
             }
           }
         }
@@ -364,13 +366,13 @@ section {
     padding: 2rem;
     background: $white;
     box-shadow: $box-shadow;
-    border: $border;
+    border: 1px solid $blue;
     margin: 1rem auto;
 
     h3 {
       font-size: 2.5rem;
       padding: 1rem;
-      color: $black;
+      color: $blue;
       text-transform: uppercase;
     }
 
@@ -378,7 +380,7 @@ section {
       width: 100%;
       padding: 1.2rem 1.4rem;
       border-radius: 0.5rem;
-      border: $border;
+      border: 1px solid $black;
       font-size: 1.6rem;
       color: $light-color;
       text-transform: none;
@@ -402,6 +404,12 @@ section {
     .btn {
       width: 100%;
       text-align: center;
+      background: $black;
+      color: $white;
+      border: none;
+      &:hover{
+        background: $blue;
+      }
 
       &.link {
         background: $black;
@@ -618,6 +626,12 @@ section {
       padding-top: 1rem;
     }
   }
+
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    font-size: 3rem;
+    color: $blue;
+  }
 }
 
 .infos-container {
@@ -703,7 +717,14 @@ section {
     font-size: 1.5rem;
     margin: 0.7rem 0;
   }
+  .btn{
+    background: $black;
+    color: $white;
 
+    &:hover{
+      background: $blue;
+    }
+  }
 
   textarea {
     height: 15rem;
@@ -743,7 +764,7 @@ section {
     flex: 1 1 42rem;
     background: $white;
     display: flex;
-    padding: 5rem;
+    padding: .5rem;
     border-radius: 0.5rem;
 
     .email {
@@ -756,14 +777,15 @@ section {
 
     .btn {
       margin-top: 0;
+      background: $black;
+      color: $white;
 
+      &:hover{
+        background: $blue;
+      }
     }
   }
 }
-
-     
-
-
 
 .home {
   background: $white;
@@ -794,24 +816,21 @@ section {
       }
 
       h3 {
-        padding-top: .5rem;
+        padding-top: 0.5rem;
         color: $black;
         font-size: 3rem;
       }
-
     }
   }
 
-    .swiper-button-next::after,
-    .swiper-button-next::after {
-      font-size: 3rem;
-      color: $black;
-    }
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    font-size: 3rem;
+    color: $black;
+  }
 }
 
-
 .shopping-cart {
-
   .box-container {
     @include grid(31rem);
 
@@ -833,7 +852,6 @@ section {
         font-size: 2.5rem;
         color: $light-color;
         cursor: pointer;
-
 
         &:hover {
           color: $black;
@@ -883,49 +901,51 @@ section {
       }
     }
   }
-       
 
   .cart-total {
-  margin-top: 2rem;
-  box-shadow: $box-shadow;
-  border: $border;
+    margin-top: 2rem;
+    box-shadow: $box-shadow;
+    border: $border;
 
-  border-color: -5rem;
-  background: $white;
-  padding: 2rem;
-  padding-top: 1rem;
-
-  h3 {
+    border-color: -5rem;
+    background: $white;
+    padding: 2rem;
     padding-top: 1rem;
-    font-size: 2rem;
-    color: $black;
 
-    span {
-      color: $blue;
+    h3 {
+      padding-top: 1rem;
+      font-size: 2rem;
+      color: $black;
+
+      span {
+        color: $blue;
+      }
+    }
+
+    .btn{
+      background: $black;
+      color: $white;
+
+      &:hover{
+        background: $blue;
+      }
     }
   }
 }
-}
-
-
-
-
-
-
-
 
 .btn {
   margin-top: 1rem;
   display: inline-block;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   padding: 1rem 3rem;
   font-size: 1.7rem;
-  color: $white;
+  color: $black;
   cursor: pointer;
-  background: $blue;
+  background: $gold;
 
   &:hover {
     background: $black;
+    color: $white;
   }
 }
 
@@ -940,18 +960,15 @@ section {
   }
 }
 
-
-
 .banner {
-
   .box-container {
     @include grid(31rem);
 
     .box {
       position: relative;
       height: 25rem;
-      border: $border ;
-      border-radius: .5rem;
+      border: $border;
+      border-radius: 0.5rem;
       overflow: hidden;
       box-shadow: $box-shadow;
 
@@ -978,7 +995,7 @@ section {
 
         h3 {
           font-size: 2rem;
-          padding: .5rem 0;
+          padding: 0.5rem 0;
           color: $black;
         }
       }
@@ -987,12 +1004,11 @@ section {
 }
 
 .arrivals {
-
   .box-container {
     @include grid(33rem);
 
     .box {
-      border-radius: .5rem;
+      border-radius: 0.5rem;
       border: $border;
       padding: 2rem;
       box-shadow: $box-shadow;
@@ -1002,9 +1018,7 @@ section {
       background: $white;
 
       &:hover {
-
         .image {
-
           .main-img {
             display: none;
           }
@@ -1016,10 +1030,9 @@ section {
       }
 
       .image {
-
         img {
           height: 15rem;
-          animation: fadeIn .2s linear;
+          animation: fadeIn 0.2s linear;
         }
 
         .hover-img {
@@ -1028,17 +1041,16 @@ section {
       }
 
       .content {
-
         h3 {
           font-size: 2rem;
           color: $black;
         }
 
         .price {
-          padding-top: .5rem;
+          padding-top: 0.5rem;
           font-size: 2rem;
           color: $blue;
-          padding-bottom: .7rem;
+          padding-bottom: 0.7rem;
 
           span {
             font-size: 1.5rem;
@@ -1047,11 +1059,14 @@ section {
           }
         }
 
-      }
+                  .stars i {
+            font-size: 1.5rem;
+            color: $gold;
+          }
+              }
     }
   }
 }
-  
 
 .messages {
   position: sticky;
@@ -1064,37 +1079,8 @@ section {
   z-index: 1000;
   box-shadow: $box-shadow;
   font-size: 2rem;
-  color: $blue;
+  color: $black;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 //media queries
 
@@ -1111,8 +1097,6 @@ section {
     padding: 3rem 2rem;
   }
 }
-
-
 
 @media (max-width: 991px) {
   .quick-links {
@@ -1142,7 +1126,6 @@ section {
   }
 
   .header {
-
     .logo {
       font-size: 1.6rem;
     }
@@ -1158,10 +1141,7 @@ section {
       }
     }
   }
-
 }
-
-
 
 @media (max-width: 768px) {
   #search-btn {
@@ -1188,8 +1168,6 @@ section {
     .logo {
       font-size: 1.3rem;
     }
-
-
   }
 
   .swiper-button-next,
@@ -1218,25 +1196,18 @@ section {
   }
 }
 
-
-@media(max-width: 768px) {
-
+@media (max-width: 768px) {
   .swiper-button-next,
   .swiper-button-next {
     display: none;
   }
 
   .home {
-
     .slide {
       text-align: center;
     }
-
   }
 }
-
-
-
 
 @media (max-width: 450px) {
   html {
@@ -1268,50 +1239,35 @@ section {
       }
     }
   }
+}
+
+@media (max-width: 450px) {
+  .home {
+    .slide {
+      .image {
+        img {
+          height: auto;
+          width: 100%;
+        }
+      }
+    }
+  }
 
   .arrivals .box-container .box {
+    flex-flow: column;
+    gap: 2rem;
+    text-align: center;
+  }
 
+  .content form .inputbox input {
+    width: 100%;
+  }
 
-    .stars i {
-      font-size: 1.5rem;
-      color: $gold;
+  .shopping-cart .cart-total {
+    text-align: center;
+
+    .btn {
+      width: 100%;
     }
   }
 }
-
-
-
- @media(max-width: 450px) {
-   .home {
-
-     .slide {
-       .image {
-
-         img {
-           height: auto;
-           width: 100%;
-         }
-       }
-     }
-
-   }
-
-   .arrivals .box-container .box {
-
-     flex-flow: column;
-     gap: 2rem;
-     text-align: center;
-   }
-
-   .content form .inputbox input {
-     width: 100%;
-   }
-
-   .shopping-cart .cart-total {
-     text-align: center;
-
-     .btn {
-       width: 100%;
-     }
-   }
- }

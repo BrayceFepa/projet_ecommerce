@@ -63,7 +63,7 @@ if (isset($_POST['submit'])) {
 
     <header class="header">
         <a href="home.html" class="logo">
-            <i class="fa fa-shop"></i> TWF mobile store
+            <i class="fa fa-shop"></i> BAMBU
         </a>
 
         <form action="" class="search-form">
@@ -132,7 +132,7 @@ if (isset($_POST['submit'])) {
             </div>
             <input type="submit" name="submit" value="login now" class="btn btn-primary">
             <p>vous n'avez pas de compte ?</p>
-            <a href="register.php" class="btn btn-primary link">register now</a>
+            <a href="register.php" class="btn link">register now</a>
         </form>
 
     </section>
@@ -142,7 +142,7 @@ if (isset($_POST['submit'])) {
 
     <!-- Footer section starts -->
     <section class="quick-links">
-        <a href="home.html" class="logo"> <i class="fa fa-shop"></i> TWF mobile store </a>
+        <a href="home.html" class="logo"> <i class="fa fa-shop"></i> BAMBU </a>
 
         <div class="links">
             <a href="home.php"> home </a>

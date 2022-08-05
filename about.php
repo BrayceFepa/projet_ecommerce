@@ -27,7 +27,7 @@
 
   <header class="header">
     <a href="home.html" class="logo">
-      <i class="fa fa-shop"></i> TWF mobile store
+      <i class="fa fa-shop"></i> BAMBU
     </a>
 
     <form action="" class="search-form">
@@ -82,145 +82,148 @@
   <!-- Sidebar section ends  -->
 
 
-<section class="about">
- 
-<div class="image">
-     <img src="images/about-img.png" alt="">
-</div>
+  <section class="about">
 
-<div class="content">
-   <h3>our story</h3>
-   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, quidem earum voluptatum perferendis odio dolore recusandae ipsa, eveniet dolor magni maxime maiores. Doloremque unde voluptatibus vitae sapiente quasi quis assumenda!</p>
-   <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia deserunt totam et mollitia omnis, asperiores, distinctio nobis alias voluptatem, obcaecati saepe! Totam et eaque at amet eligendi esse consequuntur ducimus.</p>
-   <a href="#" class="btn">read more</a>
-</div>
-</section>
+    <div class="image">
+      <img src="images/about-img.png" alt="">
+    </div>
 
-<section class="faq">
+    <div class="content">
+      <h3>our story</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, quidem earum voluptatum perferendis odio dolore recusandae ipsa, eveniet dolor magni maxime maiores. Doloremque unde voluptatibus vitae sapiente quasi quis assumenda!</p>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia deserunt totam et mollitia omnis, asperiores, distinctio nobis alias voluptatem, obcaecati saepe! Totam et eaque at amet eligendi esse consequuntur ducimus.</p>
+      <a href="#" class="btn">read more</a>
+    </div>
+  </section>
 
-<h1 class="heading">questions & <span>answers</span></h1>
+  <section class="faq">
+
+    <h1 class="heading">questions & <span>answers</span></h1>
 
 
-<div class="accordion-container">
+    <div class="accordion-container">
 
       <div class="accordion">
-          <div class="accordion-heading">
+        <div class="accordion-heading">
           <h3>how to make websites?</h3>
           <i class="fas fa-angle-down"></i>
-      </div>
+        </div>
         <p class="accordion-content">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt consectetur eaque delectus repudiandae reprehenderit doloremque rerum autem enim quo ex dolorum eligendi ipsum impedit saepe, molestiae quas quaerat voluptatem natus.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt consectetur eaque delectus repudiandae reprehenderit doloremque rerum autem enim quo ex dolorum eligendi ipsum impedit saepe, molestiae quas quaerat voluptatem natus.
         </p>
 
-  </div>
+      </div>
 
-<div class="accordion">
-  <div class="accordion-heading">
-    <h3>how to place order online?</h3>
-    <i class="fas fa-angle-down"></i>
-</div>
-<p class="accordion-content">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt consectetur eaque delectus repudiandae reprehenderit doloremque rerum autem enim quo ex dolorum eligendi ipsum impedit saepe, molestiae quas quaerat voluptatem natus.
-</p>
+      <div class="accordion">
+        <div class="accordion-heading">
+          <h3>how to place order online?</h3>
+          <i class="fas fa-angle-down"></i>
+        </div>
+        <p class="accordion-content">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt consectetur eaque delectus repudiandae reprehenderit doloremque rerum autem enim quo ex dolorum eligendi ipsum impedit saepe, molestiae quas quaerat voluptatem natus.
+        </p>
 
-</div>
+      </div>
 
-<div class="accordion">
-  <div class="accordion-heading">
-    <h3>how to pay online?</h3>
-    <i class="fas fa-angle-down"></i>
-</div>
-<p class="accordion-content">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt consectetur eaque delectus repudiandae reprehenderit doloremque rerum autem enim quo ex dolorum eligendi ipsum impedit saepe, molestiae quas quaerat voluptatem natus.
-</p>
+      <div class="accordion">
+        <div class="accordion-heading">
+          <h3>how to pay online?</h3>
+          <i class="fas fa-angle-down"></i>
+        </div>
+        <p class="accordion-content">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt consectetur eaque delectus repudiandae reprehenderit doloremque rerum autem enim quo ex dolorum eligendi ipsum impedit saepe, molestiae quas quaerat voluptatem natus.
+        </p>
 
-</div>
+      </div>
 
-<div class="accordion">
-  <div class="accordion-heading">
-    <h3>Is online payment safe?</h3>
-    <i class="fas fa-angle-down"></i>
-</div>
-<p class="accordion-content">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt consectetur eaque delectus repudiandae reprehenderit doloremque rerum autem enim quo ex dolorum eligendi ipsum impedit saepe, molestiae quas quaerat voluptatem natus.
-</p>
+      <div class="accordion">
+        <div class="accordion-heading">
+          <h3>Is online payment safe?</h3>
+          <i class="fas fa-angle-down"></i>
+        </div>
+        <p class="accordion-content">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt consectetur eaque delectus repudiandae reprehenderit doloremque rerum autem enim quo ex dolorum eligendi ipsum impedit saepe, molestiae quas quaerat voluptatem natus.
+        </p>
 
-</div>
+      </div>
 
-<div class="accordion">
-  <div class="accordion-heading">
-    <h3>How to contact service center?</h3>
-    <i class="fas fa-angle-down"></i>
-</div>
-<p class="accordion-content">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt consectetur eaque delectus repudiandae reprehenderit doloremque rerum autem enim quo ex dolorum eligendi ipsum impedit saepe, molestiae quas quaerat voluptatem natus.
-</p>
+      <div class="accordion">
+        <div class="accordion-heading">
+          <h3>How to contact service center?</h3>
+          <i class="fas fa-angle-down"></i>
+        </div>
+        <p class="accordion-content">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt consectetur eaque delectus repudiandae reprehenderit doloremque rerum autem enim quo ex dolorum eligendi ipsum impedit saepe, molestiae quas quaerat voluptatem natus.
+        </p>
 
-</div>
-</div>
+      </div>
+    </div>
 
-</section>
+  </section>
 
-<section class="review">
+  <section class="review">
 
-<h1 class="heading">clients <span>review</span></h1>
+    <h1 class="heading">clients <span>review</span></h1>
 
-<div class="swiper review-slider">
+    <div class="swiper review-slider">
 
-<div class="swiper-wrapper">
+      <div class="swiper-wrapper">
 
-<div class="swiper-slide slide">
-  <img src="images/pic-1.png" alt="">
-  <h3>John Doe</h3>
-  <span>designer</span>
-  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum eaque explicabo aperiam facere ab! Facere, ipsa, accusamus ipsam repellat iusto, quis laboriosam pariatur exercitationem ducimus officia temporibus quasi quia itaque?</p>
-</div>
+        <div class="swiper-slide slide">
+          <img src="images/pic-1.png" alt="">
+          <h3>John Doe</h3>
+          <span>designer</span>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum eaque explicabo aperiam facere ab! Facere, ipsa, accusamus ipsam repellat iusto, quis laboriosam pariatur exercitationem ducimus officia temporibus quasi quia itaque?</p>
+        </div>
 
-<div class="swiper-slide slide">
-  <img src="images/pic-2.png" alt="">
-  <h3>John Doe</h3>
-  <span>designer</span>
-  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum eaque explicabo aperiam facere ab! Facere, ipsa, accusamus ipsam repellat iusto, quis laboriosam pariatur exercitationem ducimus officia temporibus quasi quia itaque?</p>
-</div>
+        <div class="swiper-slide slide">
+          <img src="images/pic-2.png" alt="">
+          <h3>John Doe</h3>
+          <span>designer</span>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum eaque explicabo aperiam facere ab! Facere, ipsa, accusamus ipsam repellat iusto, quis laboriosam pariatur exercitationem ducimus officia temporibus quasi quia itaque?</p>
+        </div>
 
-<div class="swiper-slide slide">
-  <img src="images/pic-3.png" alt="">
-  <h3>John Doe</h3>
-  <span>designer</span>
-  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum eaque explicabo aperiam facere ab! Facere, ipsa, accusamus ipsam repellat iusto, quis laboriosam pariatur exercitationem ducimus officia temporibus quasi quia itaque?</p>
-</div>
+        <div class="swiper-slide slide">
+          <img src="images/pic-3.png" alt="">
+          <h3>John Doe</h3>
+          <span>designer</span>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum eaque explicabo aperiam facere ab! Facere, ipsa, accusamus ipsam repellat iusto, quis laboriosam pariatur exercitationem ducimus officia temporibus quasi quia itaque?</p>
+        </div>
 
-<div class="swiper-slide slide">
-  <img src="images/pic-4.png" alt="">
-  <h3>John Doe</h3>
-  <span>designer</span>
-  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum eaque explicabo aperiam facere ab! Facere, ipsa, accusamus ipsam repellat iusto, quis laboriosam pariatur exercitationem ducimus officia temporibus quasi quia itaque?</p>
-</div>
+        <div class="swiper-slide slide">
+          <img src="images/pic-4.png" alt="">
+          <h3>John Doe</h3>
+          <span>designer</span>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum eaque explicabo aperiam facere ab! Facere, ipsa, accusamus ipsam repellat iusto, quis laboriosam pariatur exercitationem ducimus officia temporibus quasi quia itaque?</p>
+        </div>
 
-<div class="swiper-slide slide">
-  <img src="images/pic-5.png" alt="">
-  <h3>John Doe</h3>
-  <span>designer</span>
-  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum eaque explicabo aperiam facere ab! Facere, ipsa, accusamus ipsam repellat iusto, quis laboriosam pariatur exercitationem ducimus officia temporibus quasi quia itaque?</p>
-</div>
+        <div class="swiper-slide slide">
+          <img src="images/pic-5.png" alt="">
+          <h3>John Doe</h3>
+          <span>designer</span>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum eaque explicabo aperiam facere ab! Facere, ipsa, accusamus ipsam repellat iusto, quis laboriosam pariatur exercitationem ducimus officia temporibus quasi quia itaque?</p>
+        </div>
 
-<div class="swiper-slide slide">
-  <img src="images/pic-6.png" alt="">
-  <h3>John Doe</h3>
-  <span>designer</span>
-  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum eaque explicabo aperiam facere ab! Facere, ipsa, accusamus ipsam repellat iusto, quis laboriosam pariatur exercitationem ducimus officia temporibus quasi quia itaque?</p>
-</div>
+        <div class="swiper-slide slide">
+          <img src="images/pic-6.png" alt="">
+          <h3>John Doe</h3>
+          <span>designer</span>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum eaque explicabo aperiam facere ab! Facere, ipsa, accusamus ipsam repellat iusto, quis laboriosam pariatur exercitationem ducimus officia temporibus quasi quia itaque?</p>
+        </div>
 
 
-</div>
+      </div>
 
-</div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
 
-</section>
+    </div>
+
+  </section>
 
   <!-- Footer section starts -->
   <section class="quick-links">
-    <a href="home.html" class="logo"> <i class="fa fa-shop"></i> TWF mobile store </a>
+    <a href="home.html" class="logo"> <i class="fa fa-shop"></i> BAMBU </a>
 
     <div class="links">
       <a href="home.php"> home </a>

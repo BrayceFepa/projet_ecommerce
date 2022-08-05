@@ -102,10 +102,10 @@ section {
 }
 .header .icons .cart #number {
   position: absolute;
-  top: -0.1rem;
-  right: -3rem;
+  top: -1.3rem;
+  right: -1.2rem;
   font-size: 1.6rem;
-  background: #fff;
+  background: #333;
   border-radius: 50%;
   display: inline-block;
   height: 2rem;
@@ -114,7 +114,7 @@ section {
   justify-content: center;
   align-items: center;
   padding: 1.2rem;
-  color: #c803da;
+  color: gold;
   font-weight: bold;
   cursor: pointer;
 }
@@ -269,6 +269,8 @@ section {
   font-size: 1.5rem;
   border: none;
   outline: none;
+  background: #c803da;
+  color: #fff;
 }
 .products .container .box .image .icons .btn:hover {
   background: #333;
@@ -289,7 +291,7 @@ section {
 }
 .products .container .box .image .content .stars i {
   font-size: 1.8rem;
-  color: #c803da;
+  color: gold;
 }
 
 .register form,
@@ -299,14 +301,14 @@ section {
   padding: 2rem;
   background: #fff;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-  border: 0.2rem solid #333;
+  border: 1px solid #c803da;
   margin: 1rem auto;
 }
 .register form h3,
 .login form h3 {
   font-size: 2.5rem;
   padding: 1rem;
-  color: #333;
+  color: #c803da;
   text-transform: uppercase;
 }
 .register form .box,
@@ -314,7 +316,7 @@ section {
   width: 100%;
   padding: 1.2rem 1.4rem;
   border-radius: 0.5rem;
-  border: 0.2rem solid #333;
+  border: 1px solid #333;
   font-size: 1.6rem;
   color: #666;
   text-transform: none;
@@ -338,6 +340,13 @@ section {
 .login form .btn {
   width: 100%;
   text-align: center;
+  background: #333;
+  color: #fff;
+  border: none;
+}
+.register form .btn:hover,
+.login form .btn:hover {
+  background: #c803da;
 }
 .register form .btn.link,
 .login form .btn.link {
@@ -517,6 +526,11 @@ section {
   color: #666;
   padding-top: 1rem;
 }
+.review .swiper-button-next::after,
+.review .swiper-button-prev::after {
+  font-size: 3rem;
+  color: #c803da;
+}
 
 .infos-container .box-container {
   display: grid;
@@ -592,6 +606,13 @@ section {
   font-size: 1.5rem;
   margin: 0.7rem 0;
 }
+.contact .btn {
+  background: #333;
+  color: #fff;
+}
+.contact .btn:hover {
+  background: #c803da;
+}
 .contact textarea {
   height: 15rem;
   resize: none;
@@ -625,7 +646,7 @@ section {
   flex: 1 1 42rem;
   background: #fff;
   display: flex;
-  padding: 5rem;
+  padding: 0.5rem;
   border-radius: 0.5rem;
 }
 .newsletter form .email {
@@ -637,6 +658,11 @@ section {
 }
 .newsletter form .btn {
   margin-top: 0;
+  background: #333;
+  color: #fff;
+}
+.newsletter form .btn:hover {
+  background: #c803da;
 }
 
 .home {
@@ -670,7 +696,7 @@ section {
   font-size: 3rem;
 }
 .home .swiper-button-next::after,
-.home .swiper-button-next::after {
+.home .swiper-button-prev::after {
   font-size: 3rem;
   color: #333;
 }
@@ -752,6 +778,13 @@ section {
 .shopping-cart .cart-total h3 span {
   color: #c803da;
 }
+.shopping-cart .cart-total .btn {
+  background: #333;
+  color: #fff;
+}
+.shopping-cart .cart-total .btn:hover {
+  background: #c803da;
+}
 
 .btn {
   margin-top: 1rem;
@@ -759,12 +792,13 @@ section {
   border-radius: 0.5rem;
   padding: 1rem 3rem;
   font-size: 1.7rem;
-  color: #fff;
+  color: #333;
   cursor: pointer;
-  background: #c803da;
+  background: gold;
 }
 .btn:hover {
   background: #333;
+  color: #fff;
 }
 
 .heading {
@@ -859,6 +893,10 @@ section {
   color: #666;
   text-decoration: line-through;
 }
+.arrivals .box-container .box .content .stars i {
+  font-size: 1.5rem;
+  color: gold;
+}
 
 .messages {
   position: -webkit-sticky;
@@ -872,7 +910,7 @@ section {
   z-index: 1000;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
   font-size: 2rem;
-  color: #c803da;
+  color: #333;
 }
 
 @media (max-width: 1200px) {
@@ -987,10 +1025,6 @@ section {
   .home .slide .image img {
     height: auto;
     width: 100%;
-  }
-  .arrivals .box-container .box .stars i {
-    font-size: 1.5rem;
-    color: gold;
   }
 }
 @media (max-width: 450px) {

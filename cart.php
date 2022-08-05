@@ -27,7 +27,7 @@
 
     <header class="header">
         <a href="home.html" class="logo">
-            <i class="fa fa-shop"></i> TWF mobile store
+            <i class="fa fa-shop"></i> BAMBU
         </a>
 
         <form action="" class="search-form">
@@ -43,7 +43,7 @@
 
             <span class="cart">
                 <a href="cart.html" class="fa fa-shopping-cart"></a>
-                <span id="number">0</span>
+                <span id="number">1</span>
             </span>
 
         </div>
@@ -200,7 +200,7 @@
 
     <!-- Footer section starts -->
     <section class="quick-links">
-        <a href="home.html" class="logo"> <i class="fa fa-shop"></i> TWF mobile store </a>
+        <a href="home.html" class="logo"> <i class="fa fa-shop"></i> BAMBU </a>
 
         <div class="links">
             <a href="home.php"> home </a>

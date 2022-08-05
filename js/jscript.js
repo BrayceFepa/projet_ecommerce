@@ -26,6 +26,15 @@ var swiper = new Swiper(".review-slider", {
     spaceBetween: 20,
     loop: true,
     grabCursor: true,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+
+    },
+    autoplay: {
+        disableOnInteraction: false,
+        delay : 5000,
+    },
     breakpoints: {
         640: {
             slidesPerView: 1,
@@ -42,6 +51,10 @@ var swiper = new Swiper(".review-slider", {
 var swiper = new Swiper(".home-slider", {
     loop: true,
     grabCursor: true,
+    autoplay: {
+        disableOnInteraction: false,
+      delay: 3000,  
+    },
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",

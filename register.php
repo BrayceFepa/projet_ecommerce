@@ -67,7 +67,7 @@ if (isset($_POST['submit'])) {
 
     <header class="header">
         <a href="home.html" class="logo">
-            <i class="fa fa-shop"></i> TWF mobile store
+            <i class="fa fa-shop"></i> BAMBU
         </a>
 
         <form action="" class="search-form">
@@ -144,7 +144,7 @@ if (isset($_POST['submit'])) {
 
     <!-- Footer section starts -->
     <section class="quick-links">
-        <a href="home.html" class="logo"> <i class="fa fa-shop"></i> TWF mobile store </a>
+        <a href="home.html" class="logo"> <i class="fa fa-shop"></i> BAMBU</a>
 
         <div class="links">
             <a href="home.php"> home </a>

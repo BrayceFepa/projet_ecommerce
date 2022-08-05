@@ -27,7 +27,7 @@
 
     <header class="header">
         <a href="home.html" class="logo">
-            <i class="fa fa-shop"></i> TWF mobile store
+            <i class="fa fa-shop"></i> BAMBU
         </a>
 
         <form action="" class="search-form">
@@ -81,7 +81,7 @@
 
     <!-- Sidebar section ends  -->
 
-        <!-- Home section starts -->
+    <!-- Home section starts -->
 
     <section class="home">
 
@@ -89,38 +89,38 @@
 
             <div class="swiper-wrapper">
 
-                    <div class="swiper-slide slide">
-                        <div class="image">
-                            <img src="images/home-img-1.jpg" alt="">
-                        </div>
-                        <div class="content">
-                            <span>upto 50% off</span>
-                            <h3>Smartphones</h3>
-                            <a href="#" class="btn">Shop now</a>
-                        </div>
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <img src="images/home-img-1.jpg" alt="">
                     </div>
+                    <div class="content">
+                        <span>upto 50% off</span>
+                        <h3>Smartphones</h3>
+                        <a href="#" class="btn">Shop now</a>
+                    </div>
+                </div>
 
-                    <div class="swiper-slide slide">
-                        <div class="image">
-                            <img src="images/home-img-2.jpg" alt="">
-                        </div>
-                        <div class="content">
-                            <span>upto 50% off</span>
-                            <h3>Smartwatch</h3>
-                            <a href="#" class="btn">Shop now</a>
-                        </div>
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <img src="images/home-img-2.jpg" alt="">
                     </div>
-                    
-                    <div class="swiper-slide slide">
-                        <div class="image">
-                            <img src="images/home-img-3.jpg" alt="">
-                        </div>
-                        <div class="content">
-                            <span>upto 50% off</span>
-                            <h3>Headphones</h3>
-                            <a href="#" class="btn">Shop now</a>
-                        </div>
+                    <div class="content">
+                        <span>upto 50% off</span>
+                        <h3>Smartwatch</h3>
+                        <a href="#" class="btn">Shop now</a>
                     </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <img src="images/home-img-3.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <span>upto 50% off</span>
+                        <h3>Headphones</h3>
+                        <a href="#" class="btn">Shop now</a>
+                    </div>
+                </div>
 
             </div>
 
@@ -148,9 +148,9 @@
                     <span>Special offer</span>
                     <h3>upto 50% off</h3>
                 </div>
-            </a>  
-            
-            
+            </a>
+
+
             <a href="#" class="box">
                 <img src="images/banner-2.jpg" alt="">
                 <div class="content">
@@ -159,7 +159,7 @@
                 </div>
             </a>
 
-            
+
             <a href="#" class="box">
                 <img src="images/banner-3.jpg" alt="">
                 <div class="content">
@@ -167,7 +167,7 @@
                     <h3>upto 50% off</h3>
                 </div>
             </a>
- 
+
         </div>
 
     </section>
@@ -175,7 +175,7 @@
 
     <!-- Banner section ends -->
 
-<!-- arrivals section starts -->
+    <!-- arrivals section starts -->
 
     <section class="arrivals">
 
@@ -255,7 +255,7 @@
                 </div>
             </div>
 
-                        <div class="box">
+            <div class="box">
                 <div class="image">
                     <img src="images/arrival-5.jpg" class="main-img" alt="">
                     <img src="images/arrival-5-hover.jpg" class="hover-img" alt="">
@@ -273,7 +273,7 @@
                 </div>
             </div>
 
-                        <div class="box">
+            <div class="box">
                 <div class="image">
                     <img src="images/arrival-6.jpg" class="main-img" alt="">
                     <img src="images/arrival-6-hover.jpg" class="hover-img" alt="">
@@ -295,12 +295,12 @@
 
     </section>
 
-<!-- arrivals section ends -->
+    <!-- arrivals section ends -->
 
 
     <!-- Footer section starts -->
     <section class="quick-links">
-        <a href="home.html" class="logo"> <i class="fa fa-shop"></i> TWF mobile store </a>
+        <a href="home.html" class="logo"> <i class="fa fa-shop"></i> BAMBU</a>
 
         <div class="links">
             <a href="home.php"> home </a>
