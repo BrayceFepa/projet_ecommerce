@@ -11,6 +11,19 @@
   transition: all 0.2s linear;
 }
 
+@-webkit-keyframes fadeIn {
+  0% {
+    scale: 0.5;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    scale: 0.5;
+    opacity: 0;
+  }
+}
 html {
   font-size: 62.5%;
 }
@@ -626,6 +639,42 @@ section {
   margin-top: 0;
 }
 
+.home {
+  background: #fff;
+}
+.home .slide {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  min-height: 40rem;
+  padding: 2rem 0;
+}
+.home .slide .image {
+  flex: 1 1 42rem;
+  text-align: center;
+}
+.home .slide .image img {
+  height: 30rem;
+}
+.home .slide .content {
+  flex: 1 1 42rem;
+}
+.home .slide .content span {
+  font-size: 2rem;
+  color: #c803da;
+}
+.home .slide .content h3 {
+  padding-top: 0.5rem;
+  color: #333;
+  font-size: 3rem;
+}
+.home .swiper-button-next::after,
+.home .swiper-button-next::after {
+  font-size: 3rem;
+  color: #333;
+}
+
 .shopping-cart .box-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
@@ -702,6 +751,113 @@ section {
 }
 .shopping-cart .cart-total h3 span {
   color: #c803da;
+}
+
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  border-radius: 0.5rem;
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+  color: #fff;
+  cursor: pointer;
+  background: #c803da;
+}
+.btn:hover {
+  background: #333;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 3.5rem;
+  color: #333;
+}
+.heading span {
+  color: #c803da;
+}
+
+.banner .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
+  gap: 2rem;
+}
+.banner .box-container .box {
+  position: relative;
+  height: 25rem;
+  border: 0.2rem solid #333;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+.banner .box-container .box:hover img {
+  transform: scale(1.1);
+}
+.banner .box-container .box img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.banner .box-container .box .content {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%) rotate(45deg);
+}
+.banner .box-container .box .content span {
+  font-size: 1.7rem;
+  color: #c803da;
+}
+.banner .box-container .box .content h3 {
+  font-size: 2rem;
+  padding: 0.5rem 0;
+  color: #333;
+}
+
+.arrivals .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(33rem, 1fr));
+  gap: 2rem;
+}
+.arrivals .box-container .box {
+  border-radius: 0.5rem;
+  border: 0.2rem solid #333;
+  padding: 2rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #fff;
+}
+.arrivals .box-container .box:hover .image .main-img {
+  display: none;
+}
+.arrivals .box-container .box:hover .image .hover-img {
+  display: inline-block;
+}
+.arrivals .box-container .box .image img {
+  height: 15rem;
+  -webkit-animation: fadeIn 0.2s linear;
+          animation: fadeIn 0.2s linear;
+}
+.arrivals .box-container .box .image .hover-img {
+  display: none;
+}
+.arrivals .box-container .box .content h3 {
+  font-size: 2rem;
+  color: #333;
+}
+.arrivals .box-container .box .content .price {
+  padding-top: 0.5rem;
+  font-size: 2rem;
+  color: #c803da;
+  padding-bottom: 0.7rem;
+}
+.arrivals .box-container .box .content .price span {
+  font-size: 1.5rem;
+  color: #666;
+  text-decoration: line-through;
 }
 
 .messages {
@@ -803,6 +959,15 @@ section {
     font-size: 1.5rem;
   }
 }
+@media (max-width: 768px) {
+  .swiper-button-next,
+.swiper-button-next {
+    display: none;
+  }
+  .home .slide {
+    text-align: center;
+  }
+}
 @media (max-width: 450px) {
   html {
     font-size: 50%;
@@ -821,7 +986,17 @@ section {
   }
   .home .slide .image img {
     height: auto;
-    width: 100px;
+    width: 100%;
+  }
+  .arrivals .box-container .box .stars i {
+    font-size: 1.5rem;
+    color: gold;
+  }
+}
+@media (max-width: 450px) {
+  .home .slide .image img {
+    height: auto;
+    width: 100%;
   }
   .arrivals .box-container .box {
     flex-flow: column;
