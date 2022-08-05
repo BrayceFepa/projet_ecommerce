@@ -90,20 +90,20 @@
 <div class="box">
     <i class="fas fa-map"></i>
     <h3>adresse</h3>
-    <p>mumbai, india - 400104</p>
+    <p>Yaounde, cameroun - VG69+685</p>
 </div>
 
 <div class="box">
     <i class="fas fa-envelope"></i>
-    <p>shaikhanaa@gmail.com</p>
-    <p> anasbhai@gmail.com</p>
+    <p>laichamouhamankoura@gmail.com</p>
+    <p>laichaMK@gmail.com</p>
 </div>
 
 <div class="box">
     <i class="fas fa-phone"></i>
     <h3>number</h3>
-    <p>+123-456-7890</p>
-    <p>+111-222-3333</p>
+    <p>+237-699-295-336</p>
+    <p>+237-654-831-981</p>
 </div>
 
 </div>
@@ -133,8 +133,7 @@
              <input type="submit" value="send message" class="btn btn-primary"> 
     </form>
 
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15076.895920873152!2d72.83196972692602!3d19.14167056419408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b63aceef0c69%3A0x2aa80cf2287dfa3b!2sJogeshwari%20West%2C%20Bombay%2C%20Maharashtra%20400047%2C%20Inde!5e0!3m2!1sfr!2scm!4v1659483036709!5m2!1sfr!2scm"
-     allowfullscreen="" loading="lazy"></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63694.159013965655!2d11.478759992525932!3d3.8348650805299562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x108bcf08f91e51a3%3A0xf6edc284684d1184!2sINFFDP!5e0!3m2!1sfr!2scm!4v1659693464930!5m2!1sfr!2scm" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 </section>
 
