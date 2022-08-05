@@ -576,28 +576,57 @@ section {
   filter: drop-shadow(0 0 0.1rem #333);
 }
 
-.about .faq .accordion-container {
+.about {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.about .image {
+  flex: 1 1 42rem;
+}
+.about .image img {
+  width: 100%;
+}
+.about .content {
+  flex: 1 1 42rem;
+  padding: 3rem;
+  background: #fff;
+}
+.about .content h3 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: #333;
+}
+.about .content p {
+  font-size: 1.5rem;
+  color: #666;
+  padding: 1rem 0;
+  line-height: 2;
+}
+
+.faq .accordion-container {
   max-width: 70rem;
   margin: 0 auto;
 }
-.about .faq .accordion-container .accordion {
+.faq .accordion-container .accordion {
   background: #fff;
   margin-bottom: 1rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
-.about .faq .accordion-container .accordion:last-child {
+.faq .accordion-container .accordion:last-child {
   margin-bottom: 5rem;
 }
-.about .faq .accordion-container .accordion.active .accordion-heading {
+.faq .accordion-container .accordion.active .accordion-heading {
   background: #0984e3;
 }
-.about .faq .accordion-container .accordion.active i {
+.faq .accordion-container .accordion.active i {
   transform: rotate(180deg);
 }
-.about .faq .accordion-container .accordion.active .accordion-content {
+.faq .accordion-container .accordion.active .accordion-content {
   display: block;
 }
-.about .faq .accordion-container .accordion .accordion-heading {
+.faq .accordion-container .accordion .accordion-heading {
   padding: 2rem;
   display: flex;
   align-items: center;
@@ -606,15 +635,15 @@ section {
   background: #333;
   cursor: pointer;
 }
-.about .faq .accordion-container .accordion .accordion-heading h3 {
+.faq .accordion-container .accordion .accordion-heading h3 {
   font-size: 2rem;
   color: #fff;
 }
-.about .faq .accordion-container .accordion .accordion-heading i {
+.faq .accordion-container .accordion .accordion-heading i {
   font-size: 2rem;
   color: #fff;
 }
-.about .faq .accordion-container .accordion-content {
+.faq .accordion-container .accordion-content {
   padding: 2rem;
   font-size: 1.5rem;
   line-height: 2;
@@ -623,7 +652,8 @@ section {
   -webkit-animation: fadeIn 0.2s linear;
           animation: fadeIn 0.2s linear;
 }
-.about .review .slide {
+
+.review .slide {
   width: 35rem;
   padding: 3rem;
   text-align: center;
@@ -632,55 +662,26 @@ section {
   border-radius: 0.5rem;
   background: #fff;
 }
-.about .review .slide img {
+.review .slide img {
   height: 10rem;
   width: 10rem;
   border-radius: 50%;
   margin-bottom: 0.5rem;
 }
-.about .review .slide h3 {
+.review .slide h3 {
   font-size: 2rem;
   padding: 5rem 0;
   color: #333;
 }
-.about .review .slide span {
+.review .slide span {
   color: #0984e3;
   font-size: 1.7rem;
 }
-.about .review .slide p {
+.review .slide p {
   font-size: 1.5rem;
   line-height: 2;
   color: #666;
   padding-top: 1rem;
-}
-.about .content {
-  flex: 1 1 42rem;
-}
-.about h3 {
-  font-size: 6rem;
-  color: #fff;
-  text-transform: uppercase;
-}
-.about p {
-  font-size: 2.2rem;
-  color: #fff;
-}
-.about form {
-  flex: 1 1 42rem;
-  background: #fff;
-  display: flex;
-  padding: 5rem;
-  border-radius: 0.5rem;
-}
-.about form .email {
-  width: 100%;
-  padding: 0 1.4rem;
-  text-transform: none;
-  color: #666;
-  font-size: 1.6rem;
-}
-.about form .btn {
-  margin-top: 0;
 }
 
 .infos-container .box-container {

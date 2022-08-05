@@ -711,135 +711,134 @@ section {
 }
 
 .about {
-  .faq {
-    .accordion-container {
-      max-width: 70rem;
-      margin: 0 auto;
-
-      .accordion {
-        background: $white;
-        margin-bottom: 1rem;
-        box-shadow: $box-shadow;
-
-        &:last-child {
-          margin-bottom: 5rem;
-        }
-
-        &.active {
-          .accordion-heading {
-            background: $blue;
-          }
-
-          i {
-            transform: rotate(180deg);
-          }
-
-          .accordion-content {
-            display: block;
-          }
-        }
-
-        .accordion-heading {
-          padding: 2rem;
-          display: flex;
-          align-items: center;
-          gap: 1rem;
-          justify-content: space-between;
-          background: $black;
-          cursor: pointer;
-
-          h3 {
-            font-size: 2rem;
-            color: $white;
-          }
-
-          i {
-            font-size: 2rem;
-            color: $white;
-          }
-        }
-      }
-
-      .accordion-content {
-        padding: 2rem;
-        font-size: 1.5rem;
-        line-height: 2;
-        color: $light-color;
-        display: none;
-        animation: fadeIn 0.2s linear;
-      }
-    }
-  }
-
-  .review {
-    .slide {
-      width: 35rem;
-      padding: 3rem;
-      text-align: center;
-      border: $border;
-      box-shadow: $box-shadow;
-      border-radius: 0.5rem;
-      background: $white;
-
-      img {
-        height: 10rem;
-        width: 10rem;
-        border-radius: 50%;
-        margin-bottom: 0.5rem;
-      }
-
-      h3 {
-        font-size: 2rem;
-        padding: 5rem 0;
-        color: $black;
-      }
-
-      span {
-        color: $blue;
-        font-size: 1.7rem;
-      }
-
-      p {
-        font-size: 1.5rem;
-        line-height: 2;
-        color: $light-color;
-        padding-top: 1rem;
-      }
-    }
-  }
-  .content {
-    flex: 1 1 42rem;
-  }
-
-  h3 {
-    font-size: 6rem;
-    color: $white;
-    text-transform: uppercase;
-  }
-
-  p {
-    font-size: 2.2rem;
-    color: $white;
-  }
-
-  form {
-    flex: 1 1 42rem;
-    background: $white;
     display: flex;
-    padding: 5rem;
-    border-radius: 0.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
 
-    .email {
-      width: 100%;
-      padding: 0 1.4rem;
-      text-transform: none;
-      color: $light-color;
-      font-size: 1.6rem;
+    .image {
+        flex: 1 1 42rem;
+
+        img {
+            width: 100%;
+        }
     }
-    .btn {
-      margin-top: 0;
+
+    .content {
+        flex: 1 1 42rem;
+        padding: 3rem;
+        background: $white;
+
+        h3 {
+            font-size: 3rem;
+            text-transform: uppercase;
+            color: $black;
+        }
+
+        p {
+            font-size: 1.5rem;
+            color: $light-color;
+            padding: 1rem 0;
+            line-height: 2;
+        }
     }
-  }
+}
+
+.faq {
+    .accordion-container {
+        max-width: 70rem;
+        margin: 0 auto;
+
+        .accordion {
+            background: $white;
+            margin-bottom: 1rem;
+            box-shadow: $box-shadow;
+
+            &:last-child {
+                margin-bottom: 5rem;
+            }
+
+            &.active {
+                .accordion-heading {
+                    background: $blue;
+                }
+
+                i {
+                    transform: rotate(180deg);
+                }
+
+                .accordion-content {
+                    display: block;
+                }
+            }
+
+            .accordion-heading {
+                padding: 2rem;
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                justify-content: space-between;
+                background: $black;
+                cursor: pointer;
+
+                h3 {
+                    font-size: 2rem;
+                    color: $white;
+                }
+
+                i {
+                    font-size: 2rem;
+                    color: $white;
+                }
+            }
+        }
+
+        .accordion-content {
+            padding: 2rem;
+            font-size: 1.5rem;
+            line-height: 2;
+            color: $light-color;
+            display: none;
+            animation: fadeIn 0.2s linear;
+        }
+    }
+}
+
+.review {
+    .slide {
+        width: 35rem;
+        padding: 3rem;
+        text-align: center;
+        border: $border;
+        box-shadow: $box-shadow;
+        border-radius: 0.5rem;
+        background: $white;
+
+        img {
+            height: 10rem;
+            width: 10rem;
+            border-radius: 50%;
+            margin-bottom: 0.5rem;
+        }
+
+        h3 {
+            font-size: 2rem;
+            padding: 5rem 0;
+            color: $black;
+        }
+
+        span {
+            color: $blue;
+            font-size: 1.7rem;
+        }
+
+        p {
+            font-size: 1.5rem;
+            line-height: 2;
+            color: $light-color;
+            padding-top: 1rem;
+        }
+    }
 }
 
 .infos-container {
