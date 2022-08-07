@@ -1,3 +1,22 @@
+<?php
+session_start();
+require_once('./php/components.php');
+include('php/config.php');
+
+$user_id = $_SESSION['user_id'];
+
+if (!isset($user_id)) {
+    header('location:login.php');
+}
+
+if (isset($_GET['logout'])) {
+    unset($user_id);
+    session_destroy();
+    header('location:login.php');
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,7 +45,7 @@
     <!-- Header section starts  -->
 
     <header class="header">
-        <a href="home.html" class="logo">
+        <a href="home.php" class="logo">
             <i class="fa fa-shop"></i> BAMBU
         </a>
 
@@ -38,12 +57,21 @@
         <div class="icons">
             <div id="menu-btn" class="fa fa-bars"></div>
             <div id="search-btn" class="fa fa-search"></div>
-            <a href="login.html" class="fa fa-user"></a>
+            <a href="login.php" class="fa fa-user"></a>
             <a href="#" class="fa fa-heart"></a>
 
             <span class="cart">
-                <a href="cart.html" class="fa fa-shopping-cart"></a>
-                <span id="number">0</span>
+                <a href="cart.php" class="fa fa-shopping-cart"></a>
+                <span id="number">
+                    <?php
+                    $carts = $db->query("SELECT * FROM `cart` WHERE user_id = '$user_id'")->fetchAll();
+                    $count = 0;
+                    foreach ($carts as $cart) {
+                        $count += $cart['quantity'];
+                    }
+                    echo $count;
+                    ?>
+                </span>
             </span>
 
         </div>
@@ -60,9 +88,12 @@
         <div id="close-side-bar" class="fa fa-times"></div>
 
         <div class="user">
-            <img src="images/user-img.png" alt="">
-            <h3>user 1</h3>
-            <a href="#">Logout</a>
+            <img src="uploads/<?php
+                                $row = $db->query("SELECT * FROM `clients` WHERE id_client = '$user_id'")->fetch(PDO::FETCH_ASSOC);
+                                echo $row['client_img'];
+                                ?>" alt="">
+            <h3><?php echo $row['name']; ?></h3>
+            <a href="register.php?logout=<?php echo $user_id; ?>">Logout</a>
         </div>
 
         <nav class="navbar">
@@ -190,7 +221,7 @@
                 </div>
                 <div class="content">
                     <h3>HD Television</h3>
-                    <div class="price">$249.99 <span>$399.99</span></div>
+                    <div class="price">124000 FCFA <span>15000 FCFA</span></div>
                     <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -208,7 +239,7 @@
                 </div>
                 <div class="content">
                     <h3>lenovo laptop</h3>
-                    <div class="price">$249.99 <span>$399.99</span></div>
+                    <div class="price">150000 FCFA <span>180000 FCFA</span></div>
                     <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -226,7 +257,7 @@
                 </div>
                 <div class="content">
                     <h3>new smartphone</h3>
-                    <div class="price">$249.99 <span>$399.99</span></div>
+                    <div class="price">80000 FCFA <span>100000 FCFA</span></div>
                     <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -244,7 +275,7 @@
                 </div>
                 <div class="content">
                     <h3>new printer</h3>
-                    <div class="price">$249.99 <span>$399.99</span></div>
+                    <div class="price">200000 FCFA <span>250000 FCFA</span></div>
                     <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -262,7 +293,7 @@
                 </div>
                 <div class="content">
                     <h3>new headphones</h3>
-                    <div class="price">$249.99 <span>$399.99</span></div>
+                    <div class="price">15000 FCFA <span>20000 FCFA</span></div>
                     <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -280,7 +311,7 @@
                 </div>
                 <div class="content">
                     <h3>new speakers</h3>
-                    <div class="price">$249.99 <span>$399.99</span></div>
+                    <div class="price">40000 FCFA <span>50000 FCFA</span></div>
                     <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>

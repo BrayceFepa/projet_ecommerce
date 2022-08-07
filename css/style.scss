@@ -12,13 +12,13 @@
   transition: all 0.2s linear;
 }
 
-$blue: #c803da;
+$blue: #e01cf1;
 $black: #333;
 $white: #fff;
 $gold: gold;
 $light-color: #666;
 $light-bg: #eee;
-$border: 0.2rem solid $black;
+$border: 0.1rem solid $black;
 $box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 
 @mixin grid($val) {
@@ -122,7 +122,7 @@ section {
         position: absolute;
         top: -1.3rem;
         right: -1.2rem;
-        font-size: 1.6rem;
+        font-size: 1.3rem;
         background: $black;
         border-radius: 50%;
         display: inline-block;
@@ -132,7 +132,7 @@ section {
         justify-content: center;
         align-items: center;
         padding: 1.2rem;
-        color: $gold;
+        color: $white;
         font-weight: bold;
         cursor: pointer;
       }
@@ -286,7 +286,7 @@ section {
     }
 
     .box {
-      padding: 1rem;
+      padding: .7rem;
       border: $border;
       background: $white;
       box-shadow: $box-shadow;
@@ -306,7 +306,7 @@ section {
       .image {
         img {
           animation: fadeIn 0.2s linear;
-          height: 20rem;
+          height: 18rem;
         }
 
         .hover-img {
@@ -314,6 +314,14 @@ section {
         }
 
         .icons {
+
+          display: flex;
+          justify-content: center;
+          flex-flow: column;
+          align-items: center;
+          gap: .5rem;
+
+
           .btn {
             padding: 1.1rem 1.2rem;
             font-size: 1.5rem;
@@ -325,6 +333,16 @@ section {
             &:hover {
               background: $black;
             }
+          }
+
+          input[type="number"]{
+            margin: 0 auto;
+            width: 50%;
+            border: $border;
+            border-radius: .5rem;
+            font-size: 1.4rem;
+            color: $black;
+            padding: .8rem 1rem;
           }
         }
 
@@ -368,6 +386,8 @@ section {
     box-shadow: $box-shadow;
     border: 1px solid $blue;
     margin: 1rem auto;
+    display: flex;
+    flex-flow: column;
 
     h3 {
       font-size: 2.5rem;
@@ -407,6 +427,7 @@ section {
       background: $black;
       color: $white;
       border: none;
+      outline: none;
       &:hover{
         background: $blue;
       }
@@ -427,6 +448,25 @@ section {
       text-align: center;
       padding-bottom: 1rem;
     }
+
+    #photo{
+      display: none;
+    }
+
+    .btn-img{
+      width: 40%;
+      font-size: 1.2rem;
+      text-align: center;
+      background: $blue;
+      color: $white;
+      border: none;
+      outline: none;
+      align-self: center;
+      padding: .5rem;
+      border-radius: .3rem;
+      margin: 1rem 0;
+      
+    }
   }
 }
 
@@ -444,7 +484,7 @@ section {
     text-decoration: none;
 
     i {
-      color: $gold;
+      color: $white;
     }
   }
 
@@ -610,7 +650,7 @@ section {
 
     h3 {
       font-size: 2rem;
-      padding: 5rem 0;
+      padding: .5rem 0;
       color: $black;
     }
 
@@ -720,6 +760,8 @@ section {
   .btn{
     background: $black;
     color: $white;
+    outline: none;
+    border: none;
 
     &:hover{
       background: $blue;
@@ -842,6 +884,7 @@ section {
       box-shadow: $box-shadow;
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: -5rem;
       position: relative;
 
@@ -850,11 +893,12 @@ section {
         top: 1rem;
         right: 1.5rem;
         font-size: 2.5rem;
-        color: $light-color;
+        color: rgb(252, 89, 89);
         cursor: pointer;
+        text-decoration: none;
 
         &:hover {
-          color: $black;
+          color: red;
         }
       }
 
@@ -871,7 +915,8 @@ section {
         form {
           padding: 1rem 0;
           display: flex;
-          gap: 5rem;
+          gap: 2.5rem;
+          justify-content: space-between;
           align-items: center;
 
           span {
@@ -885,6 +930,30 @@ section {
             border-radius: -5rem;
             background: $light-bg;
             font-size: 1.5rem;
+          }
+
+          .cart-foot{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            margin: 0 auto;
+
+            .update-btn {
+                margin-top: 1rem;
+                display: inline-block;
+                border-radius: 0.5rem;
+                padding: 1rem 1.9rem;
+                font-size: 1.5rem;
+                color: $white;
+                cursor: pointer;
+                background: $blue;
+            
+                &:hover {
+                  background: $black;
+                }
+              }
+
           }
         }
 
@@ -930,6 +999,12 @@ section {
         background: $blue;
       }
     }
+
+    .disabled{
+      pointer-events: none;
+      opacity: .5;
+    }
+
   }
 }
 
@@ -939,12 +1014,14 @@ section {
   border-radius: 0.5rem;
   padding: 1rem 3rem;
   font-size: 1.7rem;
-  color: $black;
+  color: $white;
   cursor: pointer;
-  background: $gold;
+  background: $black;
+  outline: none;
+  border: none;
 
   &:hover {
-    background: $black;
+    background: $blue;
     color: $white;
   }
 }
@@ -1140,6 +1217,10 @@ section {
         font-size: 1.4rem;
       }
     }
+
+    .search-form{
+        width: 35rem;
+    }
   }
 }
 
@@ -1166,7 +1247,15 @@ section {
     }
 
     .logo {
-      font-size: 1.3rem;
+      font-size: 1.7rem;
+    }
+
+    .cart{
+
+      #number{
+        padding: 1rem;
+        font-size: 1.1rem;
+      }
     }
   }
 
@@ -1193,6 +1282,16 @@ section {
         font-size: 1.5rem;
       }
     }
+  }
+
+  .products{
+
+    .container{
+      @include grid(31rem);
+
+      
+    }
+
   }
 }
 
@@ -1221,11 +1320,14 @@ section {
       display: flex;
       flex-flow: column;
       align-items: center;
+      gap: .6rem;
+      font-size: 2rem;
     }
 
     .icons a,
     .icons div {
-      margin: 0 1rem;
+      margin: 0;
+      font-size: 2rem;
     }
   }
 

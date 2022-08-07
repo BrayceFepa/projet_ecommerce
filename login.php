@@ -1,20 +1,44 @@
 <?php
 
-
-include 'php/config.php';
 session_start();
+include 'php/config.php';
+require_once('./php/components.php');
+
+
 
 if (isset($_POST['submit'])) {
 
-    $email = mysqli_real_escape_string($conn, $_POST['email']);
-    $pass = mysqli_real_escape_string($conn, md5($_POST['password']));
 
-    $select = mysqli_query($conn, "SELECT * FROM `clients` WHERE email = '$email' AND password = '$pass'") or die('query failed');
 
-    if (mysqli_num_rows($select) > 0) {
-        $row = mysqli_fetch_assoc($select);
+    $statement = $db->prepare("SELECT SQL_CALC_FOUND_ROWS * FROM `clients` WHERE email=:mail AND password =:pass") or die('query failed');
+    $statement->bindParam(':mail', $email);
+    $statement->bindParam(':pass', $pass);
+    $email = $_POST['email'];
+    $pass =  md5($_POST['password']);
+
+
+    $statement->execute();
+    $statement = $db->prepare("SELECT FOUND_ROWS()");
+    $statement->execute();
+    $select_user = $statement->fetchColumn();
+
+    $statement->execute([
+        'mail' => $email,
+        'pass' => $pass,
+    ]);
+
+
+    if ($select_user > 0) {
+        $statement = $db->prepare("SELECT * FROM `clients` WHERE email=:mail AND password =:pass") or die('query failed');
+
+        $statement->execute([
+            'mail' => $email,
+            'pass' => $pass,
+        ]);
+
+        $row = $statement->fetch(PDO::FETCH_ASSOC);
         $_SESSION['user_id'] = $row['id_client'];
-        header('location:products.php');
+        header('location:home.php');
     } else {
         $messages[] = 'mot de passe ou email incorrects!';
     }
@@ -62,7 +86,7 @@ if (isset($_POST['submit'])) {
     <!-- Header section starts  -->
 
     <header class="header">
-        <a href="home.html" class="logo">
+        <a href="home.php" class="logo">
             <i class="fa fa-shop"></i> BAMBU
         </a>
 
@@ -74,11 +98,11 @@ if (isset($_POST['submit'])) {
         <div class="icons">
             <div id="menu-btn" class="fa fa-bars"></div>
             <div id="search-btn" class="fa fa-search"></div>
-            <a href="login.html" class="fa fa-user"></a>
+            <a href="login.php" class="fa fa-user"></a>
             <a href="#" class="fa fa-heart"></a>
 
             <span class="cart">
-                <a href="cart.html" class="fa fa-shopping-cart"></a>
+                <a href="cart.php" class="fa fa-shopping-cart"></a>
                 <span id="number">0</span>
             </span>
 
@@ -97,7 +121,7 @@ if (isset($_POST['submit'])) {
 
         <div class="user">
             <img src="images/user-img.png" alt="">
-            <h3>user 1</h3>
+            <h3>user name</h3>
             <a href="#">Logout</a>
         </div>
 

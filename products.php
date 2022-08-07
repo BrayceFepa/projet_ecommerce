@@ -1,22 +1,39 @@
 <?php
+
 session_start();
-
-require_once('./php/createDB.php');
 require_once('./php/components.php');
-
-//create instance of createDB class
-$database = new createDB("Productsdb", "gestionnaires");
-
-
-
-include 'php/config.php';
-
-
-
+include('php/config.php');
 $user_id = $_SESSION['user_id'];
 
 if (!isset($user_id)) {
     header('location:login.php');
+}
+
+if (isset($_GET['logout'])) {
+    unset($user_id);
+    session_destroy();
+    header('location:login.php');
+}
+
+if (isset($_POST['add'])) {
+
+    $product_name = $_POST['product_name'];
+    $product_image = $_POST['product_image'];
+    $product_price = $_POST['product_price'];
+    $product_quantity = $_POST['product_quantity'];
+
+    $result = $db->prepare("SELECT SQL_CALC_FOUND_ROWS * FROM `cart` WHERE name = '$product_name' AND user_id = '$user_id'");
+    $result->execute();
+    $result = $db->prepare("SELECT FOUND_ROWS()");
+    $result->execute();
+    $select_cart = $result->fetchColumn();
+
+    if ($select_cart > 0) {
+        $messages[] = 'Product already added to cart !';
+    } else {
+        $db->query("INSERT INTO `cart`(name, price, product_img, quantity, user_id) VALUES ('$product_name', '$product_price', '$product_image', '$product_quantity', '$user_id')") or die('query failde');
+        $messages[] = 'Product added to cart !';
+    }
 }
 
 ?>
@@ -60,7 +77,7 @@ if (!isset($user_id)) {
     <!-- Header section starts  -->
 
     <header class="header">
-        <a href="home.html" class="logo">
+        <a href="home.php" class="logo">
             <i class="fa fa-shop"></i> BAMBU
         </a>
 
@@ -72,12 +89,21 @@ if (!isset($user_id)) {
         <div class="icons">
             <div id="menu-btn" class="fa fa-bars"></div>
             <div id="search-btn" class="fa fa-search"></div>
-            <a href="login.html" class="fa fa-user"></a>
+            <a href="login.php" class="fa fa-user"></a>
             <a href="#" class="fa fa-heart"></a>
 
             <span class="cart">
-                <a href="cart.html" class="fa fa-shopping-cart"></a>
-                <span id="number">0</span>
+                <a href="cart.php" class="fa fa-shopping-cart"></a>
+                <span id="number">
+                    <?php
+                    $carts = $db->query("SELECT * FROM `cart` WHERE user_id = '$user_id'")->fetchAll();
+                    $count = 0;
+                    foreach ($carts as $cart) {
+                        $count += $cart['quantity'];
+                    }
+                    echo $count;
+                    ?>
+                </span>
             </span>
 
         </div>
@@ -94,9 +120,12 @@ if (!isset($user_id)) {
         <div id="close-side-bar" class="fa fa-times"></div>
 
         <div class="user">
-            <img src="images/user-img.png" alt="">
-            <h3>user 1</h3>
-            <a href="#">Logout</a>
+            <img src="uploads/<?php
+                                $row = $db->query("SELECT * FROM `clients` WHERE id_client = '$user_id'")->fetch(PDO::FETCH_ASSOC);
+                                echo $row['client_img'];
+                                ?>" alt="">
+            <h3><?php echo $row['name']; ?></h3>
+            <a href="products.php?logout=<?php echo $user_id; ?>">Logout</a>
         </div>
 
         <nav class="navbar">
@@ -126,9 +155,10 @@ if (!isset($user_id)) {
 
             <?php
 
-            $result = $database->getData();
-            while ($row = mysqli_fetch_assoc($result)) {
-                categories($row['categ_name'], $row['categ_img']);
+            $categories = $db->query("SELECT * FROM categories")->fetchAll();
+
+            foreach ($categories as $categorie) {
+                categories($categorie['categ_name'], $categorie['categ_img']);
             }
 
             ?>
@@ -145,27 +175,28 @@ if (!isset($user_id)) {
     <section class="products">
 
         <h1 class="heading">nos <span>produits</span></h1>
-        <form action="" method="POST">
 
 
-            <div class="container">
 
-                <div class="row g-4">
+        <div class="container">
 
-                    <?php
+            <div class="row g-4">
 
-                    $result2 = $database->getProduct();
-                    while ($row2 = mysqli_fetch_assoc($result2)) {
-                        products($row2['product_name'], $row2['product_price'], $row2['product_img'], $row2['product_hover']);
-                    }
+                <?php
 
-                    ?>
+                $products = $db->query("SELECT * FROM products")->fetchAll();
 
+                foreach ($products as $product) {
+                    products($product['product_name'], $product['product_price'], $product['product_img'], $product['product_hover']);
+                }
 
-                </div>
+                ?>
+
 
             </div>
-        </form>
+
+        </div>
+
 
     </section>
 

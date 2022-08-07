@@ -1,25 +1,58 @@
 <?php
 
+require_once('./php/components.php');
+include('php/config.php');
 
-include 'php/config.php';
+
 
 if (isset($_POST['submit'])) {
 
-    $name = mysqli_real_escape_string($conn, $_POST['name']);
-    $email = mysqli_real_escape_string($conn, $_POST['email']);
-    $pass = mysqli_real_escape_string($conn, md5($_POST['password']));
-    $cpass = mysqli_real_escape_string($conn, md5($_POST['cpassword']));
+    $name = $_POST['name'];
+    $cpass = md5($_POST['cpassword']);
 
-    $select = mysqli_query($conn, "SELECT * FROM `clients` WHERE email = '$email' AND password = '$pass'") or die('query failed');
 
-    if (mysqli_num_rows($select) > 0) {
+    $photo_name = $_FILES['photo']['name'];
+    $photo_tmp_name = $_FILES['photo']['tmp_name'];
+    $photo_size = $_FILES['photo']['size'];
+
+    if ($photo_size > 5242880) {
+        $messages[] = 'photo is very large';
+    }
+
+
+    $statement = $db->prepare("SELECT SQL_CALC_FOUND_ROWS * FROM `clients` WHERE email=:mail AND password=:pass") or die('query failed');
+    $statement->bindParam(':mail', $email);
+    $statement->bindParam(':pass', $pass);
+    $email = $_POST['email'];
+    $pass =  md5($_POST['password']);
+
+    $statement->execute();
+    $statement = $db->prepare("SELECT FOUND_ROWS()");
+    $statement->execute();
+    $select_register = $statement->fetchColumn();
+
+    $statement->execute([
+        'mail' => $email,
+        'pass' => $pass,
+    ]);
+
+
+
+    if ($select_register > 0) {
         $messages[] = 'Ce compte existe déjà!';
     } else {
-        mysqli_query($conn, "INSERT INTO `clients` (name, email, password) VALUES ('$name', '$email', '$pass')") or die('query failed!');
+        $statement = $db->prepare("INSERT INTO `clients` (name, email, password, client_img) VALUES (:name, :mail, :pass, '$photo_name')") or die('query failed!');
+        $statement->bindParam(':name', $name);
+        $statement->bindParam(':mail', $email);
+        $statement->bindParam(':pass', $pass);
+        $statement->execute();
+        move_uploaded_file($photo_tmp_name, "uploads/" . $photo_name);
         $messages[] = 'inscription réussie!';
         header('location:login.php');
     }
 }
+
+
 
 
 ?>
@@ -66,7 +99,7 @@ if (isset($_POST['submit'])) {
     <!-- Header section starts  -->
 
     <header class="header">
-        <a href="home.html" class="logo">
+        <a href="home.php" class="logo">
             <i class="fa fa-shop"></i> BAMBU
         </a>
 
@@ -78,11 +111,11 @@ if (isset($_POST['submit'])) {
         <div class="icons">
             <div id="menu-btn" class="fa fa-bars"></div>
             <div id="search-btn" class="fa fa-search"></div>
-            <a href="login.html" class="fa fa-user"></a>
+            <a href="login.php" class="fa fa-user"></a>
             <a href="#" class="fa fa-heart"></a>
 
             <span class="cart">
-                <a href="cart.html" class="fa fa-shopping-cart"></a>
+                <a href="cart.php" class="fa fa-shopping-cart"></a>
                 <span id="number">0</span>
             </span>
 
@@ -100,8 +133,10 @@ if (isset($_POST['submit'])) {
         <div id="close-side-bar" class="fa fa-times"></div>
 
         <div class="user">
+
+
             <img src="images/user-img.png" alt="">
-            <h3>user 1</h3>
+            <h3>user name</h3>
             <a href="#">Logout</a>
         </div>
 
@@ -126,12 +161,14 @@ if (isset($_POST['submit'])) {
 
     <section class="register">
 
-        <form action="register.php" method="POST">
+        <form action="register.php" method="POST" enctype="multipart/form-data">
             <h3>register now </h3>
             <input type="text" name="name" placeholder="entrer votre name" id="" class="box">
             <input type="email" name="email" placeholder="entrer votre email" id="" class="box">
             <input type="password" name="password" placeholder="entrer votre mot de passe" id="" class="box">
             <input type="password" name="cpassword" placeholder="entrer votre mot de passe à nouveau" id="" class="box">
+            <input type="file" id="photo" name="photo" accept="image/*" required>
+            <label for="photo" class="btn-img">choose profile picture</label>
             <input type="submit" name="submit" value="register now" class="btn btn-primary">
             <p>vous avez déjà un compte ?</p>
             <a href="login.php" class="btn btn-primary link">login now</a>

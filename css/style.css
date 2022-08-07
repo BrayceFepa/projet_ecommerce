@@ -34,7 +34,7 @@ html::-webkit-scrollbar-track {
   background: #eee;
 }
 html::-webkit-scrollbar-thumb {
-  background: #c803da;
+  background: #e01cf1;
   border-radius: 5rem;
 }
 
@@ -53,7 +53,7 @@ section {
   right: 0;
   left: 0;
   z-index: 500;
-  background: #c803da;
+  background: #e01cf1;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -62,7 +62,7 @@ section {
 .header .logo {
   font-size: 2.5rem;
   color: #fff;
-  font-weight: 0.2rem solid #333;
+  font-weight: 0.1rem solid #333;
   text-decoration: none;
 }
 .header .logo i {
@@ -90,7 +90,7 @@ section {
   cursor: pointer;
 }
 .header .search-form label:hover {
-  color: #c803da;
+  color: #e01cf1;
 }
 .header .icons {
   display: flex;
@@ -104,7 +104,7 @@ section {
   position: absolute;
   top: -1.3rem;
   right: -1.2rem;
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   background: #333;
   border-radius: 50%;
   display: inline-block;
@@ -114,7 +114,7 @@ section {
   justify-content: center;
   align-items: center;
   padding: 1.2rem;
-  color: gold;
+  color: #fff;
   font-weight: bold;
   cursor: pointer;
 }
@@ -180,7 +180,7 @@ section {
 }
 .side-bar .user a {
   font-size: 1.5rem;
-  color: #c803da;
+  color: #e01cf1;
   text-decoration: none;
   padding: 0;
 }
@@ -199,7 +199,7 @@ section {
   margin: 0;
 }
 .side-bar .navbar a:hover {
-  color: #c803da;
+  color: #e01cf1;
 }
 .side-bar .navbar a:hover i {
   padding-right: 2rem;
@@ -216,7 +216,7 @@ section {
 .category .box-container .box {
   text-align: center;
   border-radius: 0.5rem;
-  border: 0.2rem solid #333;
+  border: 0.1rem solid #333;
   padding: 2rem;
   background: #fff;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
@@ -243,8 +243,8 @@ section {
   align-items: center;
 }
 .products .container .box {
-  padding: 1rem;
-  border: 0.2rem solid #333;
+  padding: 0.7rem;
+  border: 0.1rem solid #333;
   background: #fff;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
   border-radius: 0.5rem;
@@ -259,21 +259,37 @@ section {
 .products .container .box .image img {
   -webkit-animation: fadeIn 0.2s linear;
           animation: fadeIn 0.2s linear;
-  height: 20rem;
+  height: 18rem;
 }
 .products .container .box .image .hover-img {
   display: none;
+}
+.products .container .box .image .icons {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  align-items: center;
+  gap: 0.5rem;
 }
 .products .container .box .image .icons .btn {
   padding: 1.1rem 1.2rem;
   font-size: 1.5rem;
   border: none;
   outline: none;
-  background: #c803da;
+  background: #e01cf1;
   color: #fff;
 }
 .products .container .box .image .icons .btn:hover {
   background: #333;
+}
+.products .container .box .image .icons input[type=number] {
+  margin: 0 auto;
+  width: 50%;
+  border: 0.1rem solid #333;
+  border-radius: 0.5rem;
+  font-size: 1.4rem;
+  color: #333;
+  padding: 0.8rem 1rem;
 }
 .products .container .box .image .content .card-title {
   font-size: 1.6rem;
@@ -281,7 +297,7 @@ section {
 }
 .products .container .box .image .content .price {
   font-size: 1.6rem;
-  color: #c803da;
+  color: #e01cf1;
   font-weight: bold;
 }
 .products .container .box .image .content .price span {
@@ -301,14 +317,16 @@ section {
   padding: 2rem;
   background: #fff;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-  border: 1px solid #c803da;
+  border: 1px solid #e01cf1;
   margin: 1rem auto;
+  display: flex;
+  flex-flow: column;
 }
 .register form h3,
 .login form h3 {
   font-size: 2.5rem;
   padding: 1rem;
-  color: #c803da;
+  color: #e01cf1;
   text-transform: uppercase;
 }
 .register form .box,
@@ -343,10 +361,11 @@ section {
   background: #333;
   color: #fff;
   border: none;
+  outline: none;
 }
 .register form .btn:hover,
 .login form .btn:hover {
-  background: #c803da;
+  background: #e01cf1;
 }
 .register form .btn.link,
 .login form .btn.link {
@@ -354,7 +373,7 @@ section {
 }
 .register form .btn.link:hover,
 .login form .btn.link:hover {
-  background: #c803da;
+  background: #e01cf1;
 }
 .register form p,
 .login form p {
@@ -363,6 +382,24 @@ section {
   color: #666;
   text-align: center;
   padding-bottom: 1rem;
+}
+.register form #photo,
+.login form #photo {
+  display: none;
+}
+.register form .btn-img,
+.login form .btn-img {
+  width: 40%;
+  font-size: 1.2rem;
+  text-align: center;
+  background: #e01cf1;
+  color: #fff;
+  border: none;
+  outline: none;
+  align-self: center;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  margin: 1rem 0;
 }
 
 .quick-links {
@@ -375,11 +412,11 @@ section {
 .quick-links .logo {
   font-size: 2.5rem;
   color: #fff;
-  font-weight: 0.2rem solid #333;
+  font-weight: 0.1rem solid #333;
   text-decoration: none;
 }
 .quick-links .logo i {
-  color: gold;
+  color: #fff;
 }
 .quick-links .links a {
   margin: 0 1rem;
@@ -412,7 +449,7 @@ section {
   color: #666;
 }
 .credit p span {
-  color: #c803da;
+  color: #e01cf1;
 }
 .credit img {
   height: 4rem;
@@ -461,7 +498,7 @@ section {
   margin-bottom: 5rem;
 }
 .faq .accordion-container .accordion.active .accordion-heading {
-  background: #c803da;
+  background: #e01cf1;
 }
 .faq .accordion-container .accordion.active i {
   transform: rotate(180deg);
@@ -500,7 +537,7 @@ section {
   width: 35rem;
   padding: 3rem;
   text-align: center;
-  border: 0.2rem solid #333;
+  border: 0.1rem solid #333;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
   border-radius: 0.5rem;
   background: #fff;
@@ -513,11 +550,11 @@ section {
 }
 .review .slide h3 {
   font-size: 2rem;
-  padding: 5rem 0;
+  padding: 0.5rem 0;
   color: #333;
 }
 .review .slide span {
-  color: #c803da;
+  color: #e01cf1;
   font-size: 1.7rem;
 }
 .review .slide p {
@@ -529,7 +566,7 @@ section {
 .review .swiper-button-next::after,
 .review .swiper-button-prev::after {
   font-size: 3rem;
-  color: #c803da;
+  color: #e01cf1;
 }
 
 .infos-container .box-container {
@@ -542,7 +579,7 @@ section {
   border-radius: 0.5rem;
   text-align: center;
   padding: 2rem;
-  border: 0.2rem solid #333;
+  border: 0.1rem solid #333;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 .infos-container .box-container .box i {
@@ -552,7 +589,7 @@ section {
   font-size: 2.5rem;
   border-radius: 50%;
   margin-bottom: 0.5rem;
-  background: #c803da;
+  background: #e01cf1;
   color: #fff;
 }
 .infos-container .box-container .box h3 {
@@ -599,7 +636,7 @@ section {
   padding: 1.2rem 1.4rem;
   border-radius: 0.5rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-  border: 0.2rem solid #333;
+  border: 0.1rem solid #333;
   background: #fff;
   text-transform: none;
   color: #666;
@@ -609,9 +646,11 @@ section {
 .contact .btn {
   background: #333;
   color: #fff;
+  outline: none;
+  border: none;
 }
 .contact .btn:hover {
-  background: #c803da;
+  background: #e01cf1;
 }
 .contact textarea {
   height: 15rem;
@@ -624,7 +663,7 @@ section {
 }
 
 .newsletter {
-  background-color: #c803da;
+  background-color: #e01cf1;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -662,7 +701,7 @@ section {
   color: #fff;
 }
 .newsletter form .btn:hover {
-  background: #c803da;
+  background: #e01cf1;
 }
 
 .home {
@@ -688,7 +727,7 @@ section {
 }
 .home .slide .content span {
   font-size: 2rem;
-  color: #c803da;
+  color: #e01cf1;
 }
 .home .slide .content h3 {
   padding-top: 0.5rem;
@@ -708,12 +747,13 @@ section {
 }
 .shopping-cart .box-container .box {
   padding: 2rem;
-  border: 0.2rem solid #333;
+  border: 0.1rem solid #333;
   background: #fff;
   border-radius: -5rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: -5rem;
   position: relative;
 }
@@ -722,11 +762,12 @@ section {
   top: 1rem;
   right: 1.5rem;
   font-size: 2.5rem;
-  color: #666;
+  color: rgb(252, 89, 89);
   cursor: pointer;
+  text-decoration: none;
 }
 .shopping-cart .box-container .box .fa-times:hover {
-  color: #333;
+  color: red;
 }
 .shopping-cart .box-container .box img {
   height: 12rem;
@@ -738,7 +779,8 @@ section {
 .shopping-cart .box-container .box .content form {
   padding: 1rem 0;
   display: flex;
-  gap: 5rem;
+  gap: 2.5rem;
+  justify-content: space-between;
   align-items: center;
 }
 .shopping-cart .box-container .box .content form span {
@@ -752,9 +794,29 @@ section {
   background: #eee;
   font-size: 1.5rem;
 }
+.shopping-cart .box-container .box .content form .cart-foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+}
+.shopping-cart .box-container .box .content form .cart-foot .update-btn {
+  margin-top: 1rem;
+  display: inline-block;
+  border-radius: 0.5rem;
+  padding: 1rem 1.9rem;
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+  background: #e01cf1;
+}
+.shopping-cart .box-container .box .content form .cart-foot .update-btn:hover {
+  background: #333;
+}
 .shopping-cart .box-container .box .content .price {
   font-size: 2rem;
-  color: #c803da;
+  color: #e01cf1;
 }
 .shopping-cart .box-container .box .content .price span {
   font-size: 1.5rem;
@@ -764,7 +826,7 @@ section {
 .shopping-cart .cart-total {
   margin-top: 2rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-  border: 0.2rem solid #333;
+  border: 0.1rem solid #333;
   border-color: -5rem;
   background: #fff;
   padding: 2rem;
@@ -776,14 +838,18 @@ section {
   color: #333;
 }
 .shopping-cart .cart-total h3 span {
-  color: #c803da;
+  color: #e01cf1;
 }
 .shopping-cart .cart-total .btn {
   background: #333;
   color: #fff;
 }
 .shopping-cart .cart-total .btn:hover {
-  background: #c803da;
+  background: #e01cf1;
+}
+.shopping-cart .cart-total .disabled {
+  pointer-events: none;
+  opacity: 0.5;
 }
 
 .btn {
@@ -792,12 +858,14 @@ section {
   border-radius: 0.5rem;
   padding: 1rem 3rem;
   font-size: 1.7rem;
-  color: #333;
+  color: #fff;
   cursor: pointer;
-  background: gold;
+  background: #333;
+  outline: none;
+  border: none;
 }
 .btn:hover {
-  background: #333;
+  background: #e01cf1;
   color: #fff;
 }
 
@@ -808,7 +876,7 @@ section {
   color: #333;
 }
 .heading span {
-  color: #c803da;
+  color: #e01cf1;
 }
 
 .banner .box-container {
@@ -819,7 +887,7 @@ section {
 .banner .box-container .box {
   position: relative;
   height: 25rem;
-  border: 0.2rem solid #333;
+  border: 0.1rem solid #333;
   border-radius: 0.5rem;
   overflow: hidden;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
@@ -841,7 +909,7 @@ section {
 }
 .banner .box-container .box .content span {
   font-size: 1.7rem;
-  color: #c803da;
+  color: #e01cf1;
 }
 .banner .box-container .box .content h3 {
   font-size: 2rem;
@@ -856,7 +924,7 @@ section {
 }
 .arrivals .box-container .box {
   border-radius: 0.5rem;
-  border: 0.2rem solid #333;
+  border: 0.1rem solid #333;
   padding: 2rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
   display: flex;
@@ -885,7 +953,7 @@ section {
 .arrivals .box-container .box .content .price {
   padding-top: 0.5rem;
   font-size: 2rem;
-  color: #c803da;
+  color: #e01cf1;
   padding-bottom: 0.7rem;
 }
 .arrivals .box-container .box .content .price span {
@@ -956,6 +1024,9 @@ section {
     right: -3rem;
     font-size: 1.4rem;
   }
+  .header .search-form {
+    width: 35rem;
+  }
 }
 @media (max-width: 768px) {
   #search-btn {
@@ -978,7 +1049,11 @@ section {
             clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
   .header .logo {
-    font-size: 1.3rem;
+    font-size: 1.7rem;
+  }
+  .header .cart #number {
+    padding: 1rem;
+    font-size: 1.1rem;
   }
   .swiper-button-next,
 .swiper-button-prev {
@@ -1017,10 +1092,13 @@ section {
     display: flex;
     flex-flow: column;
     align-items: center;
+    gap: 0.6rem;
+    font-size: 2rem;
   }
   .header .icons a,
 .header .icons div {
-    margin: 0 1rem;
+    margin: 0;
+    font-size: 2rem;
   }
   .home .slide .image img {
     height: auto;

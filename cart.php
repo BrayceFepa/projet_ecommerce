@@ -1,3 +1,43 @@
+<?php
+
+session_start();
+require_once('./php/components.php');
+include('php/config.php');
+$user_id = $_SESSION['user_id'];
+
+if (!isset($user_id)) {
+    header('location:login.php');
+}
+
+if (isset($_GET['logout'])) {
+    unset($user_id);
+    session_destroy();
+    header('location:login.php');
+}
+
+
+if (isset($_POST['update_cart'])) {
+    $update_quantity = $_POST['cart_quantity'];
+    $update_id = $_POST['cart_id'];
+
+    $db->query("UPDATE `cart` SET quantity = '$update_quantity' WHERE id = '$update_id'") or die('query failed');
+    $messages[] = 'cart quantity updated successfully !';
+}
+
+if (isset($_GET['remove'])) {
+    $remove_id = $_GET['remove'];
+    $db->query("DELETE FROM `cart` WHERE id = '$remove_id'") or die('query failed');
+    header('location:cart.php');
+}
+
+if (isset($_GET['deleteall'])) {
+    $db->query("DELETE  FROM `cart` WHERE user_id = '$user_id'") or die('query failed');
+    header('location:cart.php');
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,8 +65,18 @@
 <body>
     <!-- Header section starts  -->
 
+    <?php
+
+    if (isset($messages)) {
+        foreach ($messages as $message) {
+            echo '<div class="messages" onclick="this.remove();">' . $message . '</div>';
+        }
+    }
+
+    ?>
+
     <header class="header">
-        <a href="home.html" class="logo">
+        <a href="home.php" class="logo">
             <i class="fa fa-shop"></i> BAMBU
         </a>
 
@@ -38,12 +88,21 @@
         <div class="icons">
             <div id="menu-btn" class="fa fa-bars"></div>
             <div id="search-btn" class="fa fa-search"></div>
-            <a href="login.html" class="fa fa-user"></a>
+            <a href="login.php" class="fa fa-user"></a>
             <a href="#" class="fa fa-heart"></a>
 
             <span class="cart">
-                <a href="cart.html" class="fa fa-shopping-cart"></a>
-                <span id="number">1</span>
+                <a href="cart.php" class="fa fa-shopping-cart"></a>
+                <span id="number">
+                    <?php
+                    $carts = $db->query("SELECT * FROM `cart` WHERE user_id = '$user_id'")->fetchAll();
+                    $count = 0;
+                    foreach ($carts as $cart) {
+                        $count += $cart['quantity'];
+                    }
+                    echo $count;
+                    ?>
+                </span>
             </span>
 
         </div>
@@ -58,110 +117,36 @@
 
         <div class="box-container">
 
-            <div class="box">
-                <i class="fas fa-times"></i>
-                <img src="images/product-1.jpg" alt="">
-                <div class="content">
-                    <h3>smartphones</h3>
-                    <form action="">
-                        <span>quantity: </span>
-                        <input type="number" name="" value="1" id="">
+            <?php
 
-                    </form>
-                    <div class="price">$249.99 <span>$399.99</span></div>
-                </div>
-            </div>
+            $statement = $db->prepare("SELECT SQL_CALC_FOUND_ROWS * FROM `cart` WHERE user_id= '$user_id'") or die('query failed');
+            $statement->execute();
+            $statement = $db->prepare("SELECT FOUND_ROWS()");
+            $statement->execute();
+            $select_cart = $statement->fetchColumn();
 
-            <div class="box">
-                <i class="fas fa-times"></i>
-                <img src="images/product-2.jpg" alt="">
-                <div class="content">
-                    <h3>camera</h3>
-                    <form action="">
-                        <span>quantity: </span>
-                        <input type="number" name="" value="1" id="">
+            if ($select_cart > 0) {
 
-                    </form>
-                    <div class="price">$249.99 <span>$399.99</span></div>
-                </div>
-            </div>
+                $carts = $db->query("SELECT * FROM `cart` WHERE user_id = '$user_id'")->fetchAll();
 
-            <div class="box">
-                <i class="fas fa-times"></i>
-                <img src="images/product-3.jpg" alt="">
-                <div class="content">
-                    <h3>television</h3>
-                    <form action="">
-                        <span>quantity: </span>
-                        <input type="number" name="" value="1" id="">
+                $total = 0;
+                foreach ($carts as $cart) {
+                    cart($cart['product_img'], $cart['name'], $cart['price'], $cart['quantity'], $cart['id']);
 
-                    </form>
-                    <div class="price">$249.99 <span>$399.99</span></div>
-                </div>
-            </div>
+                    $total += $cart['price'] * $cart['quantity'];
+                }
+            }
 
-            <div class="box">
-                <i class="fas fa-times"></i>
-                <img src="images/product-4.jpg" alt="">
-                <div class="content">
-                    <h3>speaker</h3>
-                    <form action="">
-                        <span>quantity: </span>
-                        <input type="number" name="" value="1" id="">
-
-                    </form>
-                    <div class="price">$249.99 <span>$399.99</span></div>
-                </div>
-            </div>
-
-            <div class="box">
-                <i class="fas fa-times"></i>
-                <img src="images/product-5.jpg" alt="">
-                <div class="content">
-                    <h3>smartphones</h3>
-                    <form action="">
-                        <span>quantity: </span>
-                        <input type="number" name="" value="1" id="">
-
-                    </form>
-                    <div class="price">$249.99 <span>$399.99</span></div>
-                </div>
-            </div>
-
-            <div class="box">
-                <i class="fas fa-times"></i>
-                <img src="images/product-6.jpg" alt="">
-                <div class="content">
-                    <h3>smartwatch</h3>
-                    <form action="">
-                        <span>quantity: </span>
-                        <input type="number" name="" value="1" id="">
-
-                    </form>
-                    <div class="price">$249.99 <span>$399.99</span></div>
-                </div>
-            </div>
-
-            <div class="box">
-                <i class="fas fa-times"></i>
-                <img src="images/product-7.jpg" alt="">
-                <div class="content">
-                    <h3>headphones</h3>
-                    <form action="">
-                        <span>quantity: </span>
-                        <input type="number" name="" value="1" id="">
-
-                    </form>
-                    <div class="price">$249.99 <span>$399.99</span></div>
-                </div>
-            </div>
+            ?>
         </div>
 
         <div class="cart-total">
-            <h3>subtotal : <span>$1499.99</span></h3>
-            <h3>discount : <span>$99.94</span></h3>
-            <h3>subtotal : <span>$1400.00</span></h3>
-            <a href="#" class="btn">proceed to checkout</a>
+            <h3>total : <span> <?php echo isset($total) ? $total . 'fcfa' : ''; ?> </span></h3>
+            <h3>discount : <span>10000 fcfa</span></h3>
+            <h3>subtotal : <span> <?php echo isset($total) ? ($total - 10000) . 'fcfa' : '' ?> </span></h3>
+            <form action="" method="post">
+                <a href="cart.php?deleteall" class="btn <?php echo isset($total) ? '' : 'disabled'; ?>" onclick=" return confirm('voulez vous vraiment vider le pannier ?');">vider le panier</a>
+            </form>
         </div>
 
     </section>
@@ -174,9 +159,12 @@
         <div id="close-side-bar" class="fa fa-times"></div>
 
         <div class="user">
-            <img src="images/user-img.png" alt="">
-            <h3>user 1</h3>
-            <a href="#">Logout</a>
+            <img src="uploads/<?php
+                                $row = $db->query("SELECT * FROM `clients` WHERE id_client = '$user_id'")->fetch(PDO::FETCH_ASSOC);
+                                echo $row['client_img'];
+                                ?>" alt="">
+            <h3><?php echo $row['name']; ?></h3>
+            <a href="register.php?logout=<?php echo $user_id; ?>">Logout</a>
         </div>
 
         <nav class="navbar">

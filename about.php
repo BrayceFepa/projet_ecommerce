@@ -1,3 +1,22 @@
+<?php
+
+session_start();
+require_once('./php/components.php');
+include('php/config.php');
+$user_id = $_SESSION['user_id'];
+
+if (!isset($user_id)) {
+  header('location:login.php');
+}
+
+if (isset($_GET['logout'])) {
+  unset($user_id);
+  session_destroy();
+  header('location:login.php');
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -26,7 +45,7 @@
   <!-- Header section starts  -->
 
   <header class="header">
-    <a href="home.html" class="logo">
+    <a href="home.php" class="logo">
       <i class="fa fa-shop"></i> BAMBU
     </a>
 
@@ -38,12 +57,21 @@
     <div class="icons">
       <div id="menu-btn" class="fa fa-bars"></div>
       <div id="search-btn" class="fa fa-search"></div>
-      <a href="login.html" class="fa fa-user"></a>
+      <a href="login.php" class="fa fa-user"></a>
       <a href="#" class="fa fa-heart"></a>
 
       <span class="cart">
-        <a href="cart.html" class="fa fa-shopping-cart"></a>
-        <span id="number">0</span>
+        <a href="cart.php" class="fa fa-shopping-cart"></a>
+        <span id="number">
+          <?php
+          $carts = $db->query("SELECT * FROM `cart` WHERE user_id = '$user_id'")->fetchAll();
+          $count = 0;
+          foreach ($carts as $cart) {
+            $count += $cart['quantity'];
+          }
+          echo $count;
+          ?>
+        </span>
       </span>
 
     </div>
@@ -60,9 +88,12 @@
     <div id="close-side-bar" class="fa fa-times"></div>
 
     <div class="user">
-      <img src="images/user-img.png" alt="">
-      <h3>user 1</h3>
-      <a href="#">Logout</a>
+      <img src="uploads/<?php
+                        $row = $db->query("SELECT * FROM `clients` WHERE id_client = '$user_id'")->fetch(PDO::FETCH_ASSOC);
+                        echo $row['client_img'];
+                        ?>" alt="">
+      <h3><?php echo $row['name']; ?></h3>
+      <a href="register.php?logout=<?php echo $user_id; ?>">Logout</a>
     </div>
 
     <nav class="navbar">
@@ -84,105 +115,109 @@
 
   <section class="about">
 
-<div class="content">
-   <h3>Notre Histoire</h3>
-   <p>Avec l'avancee des nouvelles technologies,le Monde se numerise avec plus d'un milliard de personnes connectees via les outils informatiques.Mais il existe aussi pres d'un million qui n'y ont pas acces ou ne sachant pas les utiliser.C'est pour palier a ce probleme que BAMBU a ete cree.</p>
-    <p> Fonde en 2022 par des developpeurs juniors motives,BAMBU est un site de e-commerce dedie a la vente d'outils numeriques a des prix accessibles a tous et qui propose des conseils avises sur leur utilisation.</p>
-   <a href="#" class="btn">En savoir plus</a>
-</div>
-</section>
+    <div class="image">
+      <img src="images/about-img.jpg" alt="">
+    </div>
+
+    <div class="content">
+      <h3>Notre Histoire</h3>
+      <p>Avec l'avancee des nouvelles technologies,le Monde se numerise avec plus d'un milliard de personnes connectees via les outils informatiques.Mais il existe aussi pres d'un million qui n'y ont pas acces ou ne sachant pas les utiliser.C'est pour palier a ce probleme que BAMBU a ete cree.</p>
+      <p> Fonde en 2022 par des developpeurs juniors motives,BAMBU est un site de e-commerce dedie a la vente d'outils numeriques a des prix accessibles a tous et qui propose des conseils avises sur leur utilisation.</p>
+      <a href="#" class="btn">En savoir plus</a>
+    </div>
+  </section>
 
 
   <section class="faq">
 
 
-<h1 class="heading">Questions & <span>Reponses</span></h1>
-    
+    <h1 class="heading">Questions & <span>Reponses</span></h1>
+
 
 
     <div class="accordion-container">
 
       <div class="accordion">
 
-          <div class="accordion-heading">
+        <div class="accordion-heading">
           <h3>OBJECTIFS</h3>
-       
+
           <i class="fas fa-angle-down"></i>
         </div>
         <p class="accordion-content">
-          Nous proposons a des prix abordables des appareils numeriques simples d'usage et de meilleure qualite. De plus,pour chaque produit achete, nous proposons une fiche d'utilisation simple et concise pour ceux n'ayant pas de reelles connaissances en informatique.Car,notre but principal est de permettre a tous,debutants et connaisseurs,d'entrer de plein pied dans l'univers du numerique. 
+          Nous proposons a des prix abordables des appareils numeriques simples d'usage et de meilleure qualite. De plus,pour chaque produit achete, nous proposons une fiche d'utilisation simple et concise pour ceux n'ayant pas de reelles connaissances en informatique.Car,notre but principal est de permettre a tous,debutants et connaisseurs,d'entrer de plein pied dans l'univers du numerique.
         </p>
 
       </div>
 
       <div class="accordion">
-  <div class="accordion-heading">
-    <h3>PRODUITS</h3>
-    <i class="fas fa-angle-down"></i>
-</div>
-<p class="accordion-content">
-Nous proposons a la vente des produits des plus grandes marques presentes sur le marche.Ordinateurs,tablettes,smartphones,appareils photo,camera,casques,etc.Des produits d'excellente qualite,efficaces et simples a utiliser,avec des prix abordables et adaptes a la realite socio-economique du pays.
-</p>
+        <div class="accordion-heading">
+          <h3>PRODUITS</h3>
+          <i class="fas fa-angle-down"></i>
+        </div>
+        <p class="accordion-content">
+          Nous proposons a la vente des produits des plus grandes marques presentes sur le marche.Ordinateurs,tablettes,smartphones,appareils photo,camera,casques,etc.Des produits d'excellente qualite,efficaces et simples a utiliser,avec des prix abordables et adaptes a la realite socio-economique du pays.
+        </p>
 
-</div>
+      </div>
 
-<div class="accordion">
-  <div class="accordion-heading">
-    <h3>PAIEMENTS</h3>
-    <i class="fas fa-angle-down"></i>
-</div>
-<p class="accordion-content">
-   Les paiements se font essentiellement en ligne,via smartphones ou autre appareils connectes,par carte bancaire VISA,MASTERCARD,AMERICAN EXPRESS,PAYPAL,ORANGE MONEY,MTN MOBILE MONEY.
-</p>
+      <div class="accordion">
+        <div class="accordion-heading">
+          <h3>PAIEMENTS</h3>
+          <i class="fas fa-angle-down"></i>
+        </div>
+        <p class="accordion-content">
+          Les paiements se font essentiellement en ligne,via smartphones ou autre appareils connectes,par carte bancaire VISA,MASTERCARD,AMERICAN EXPRESS,PAYPAL,ORANGE MONEY,MTN MOBILE MONEY.
+        </p>
 
-</div>
+      </div>
 
-<div class="accordion">
-  <div class="accordion-heading">
-    <h3>SECURITE</h3>
-    <i class="fas fa-angle-down"></i>
-</div>
-<p class="accordion-content">
-La securite des paiements et des transactions constitue notre principale priorite.Aussi,quelque soit l'endroit ou sera effectue le paiement,au Cameroun ou a l'etranger,nous respectons les normes de securite relatifs au paiement en ligne imposees par les instances des differents Etats,tel que l'Afrique Centrale ou nous appliquons le Règlement du 21 décembre 2018 relatif aux services de paiement dans la
-zone CEMAC adoptee le 21/12/2018 a Yaoundé,ainsi que par celle de l’industrie des cartes de paiement(Payment Card Industry Data Security Standard ou PCI DSS),avec une certification qui atteste de la securite de vos donnees bancaires selon les 12 Exigences de la conformite PCI DSS.
-</p>
+      <div class="accordion">
+        <div class="accordion-heading">
+          <h3>SECURITE</h3>
+          <i class="fas fa-angle-down"></i>
+        </div>
+        <p class="accordion-content">
+          La securite des paiements et des transactions constitue notre principale priorite.Aussi,quelque soit l'endroit ou sera effectue le paiement,au Cameroun ou a l'etranger,nous respectons les normes de securite relatifs au paiement en ligne imposees par les instances des differents Etats,tel que l'Afrique Centrale ou nous appliquons le Règlement du 21 décembre 2018 relatif aux services de paiement dans la
+          zone CEMAC adoptee le 21/12/2018 a Yaoundé,ainsi que par celle de l’industrie des cartes de paiement(Payment Card Industry Data Security Standard ou PCI DSS),avec une certification qui atteste de la securite de vos donnees bancaires selon les 12 Exigences de la conformite PCI DSS.
+        </p>
 
-</div>
+      </div>
 
-<div class="accordion">
-  <div class="accordion-heading">
-    <h3>CONTACTS</h3>
-    <i class="fas fa-angle-down"></i>
-</div>
-<p class="accordion-content">
-Nous sommes disponibles 24/7 avec un service clientele a votre ecoute, quelque soit votre preocuppation.Vous pouvez nous joindre par:<br>
-Telephone:237 699 92 42 43<br>
-Email:Bambu@gmail.com<br>
-Vous pouvez aussi nous suivre sur nos comptes Facebook,Twitter,linkedin et Instagram.
-</p>
+      <div class="accordion">
+        <div class="accordion-heading">
+          <h3>CONTACTS</h3>
+          <i class="fas fa-angle-down"></i>
+        </div>
+        <p class="accordion-content">
+          Nous sommes disponibles 24/7 avec un service clientele a votre ecoute, quelque soit votre preocuppation.Vous pouvez nous joindre par:<br>
+          Telephone:237 699 92 42 43<br>
+          Email:Bambu@gmail.com<br>
+          Vous pouvez aussi nous suivre sur nos comptes Facebook,Twitter,linkedin et Instagram.
+        </p>
 
-</div>
-</div>
+      </div>
+    </div>
 
-      
 
-      
 
-      
 
-      
+
+
+
+
     </div>
 
   </section>
 
 
 
-</section>
+  </section>
 
 
   <section class="review">
 
-    <h1 class="heading">clients <span>review</span></h1>
+    <h1 class="heading"> <span>témoignages</span> des clients</h1>
 
     <div class="swiper review-slider">
 

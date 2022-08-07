@@ -1,3 +1,21 @@
+<?php
+session_start();
+require_once('./php/components.php');
+include('php/config.php');
+$user_id = $_SESSION['user_id'];
+
+if (!isset($user_id)) {
+    header('location:login.php');
+}
+
+if (isset($_GET['logout'])) {
+    unset($user_id);
+    session_destroy();
+    header('location:login.php');
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,7 +44,7 @@
     <!-- Header section starts  -->
 
     <header class="header">
-        <a href="home.html" class="logo">
+        <a href="home.php" class="logo">
             <i class="fa fa-shop"></i> BAMBU
         </a>
 
@@ -38,12 +56,21 @@
         <div class="icons">
             <div id="menu-btn" class="fa fa-bars"></div>
             <div id="search-btn" class="fa fa-search"></div>
-            <a href="login.html" class="fa fa-user"></a>
+            <a href="login.php" class="fa fa-user"></a>
             <a href="#" class="fa fa-heart"></a>
 
             <span class="cart">
-                <a href="cart.html" class="fa fa-shopping-cart"></a>
-                <span id="number">0</span>
+                <a href="cart.php" class="fa fa-shopping-cart"></a>
+                <span id="number">
+                    <?php
+                    $carts = $db->query("SELECT * FROM `cart` WHERE user_id = '$user_id'")->fetchAll();
+                    $count = 0;
+                    foreach ($carts as $cart) {
+                        $count += $cart['quantity'];
+                    }
+                    echo $count;
+                    ?>
+                </span>
             </span>
 
         </div>
@@ -60,9 +87,12 @@
         <div id="close-side-bar" class="fa fa-times"></div>
 
         <div class="user">
-            <img src="images/user-img.png" alt="">
-            <h3>user 1</h3>
-            <a href="#">Logout</a>
+            <img src="uploads/<?php
+                                $row = $db->query("SELECT * FROM `clients` WHERE id_client = '$user_id'")->fetch(PDO::FETCH_ASSOC);
+                                echo $row['client_img'];
+                                ?>" alt="">
+            <h3><?php echo $row['name']; ?></h3>
+            <a href="register.php?logout=<?php echo $user_id; ?>">Logout</a>
         </div>
 
         <nav class="navbar">
@@ -87,24 +117,24 @@
 
         <div class="box-container">
 
-<div class="box">
-    <i class="fas fa-map"></i>
-    <h3>adresse</h3>
-    <p>Yaounde, cameroun - VG69+685</p>
-</div>
+            <div class="box">
+                <i class="fas fa-map"></i>
+                <h3>adresse</h3>
+                <p>Yaounde, cameroun - VG69+685</p>
+            </div>
 
-<div class="box">
-    <i class="fas fa-envelope"></i>
-    <p>laichamouhamankoura@gmail.com</p>
-    <p>laichaMK@gmail.com</p>
-</div>
+            <div class="box">
+                <i class="fas fa-envelope"></i>
+                <p>laichamouhamankoura@gmail.com</p>
+                <p>laichaMK@gmail.com</p>
+            </div>
 
-<div class="box">
-    <i class="fas fa-phone"></i>
-    <h3>number</h3>
-    <p>+237-699-295-336</p>
-    <p>+237-654-831-981</p>
-</div>
+            <div class="box">
+                <i class="fas fa-phone"></i>
+                <h3>number</h3>
+                <p>+237-699-295-336</p>
+                <p>+237-654-831-981</p>
+            </div>
 
         </div>
 
@@ -116,7 +146,7 @@
     <!-- contact section starts -->
     <section class="contact">
         <form action="">
-            <h3>get in touch</h3>
+            <h3>laissez nous un message</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic unde tempore cum sapiente repudiandae,
                 eligendi nisi vel fugit eos quibusdam.</p>
             <div class="inputBox">
@@ -133,7 +163,7 @@
             <input type="submit" value="send message" class="btn">
         </form>
 
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63694.159013965655!2d11.478759992525932!3d3.8348650805299562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x108bcf08f91e51a3%3A0xf6edc284684d1184!2sINFFDP!5e0!3m2!1sfr!2scm!4v1659693464930!5m2!1sfr!2scm" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63694.159013965655!2d11.478759992525932!3d3.8348650805299562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x108bcf08f91e51a3%3A0xf6edc284684d1184!2sINFFDP!5e0!3m2!1sfr!2scm!4v1659693464930!5m2!1sfr!2scm" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 
     </section>
