@@ -103,7 +103,7 @@ if (isset($_POST['submit'])) {
             <i class="fa fa-shop"></i> BAMBU
         </a>
 
-        <form action="" class="search-form">
+        <!-- <form action="" class="search-form">
             <input type="search" id="search-box" placeholder="search here..." />
             <label for="search-box" class="fa fa-search"></label>
         </form>
@@ -117,7 +117,7 @@ if (isset($_POST['submit'])) {
             <span class="cart">
                 <a href="cart.php" class="fa fa-shopping-cart"></a>
                 <span id="number">0</span>
-            </span>
+            </span> -->
 
         </div>
     </header>
@@ -128,7 +128,7 @@ if (isset($_POST['submit'])) {
 
     <!-- Sidebar section starts  -->
 
-    <div class="side-bar">
+    <!-- <div class="side-bar">
 
         <div id="close-side-bar" class="fa fa-times"></div>
 
@@ -152,7 +152,7 @@ if (isset($_POST['submit'])) {
             </div>
         </nav>
 
-    </div>
+    </div> -->
 
     <!-- Sidebar section ends  -->
 
@@ -180,7 +180,7 @@ if (isset($_POST['submit'])) {
 
 
     <!-- Footer section starts -->
-    <section class="quick-links">
+    <!-- <section class="quick-links">
         <a href="home.html" class="logo"> <i class="fa fa-shop"></i> BAMBU</a>
 
         <div class="links">
@@ -199,7 +199,7 @@ if (isset($_POST['submit'])) {
             <a href="#" class="fab fa-instagram"></a>
             <a href="#" class="fab fa-linkedin"></a>
         </div>
-    </section>
+    </section> -->
 
     <section class="credit">
         <p>made by <span>TWF students</span> | all right reserved!</p>
