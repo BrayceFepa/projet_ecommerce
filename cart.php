@@ -35,6 +35,13 @@ if (isset($_GET['deleteall'])) {
     header('location:cart.php');
 }
 
+date_default_timezone_set('Africa/Douala');
+$date = date('d-m-y h:i:s');
+
+if (isset($_GET['pay'])) {
+    header('location:https://s.htr.cm/gHyz');
+}
+
 
 ?>
 
@@ -143,10 +150,17 @@ if (isset($_GET['deleteall'])) {
         <div class="cart-total">
             <h3>total : <span> <?php echo isset($total) ? $total . 'fcfa' : ''; ?> </span></h3>
             <h3>discount : <span>10000 fcfa</span></h3>
-            <h3>subtotal : <span> <?php echo isset($total) ? ($total - 10000) . 'fcfa' : '' ?> </span></h3>
-            <form action="" method="post">
+            <h3>subtotal : <span> <?php echo isset($total) ? $stotal = ($total - 10000) . 'fcfa' : '' ?> </span></h3>
+            <form action="" method="post" class="form-cart">
                 <a href="cart.php?deleteall" class="btn <?php echo isset($total) ? '' : 'disabled'; ?>" onclick=" return confirm('voulez vous vraiment vider le pannier ?');">vider le panier</a>
+                <a href="cart.php?pay" class="btn <?php echo isset($total) ? '' : 'disabled'; ?>">Payer</a>
             </form>
+            <?php
+            if (isset($_GET['pay'])) {
+                $db->query("INSERT INTO `commandes` (date_commande, paiement, user_id, id_client) VALUES ('$date', '$stotal', '$user_id', '$user_id')");
+            }
+
+            ?>
         </div>
 
     </section>
@@ -210,7 +224,7 @@ if (isset($_GET['deleteall'])) {
 
     <section class="credit">
         <p>made by <span>TWF students</span> | all right reserved!</p>
-        <img src="images/card_img.png" alt="" />
+        <img src="images/card_img.jpg" alt="" />
     </section>
     <!-- Footer section ends -->
 

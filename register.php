@@ -25,6 +25,7 @@ if (isset($_POST['submit'])) {
     $statement->bindParam(':pass', $pass);
     $email = $_POST['email'];
     $pass =  md5($_POST['password']);
+    $district = $_POST['district'];
 
     $statement->execute();
     $statement = $db->prepare("SELECT FOUND_ROWS()");
@@ -41,10 +42,11 @@ if (isset($_POST['submit'])) {
     if ($select_register > 0) {
         $messages[] = 'Ce compte existe déjà!';
     } else {
-        $statement = $db->prepare("INSERT INTO `clients` (name, email, password, client_img) VALUES (:name, :mail, :pass, '$photo_name')") or die('query failed!');
+        $statement = $db->prepare("INSERT INTO `clients` (name, email, password, client_district, client_img) VALUES (:name, :mail, :pass, :district, '$photo_name')") or die('query failed!');
         $statement->bindParam(':name', $name);
         $statement->bindParam(':mail', $email);
         $statement->bindParam(':pass', $pass);
+        $statement->bindParam(':district', $district);
         $statement->execute();
         move_uploaded_file($photo_tmp_name, "uploads/" . $photo_name);
         $messages[] = 'inscription réussie!';
@@ -167,6 +169,7 @@ if (isset($_POST['submit'])) {
             <input type="email" name="email" placeholder="entrer votre email" id="" class="box">
             <input type="password" name="password" placeholder="entrer votre mot de passe" id="" class="box">
             <input type="password" name="cpassword" placeholder="entrer votre mot de passe à nouveau" id="" class="box">
+            <input type="text" name="district" placeholder="entrer votre quartier (Ville de Yaoundé)" id="" class="box">
             <input type="file" id="photo" name="photo" accept="image/*" required>
             <label for="photo" class="btn-img">choose profile picture</label>
             <input type="submit" name="submit" value="register now" class="btn btn-primary">
@@ -203,7 +206,7 @@ if (isset($_POST['submit'])) {
 
     <section class="credit">
         <p>made by <span>TWF students</span> | all right reserved!</p>
-        <img src="images/card_img.png" alt="" />
+        <img src="images/card_img.jpg" alt="" />
     </section>
     <!-- Footer section ends -->
 

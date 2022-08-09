@@ -400,6 +400,7 @@ section {
   padding: 0.5rem;
   border-radius: 0.3rem;
   margin: 1rem 0;
+  cursor: pointer;
 }
 
 .quick-links {
@@ -851,6 +852,13 @@ section {
   pointer-events: none;
   opacity: 0.5;
 }
+.shopping-cart .cart-total .form-cart {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: column;
+  align-items: center;
+  gap: 10rem;
+}
 
 .btn {
   margin-top: 1rem;
@@ -1070,6 +1078,11 @@ section {
   }
   .newsletter .content p {
     font-size: 1.5rem;
+  }
+  .products .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
+    gap: 2rem;
   }
 }
 @media (max-width: 768px) {

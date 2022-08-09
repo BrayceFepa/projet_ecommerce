@@ -465,7 +465,7 @@ section {
       padding: .5rem;
       border-radius: .3rem;
       margin: 1rem 0;
-      
+      cursor: pointer;
     }
   }
 }
@@ -1003,6 +1003,14 @@ section {
     .disabled{
       pointer-events: none;
       opacity: .5;
+    }
+
+    .form-cart{
+      display: flex;
+      justify-content: space-between;
+      flex-flow: column;
+      align-items: center;
+      gap: 10rem;
     }
 
   }

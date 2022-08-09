@@ -188,7 +188,7 @@ if (isset($_POST['submit'])) {
 
     <section class="credit">
         <p>made by <span>TWF students</span> | all right reserved!</p>
-        <img src="images/card_img.png" alt="" />
+        <img src="images/card_img.jpg" alt="" />
     </section>
     <!-- Footer section ends -->
 

@@ -4,7 +4,8 @@
                 email VARCHAR(50) NOT NULL,
                 password VARCHAR(50) NOT NULL,
                 client_img VARCHAR(50) NOT NULL,
-                client_review VARCHAR(50),
+                client_district VARCHAR(50) NOT NULL,
+                client_review VARCHAR(100)
                 );
 
                 CREATE TABLE IF NOT EXISTS gestionnaires
@@ -15,8 +16,8 @@
 
                 CREATE TABLE IF NOT EXISTS categories
                 (id_categ int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-                categ_name VARCHAR(25) NOT NULL,
-                categ_img VARCHAR(25) NOT NULL,
+                categ_name VARCHAR(50) NOT NULL,
+                categ_img VARCHAR(50) NOT NULL,
                 id_gest int(11),
                 FOREIGN KEY (id_gest) REFERENCES gestionnaires(id_gest)
                 );
@@ -37,6 +38,8 @@
                 CREATE TABLE IF NOT EXISTS commandes
                 (id_commande int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
                 date_commande date,
+                paiement int(100), 
+                user_id int(100) NOT NULL,
                 id_client int(11),
                 FOREIGN KEY (id_client) REFERENCES clients(id_client)
                 );
