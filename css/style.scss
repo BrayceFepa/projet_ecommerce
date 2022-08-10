@@ -83,13 +83,14 @@ section {
   }
 
   .search-form {
-    height: 5rem;
-    width: 50rem;
+    height: 4rem;
+    width: 20rem;
     background: $white;
     border-radius: 5rem;
     display: flex;
     align-items: center;
     padding: 0 2rem;
+    display: none;
 
     input {
       width: 100%;
@@ -113,7 +114,8 @@ section {
   .icons {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    align-items: center;
+    gap: 1.2rem;
 
     .cart {
       position: relative;
@@ -122,26 +124,42 @@ section {
         position: absolute;
         top: -1.3rem;
         right: -1.2rem;
-        font-size: 1.3rem;
+        font-size: 1.1rem;
         background: $black;
         border-radius: 50%;
         display: inline-block;
-        height: 2rem;
-        width: 2rem;
+        height: 1.4rem;
+        width: 1.4rem;
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 1.2rem;
+        padding: 1rem;
         color: $white;
         font-weight: bold;
         cursor: pointer;
       }
     }
+    .pay-btn{
+      font-size: 1.7rem;
+      display: inline-block;
+      border-radius: 1rem;
+      padding: .6rem 1rem;
+      color: $blue;
+      cursor: pointer;
+      background: $white;
+      display: none;
+  
+      &:hover {
+        background: $gold;
+        color: $black;
+      }
+    }
+
   }
 
   .icons a,
   .icons div {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     color: $white;
     margin-left: 2rem;
     cursor: pointer;
@@ -151,6 +169,56 @@ section {
       color: $gold;
     }
   }
+
+  .navbar-nav{
+    margin-left: 15rem;
+    .nav-item{
+      font-size: 1.7rem;
+      margin: 0 .7rem;
+      
+      .nav-link{
+        color: $light-bg;
+      }
+      .nav-link.active{
+        color: $white;
+        font-weight: 500;
+      }
+    }
+  }
+
+    .user {
+      position: absolute;
+      top: 30%;
+      padding: 2rem;
+      text-align: center;
+      left: 1rem;
+      display: none;
+  
+      img {
+        height: 6rem;
+        width: 6rem;
+        border-radius: 50%;
+        border: .5rem solid $white;
+        box-shadow: $box-shadow;
+      }
+  
+      h3 {
+        padding: 0.5rem 0;
+        font-size: 1.5rem;
+        color: $light-color;
+        margin-top: .5rem;
+      }
+  
+      a {
+        font-size: 1rem;
+        color: $blue;
+        text-decoration: none;
+  
+        &:hover {
+          color: $black;
+        }
+      }
+    }
 }
 
 #search-btn {
@@ -185,37 +253,39 @@ section {
     }
   }
 
-  .user {
-    padding: 2rem;
-    background: $light-bg;
-    text-align: center;
+    .user {
+      padding: 2rem;
+      background: $light-bg;
+      text-align: center;
 
-    img {
-      height: 17rem;
-      width: 17rem;
-      border-radius: 50%;
-      border: 1rem solid $white;
-      box-shadow: $box-shadow;
-    }
+      img {
+        height: 17rem;
+        width: 17rem;
+        border-radius: 50%;
+        border: 1rem solid $white;
+        box-shadow: $box-shadow;
+      }
 
-    h3 {
-      padding: 0.5rem 0;
-      font-size: 1.7rem;
-      color: $light-color;
-      margin-top: 1rem;
-    }
+      h3 {
+        padding: 0.5rem 0;
+        font-size: 1.7rem;
+        color: $light-color;
+        margin-top: 1rem;
+      }
 
-    a {
-      font-size: 1.5rem;
-      color: $blue;
-      text-decoration: none;
-      padding: 0;
+      a {
+        font-size: 1.5rem;
+        color: $blue;
+        text-decoration: none;
+        padding: 0;
 
-      &:hover {
-        color: $black;
+        &:hover {
+          color: $black;
+        }
       }
     }
-  }
+
+  
 
   .navbar {
     padding-top: 1rem;
@@ -1010,7 +1080,6 @@ section {
       justify-content: space-between;
       flex-flow: column;
       align-items: center;
-      gap: 10rem;
     }
 
   }
@@ -1228,7 +1297,11 @@ section {
 
     .search-form{
         width: 35rem;
+        display: none;
     }
+  }
+  .user{
+    display: none;
   }
 }
 
@@ -1252,6 +1325,7 @@ section {
       &.active {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
       }
+      display: none;
     }
 
     .logo {
@@ -1264,6 +1338,15 @@ section {
         padding: 1rem;
         font-size: 1.1rem;
       }
+    }
+
+    .icons{
+      display: flex;
+      gap: 2rem;
+    }
+    .icons a,
+    .icons div{
+      font-size: 1.5rem;
     }
   }
 

@@ -68,7 +68,7 @@ if (isset($_POST['submit'])) {
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Register</title>
+    <title>inscription</title>
 
     <!-- Font awesom cdn links -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -164,17 +164,17 @@ if (isset($_POST['submit'])) {
     <section class="register">
 
         <form action="register.php" method="POST" enctype="multipart/form-data">
-            <h3>register now </h3>
-            <input type="text" name="name" placeholder="entrer votre name" id="" class="box">
+            <h3>inscription </h3>
+            <input type="text" name="name" placeholder="entrer votre nom" id="" class="box">
             <input type="email" name="email" placeholder="entrer votre email" id="" class="box">
             <input type="password" name="password" placeholder="entrer votre mot de passe" id="" class="box">
             <input type="password" name="cpassword" placeholder="entrer votre mot de passe à nouveau" id="" class="box">
             <input type="text" name="district" placeholder="entrer votre quartier (Ville de Yaoundé)" id="" class="box">
-            <input type="file" id="photo" name="photo" accept="image/*" required>
-            <label for="photo" class="btn-img">choose profile picture</label>
+            <!-- <input type="file" id="photo" name="photo" accept="image/*" required>  -->
+            <!-- <label for="photo" class="btn-img">importer une image</label> -->
             <input type="submit" name="submit" value="register now" class="btn btn-primary">
             <p>vous avez déjà un compte ?</p>
-            <a href="login.php" class="btn btn-primary link">login now</a>
+            <a href="login.php" class="btn btn-primary link">connectez-vous</a>
         </form>
 
     </section>
@@ -205,7 +205,7 @@ if (isset($_POST['submit'])) {
     </section> -->
 
     <section class="credit">
-        <p>made by <span>TWF students</span> | all right reserved!</p>
+        <p>fait par <span>les étudiants de TWF</span> | tous droits reservés!</p>
         <img src="images/card_img.jpg" alt="" />
     </section>
     <!-- Footer section ends -->

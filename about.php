@@ -24,7 +24,7 @@ if (isset($_GET['logout'])) {
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About</title>
+  <title>à propos</title>
 
   <!-- Font awesom cdn links -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -45,9 +45,39 @@ if (isset($_GET['logout'])) {
   <!-- Header section starts  -->
 
   <header class="header">
-    <a href="home.php" class="logo">
-      <i class="fa fa-shop"></i> BAMBU
-    </a>
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand logo" href="home.php">
+          <i class="fa fa-shop"></i> BAMBU
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="home.php">Accueil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="about.php">à propos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="products.php">produits</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="cart.php">panier</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacts.php">contacts</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">made in cameroon</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
     <form action="" class="search-form">
       <input type="search" id="search-box" placeholder="search here..." />
@@ -55,10 +85,9 @@ if (isset($_GET['logout'])) {
     </form>
 
     <div class="icons">
-      <div id="menu-btn" class="fa fa-bars"></div>
+
       <div id="search-btn" class="fa fa-search"></div>
       <a href="login.php" class="fa fa-user"></a>
-      <a href="#" class="fa fa-heart"></a>
 
       <span class="cart">
         <a href="cart.php" class="fa fa-shopping-cart"></a>
@@ -73,19 +102,9 @@ if (isset($_GET['logout'])) {
           ?>
         </span>
       </span>
+      <a href="" class="pay-btn">payer</a>
 
     </div>
-  </header>
-
-  <!-- Header section ends  -->
-
-
-
-  <!-- Sidebar section starts  -->
-
-  <div class="side-bar">
-
-    <div id="close-side-bar" class="fa fa-times"></div>
 
     <div class="user">
       <img src="uploads/<?php
@@ -93,24 +112,12 @@ if (isset($_GET['logout'])) {
                         echo $row['client_img'];
                         ?>" alt="">
       <h3><?php echo $row['name']; ?></h3>
-      <a href="register.php?logout=<?php echo $user_id; ?>">Logout</a>
+      <a href="register.php?logout=<?php echo $user_id; ?>">déconnexion</a>
     </div>
 
-    <nav class="navbar">
-      <div>
-        <a href="home.php"> <i class="fa fa-angle-right"></i> home</a>
-        <a href="about.php"> <i class="fa fa-angle-right"></i> about</a>
-        <a href="products.php"> <i class="fa fa-angle-right"></i> products</a>
-        <a href="contacts.php"> <i class="fa fa-angle-right"></i> contacts</a>
-        <a href="login.php"> <i class="fa fa-angle-right"></i> login</a>
-        <a href="register.php"> <i class="fa fa-angle-right"></i> register</a>
-        <a href="cart.php"> <i class="fa fa-angle-right"></i> cart</a>
-      </div>
-    </nav>
+  </header>
 
-  </div>
-
-  <!-- Sidebar section ends  -->
+  <!-- Header section ends  -->
 
 
   <section class="about">
@@ -225,42 +232,42 @@ if (isset($_GET['logout'])) {
 
         <div class="swiper-slide slide">
           <img src="images/pic-1.png" alt="">
-          <h3>John Doe</h3>
+          <h3>client 1</h3>
           <span>designer</span>
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum eaque explicabo aperiam facere ab! Facere, ipsa, accusamus ipsam repellat iusto, quis laboriosam pariatur exercitationem ducimus officia temporibus quasi quia itaque?</p>
         </div>
 
         <div class="swiper-slide slide">
           <img src="images/pic-2.png" alt="">
-          <h3>John Doe</h3>
+          <h3>client 2</h3>
           <span>designer</span>
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum eaque explicabo aperiam facere ab! Facere, ipsa, accusamus ipsam repellat iusto, quis laboriosam pariatur exercitationem ducimus officia temporibus quasi quia itaque?</p>
         </div>
 
         <div class="swiper-slide slide">
           <img src="images/pic-3.png" alt="">
-          <h3>John Doe</h3>
+          <h3>client 3</h3>
           <span>designer</span>
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum eaque explicabo aperiam facere ab! Facere, ipsa, accusamus ipsam repellat iusto, quis laboriosam pariatur exercitationem ducimus officia temporibus quasi quia itaque?</p>
         </div>
 
         <div class="swiper-slide slide">
           <img src="images/pic-4.png" alt="">
-          <h3>John Doe</h3>
+          <h3>client 4</h3>
           <span>designer</span>
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum eaque explicabo aperiam facere ab! Facere, ipsa, accusamus ipsam repellat iusto, quis laboriosam pariatur exercitationem ducimus officia temporibus quasi quia itaque?</p>
         </div>
 
         <div class="swiper-slide slide">
           <img src="images/pic-5.png" alt="">
-          <h3>John Doe</h3>
+          <h3>client 5</h3>
           <span>designer</span>
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum eaque explicabo aperiam facere ab! Facere, ipsa, accusamus ipsam repellat iusto, quis laboriosam pariatur exercitationem ducimus officia temporibus quasi quia itaque?</p>
         </div>
 
         <div class="swiper-slide slide">
           <img src="images/pic-6.png" alt="">
-          <h3>John Doe</h3>
+          <h3>client 6</h3>
           <span>designer</span>
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum eaque explicabo aperiam facere ab! Facere, ipsa, accusamus ipsam repellat iusto, quis laboriosam pariatur exercitationem ducimus officia temporibus quasi quia itaque?</p>
         </div>
@@ -281,13 +288,13 @@ if (isset($_GET['logout'])) {
     <a href="home.html" class="logo"> <i class="fa fa-shop"></i> BAMBU </a>
 
     <div class="links">
-      <a href="home.php"> home </a>
-      <a href="about.php"> about </a>
-      <a href="products.php"> products </a>
+      <a href="home.php"> accueil </a>
+      <a href="about.php"> à propos </a>
+      <a href="products.php"> produits </a>
       <a href="contacts.php"> contacts </a>
-      <a href="login.php"> login </a>
-      <a href="register.php"> register </a>
-      <a href="cart.php"> cart </a>
+      <a href="login.php"> connexion </a>
+      <a href="register.php"> inscription </a>
+      <a href="cart.php"> panier </a>
     </div>
 
     <div class="share">
@@ -299,7 +306,7 @@ if (isset($_GET['logout'])) {
   </section>
 
   <section class="credit">
-    <p>made by <span>TWF students</span> | all right reserved!</p>
+    <p>fait par les <span>étudiants de TWF</span> | tous droits reservés!</p>
     <img src="images/card_img.jpg" alt="" />
   </section>
   <!-- Footer section ends -->

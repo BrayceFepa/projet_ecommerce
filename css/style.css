@@ -69,13 +69,14 @@ section {
   color: #fff;
 }
 .header .search-form {
-  height: 5rem;
-  width: 50rem;
+  height: 4rem;
+  width: 20rem;
   background: #fff;
   border-radius: 5rem;
   display: flex;
   align-items: center;
   padding: 0 2rem;
+  display: none;
 }
 .header .search-form input {
   width: 100%;
@@ -95,7 +96,8 @@ section {
 .header .icons {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  align-items: center;
+  gap: 1.2rem;
 }
 .header .icons .cart {
   position: relative;
@@ -104,23 +106,37 @@ section {
   position: absolute;
   top: -1.3rem;
   right: -1.2rem;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   background: #333;
   border-radius: 50%;
   display: inline-block;
-  height: 2rem;
-  width: 2rem;
+  height: 1.4rem;
+  width: 1.4rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1.2rem;
+  padding: 1rem;
   color: #fff;
   font-weight: bold;
   cursor: pointer;
 }
+.header .icons .pay-btn {
+  font-size: 1.7rem;
+  display: inline-block;
+  border-radius: 1rem;
+  padding: 0.6rem 1rem;
+  color: #e01cf1;
+  cursor: pointer;
+  background: #fff;
+  display: none;
+}
+.header .icons .pay-btn:hover {
+  background: gold;
+  color: #333;
+}
 .header .icons a,
 .header .icons div {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   color: #fff;
   margin-left: 2rem;
   cursor: pointer;
@@ -129,6 +145,49 @@ section {
 .header .icons a:hover,
 .header .icons div:hover {
   color: gold;
+}
+.header .navbar-nav {
+  margin-left: 15rem;
+}
+.header .navbar-nav .nav-item {
+  font-size: 1.7rem;
+  margin: 0 0.7rem;
+}
+.header .navbar-nav .nav-item .nav-link {
+  color: #eee;
+}
+.header .navbar-nav .nav-item .nav-link.active {
+  color: #fff;
+  font-weight: 500;
+}
+.header .user {
+  position: absolute;
+  top: 30%;
+  padding: 2rem;
+  text-align: center;
+  left: 1rem;
+  display: none;
+}
+.header .user img {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  border: 0.5rem solid #fff;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+.header .user h3 {
+  padding: 0.5rem 0;
+  font-size: 1.5rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+.header .user a {
+  font-size: 1rem;
+  color: #e01cf1;
+  text-decoration: none;
+}
+.header .user a:hover {
+  color: #333;
 }
 
 #search-btn {
@@ -857,7 +916,6 @@ section {
   justify-content: space-between;
   flex-flow: column;
   align-items: center;
-  gap: 10rem;
 }
 
 .btn {
@@ -1034,6 +1092,10 @@ section {
   }
   .header .search-form {
     width: 35rem;
+    display: none;
+  }
+  .user {
+    display: none;
   }
 }
 @media (max-width: 768px) {
@@ -1051,6 +1113,7 @@ section {
     height: 6rem;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
             clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    display: none;
   }
   .header .search-form.active {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
@@ -1062,6 +1125,14 @@ section {
   .header .cart #number {
     padding: 1rem;
     font-size: 1.1rem;
+  }
+  .header .icons {
+    display: flex;
+    gap: 2rem;
+  }
+  .header .icons a,
+.header .icons div {
+    font-size: 1.5rem;
   }
   .swiper-button-next,
 .swiper-button-prev {

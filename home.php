@@ -24,7 +24,7 @@ if (isset($_GET['logout'])) {
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
+    <title>accueil</title>
 
     <!-- Font awesom cdn links -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -45,20 +45,49 @@ if (isset($_GET['logout'])) {
     <!-- Header section starts  -->
 
     <header class="header">
-        <a href="home.php" class="logo">
-            <i class="fa fa-shop"></i> BAMBU
-        </a>
+
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand logo" href="home.php">
+                    <i class="fa fa-shop"></i> BAMBU
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="home.php">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.php">à propos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="products.php">produits</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cart.php">panier</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacts.php">contacts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">made in cameroon</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
         <form action="" class="search-form">
-            <input type="search" id="search-box" placeholder="search here..." />
+            <input type="search" id="search-box" placeholder="rechercher" />
             <label for="search-box" class="fa fa-search"></label>
         </form>
 
         <div class="icons">
-            <div id="menu-btn" class="fa fa-bars"></div>
+            <!-- <div id="menu-btn" class="fa fa-bars"></div> -->
             <div id="search-btn" class="fa fa-search"></div>
             <a href="login.php" class="fa fa-user"></a>
-            <a href="#" class="fa fa-heart"></a>
 
             <span class="cart">
                 <a href="cart.php" class="fa fa-shopping-cart"></a>
@@ -73,19 +102,9 @@ if (isset($_GET['logout'])) {
                     ?>
                 </span>
             </span>
+            <a href="home?pay" class="pay-btn">payer</a>
 
         </div>
-    </header>
-
-    <!-- Header section ends  -->
-
-
-
-    <!-- Sidebar section starts  -->
-
-    <div class="side-bar">
-
-        <div id="close-side-bar" class="fa fa-times"></div>
 
         <div class="user">
             <img src="uploads/<?php
@@ -93,24 +112,46 @@ if (isset($_GET['logout'])) {
                                 echo $row['client_img'];
                                 ?>" alt="">
             <h3><?php echo $row['name']; ?></h3>
-            <a href="register.php?logout=<?php echo $user_id; ?>">Logout</a>
+            <a href="register.php?logout=<?php echo $user_id; ?>">déconnexion</a>
         </div>
 
-        <nav class="navbar">
+    </header>
+
+    <!-- Header section ends  -->
+
+
+    <!-- Sidebar section starts -->
+
+    <div class="side-bar">
+
+        <div id="close-side-bar" class="fa fa-times"></div>
+
+        <div class="user">
+            <img src="uploads/<?php
+                                // $row = $db->query("SELECT * FROM `clients` WHERE id_client = '$user_id'")->fetch(PDO::FETCH_ASSOC);
+                                // echo $row['client_img'];
+                                ?>" alt="">
+            <h3><?php echo $row['name']; ?></h3>
+            <a href="register.php?logout=<?php echo $user_id; ?>">déconnexion</a>
+        </div>
+
+        <!-- <nav class="navbar">
             <div>
-                <a href="home.php"> <i class="fa fa-angle-right"></i> home</a>
-                <a href="about.php"> <i class="fa fa-angle-right"></i> about</a>
-                <a href="products.php"> <i class="fa fa-angle-right"></i> products</a>
+                <a href="home.php"> <i class="fa fa-angle-right"></i> accueil</a>
+                <a href="about.php"> <i class="fa fa-angle-right"></i> à propos</a>
+                <a href="products.php"> <i class="fa fa-angle-right"></i> produits</a>
                 <a href="contacts.php"> <i class="fa fa-angle-right"></i> contacts</a>
-                <a href="login.php"> <i class="fa fa-angle-right"></i> login</a>
-                <a href="register.php"> <i class="fa fa-angle-right"></i> register</a>
-                <a href="cart.php"> <i class="fa fa-angle-right"></i> cart</a>
+                <a href="login.php"> <i class="fa fa-angle-right"></i> connexion</a>
+                <a href="register.php"> <i class="fa fa-angle-right"></i> inscription</a>
+                <a href="cart.php"> <i class="fa fa-angle-right"></i> panier</a>
             </div>
-        </nav>
+        </nav> -->
 
     </div>
 
-    <!-- Sidebar section ends  -->
+    <!-- Sidebar section ends -->
+
+
 
     <!-- Home section starts -->
 
@@ -125,9 +166,9 @@ if (isset($_GET['logout'])) {
                         <img src="images/home-img-1.jpg" alt="">
                     </div>
                     <div class="content">
-                        <span>upto 50% off</span>
+                        <span>reduction de 50%</span>
                         <h3>Smartphones</h3>
-                        <a href="#" class="btn">Shop now</a>
+                        <a href="#" class="btn">acheter</a>
                     </div>
                 </div>
 
@@ -136,9 +177,9 @@ if (isset($_GET['logout'])) {
                         <img src="images/home-img-2.jpg" alt="">
                     </div>
                     <div class="content">
-                        <span>upto 50% off</span>
-                        <h3>Smartwatch</h3>
-                        <a href="#" class="btn">Shop now</a>
+                        <span>reduction de 50%</span>
+                        <h3>montre connectée</h3>
+                        <a href="#" class="btn">acheter</a>
                     </div>
                 </div>
 
@@ -147,9 +188,9 @@ if (isset($_GET['logout'])) {
                         <img src="images/home-img-3.jpg" alt="">
                     </div>
                     <div class="content">
-                        <span>upto 50% off</span>
-                        <h3>Headphones</h3>
-                        <a href="#" class="btn">Shop now</a>
+                        <span>reduction de 50%</span>
+                        <h3>Casque audio</h3>
+                        <a href="#" class="btn">acheter</a>
                     </div>
                 </div>
 
@@ -176,8 +217,8 @@ if (isset($_GET['logout'])) {
             <a href="#" class="box">
                 <img src="images/banner-1.jpg" alt="">
                 <div class="content">
-                    <span>Special offer</span>
-                    <h3>upto 50% off</h3>
+                    <span>offre spéciale</span>
+                    <h3>reduction de 50%</h3>
                 </div>
             </a>
 
@@ -185,8 +226,8 @@ if (isset($_GET['logout'])) {
             <a href="#" class="box">
                 <img src="images/banner-2.jpg" alt="">
                 <div class="content">
-                    <span>Special offer</span>
-                    <h3>upto 50% off</h3>
+                    <span>offre spéciale</span>
+                    <h3>reduction de 50%</h3>
                 </div>
             </a>
 
@@ -194,8 +235,8 @@ if (isset($_GET['logout'])) {
             <a href="#" class="box">
                 <img src="images/banner-3.jpg" alt="">
                 <div class="content">
-                    <span>Special offer</span>
-                    <h3>upto 50% off</h3>
+                    <span>offre spéciale</span>
+                    <h3>reduction de 50%</h3>
                 </div>
             </a>
 
@@ -210,7 +251,7 @@ if (isset($_GET['logout'])) {
 
     <section class="arrivals">
 
-        <h1 class="heading">New <span>arrivals</span></h1>
+        <h1 class="heading"> <span>nouveautés</span></h1>
 
         <div class="box-container">
 
@@ -220,8 +261,8 @@ if (isset($_GET['logout'])) {
                     <img src="images/arrival-1-hover.jpg" class="hover-img" alt="">
                 </div>
                 <div class="content">
-                    <h3>HD Television</h3>
-                    <div class="price">124000 FCFA <span>15000 FCFA</span></div>
+                    <h3>Television HD</h3>
+                    <div class="price">124000 FCFA <span>150000 FCFA</span></div>
                     <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -238,7 +279,7 @@ if (isset($_GET['logout'])) {
                     <img src="images/arrival-2-hover.jpg" class="hover-img" alt="">
                 </div>
                 <div class="content">
-                    <h3>lenovo laptop</h3>
+                    <h3>laptop lenovo </h3>
                     <div class="price">150000 FCFA <span>180000 FCFA</span></div>
                     <div class="stars">
                         <i class="fas fa-star"></i>
@@ -256,7 +297,7 @@ if (isset($_GET['logout'])) {
                     <img src="images/arrival-3-hover.jpg" class="hover-img" alt="">
                 </div>
                 <div class="content">
-                    <h3>new smartphone</h3>
+                    <h3>smartphone</h3>
                     <div class="price">80000 FCFA <span>100000 FCFA</span></div>
                     <div class="stars">
                         <i class="fas fa-star"></i>
@@ -274,7 +315,7 @@ if (isset($_GET['logout'])) {
                     <img src="images/arrival-4-hover.jpg" class="hover-img" alt="">
                 </div>
                 <div class="content">
-                    <h3>new printer</h3>
+                    <h3>imprimante</h3>
                     <div class="price">200000 FCFA <span>250000 FCFA</span></div>
                     <div class="stars">
                         <i class="fas fa-star"></i>
@@ -292,7 +333,7 @@ if (isset($_GET['logout'])) {
                     <img src="images/arrival-5-hover.jpg" class="hover-img" alt="">
                 </div>
                 <div class="content">
-                    <h3>new headphones</h3>
+                    <h3>casque</h3>
                     <div class="price">15000 FCFA <span>20000 FCFA</span></div>
                     <div class="stars">
                         <i class="fas fa-star"></i>
@@ -310,7 +351,7 @@ if (isset($_GET['logout'])) {
                     <img src="images/arrival-6-hover.jpg" class="hover-img" alt="">
                 </div>
                 <div class="content">
-                    <h3>new speakers</h3>
+                    <h3>haut-parleur</h3>
                     <div class="price">40000 FCFA <span>50000 FCFA</span></div>
                     <div class="stars">
                         <i class="fas fa-star"></i>
@@ -334,13 +375,13 @@ if (isset($_GET['logout'])) {
         <a href="home.html" class="logo"> <i class="fa fa-shop"></i> BAMBU</a>
 
         <div class="links">
-            <a href="home.php"> home </a>
-            <a href="about.php"> about </a>
-            <a href="products.php"> products </a>
+            <a href="home.php"> accueil </a>
+            <a href="about.php"> à propos </a>
+            <a href="products.php"> produits </a>
             <a href="contacts.php"> contacts </a>
-            <a href="login.php"> login </a>
-            <a href="register.php"> register </a>
-            <a href="cart.php"> cart </a>
+            <a href="login.php"> connexion </a>
+            <a href="register.php"> inscription </a>
+            <a href="cart.php"> panier </a>
         </div>
 
         <div class="share">
@@ -352,7 +393,7 @@ if (isset($_GET['logout'])) {
     </section>
 
     <section class="credit">
-        <p>made by <span>TWF students</span> | all right reserved!</p>
+        <p>fait par les <span>étudiants de TWF</span> | tous droits reservés!</p>
         <img src="images/card_img.jpg" alt="" />
     </section>
     <!-- Footer section ends -->

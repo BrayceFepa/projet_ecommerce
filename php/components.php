@@ -29,7 +29,7 @@ function products($product_name, $product_price, $product_img, $product_hov)
 
                             <div class=\"icons\">
                                 <input type=\"number\" name=\"product_quantity\" min=\"1\" value=\"1\" id=\"\">
-                                <button type=\"submit\" name=\"add\" class=\"btn btn-primary\">Add to cart <i class=\"fas fa-shopping-cart\"></i></button>
+                                <button type=\"submit\" name=\"add\" class=\"btn btn-primary\">ajouter <i class=\"fas fa-shopping-cart\"></i></button>
                             </div>
 
                             <div class=\"content\">
@@ -75,7 +75,7 @@ function cart($cartimg, $cartname, $cartprice, $cartquantity, $cart_id)
                         </div>
                         <div class = \"cart-foot\">
                             <input type=\"hidden\" name=\"cart_id\" value=\"$cart_id\" id=\"\">
-                            <button type=\"submit\" name=\"update_cart\" class=\"update-btn\" id=\"\">update</button>
+                            <button type=\"submit\" name=\"update_cart\" class=\"update-btn\" id=\"\">actualiser</button>
                         </div>
                     </form>
                     <div class=\"price\">$cartprice fcfa</div>

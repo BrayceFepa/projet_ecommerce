@@ -55,7 +55,7 @@ if (isset($_POST['submit'])) {
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
+    <title>connexion</title>
 
     <!-- Font awesom cdn links -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -147,7 +147,7 @@ if (isset($_POST['submit'])) {
     <section class="login">
 
         <form action="" method="POST">
-            <h3>login now </h3>
+            <h3>connectez-vous </h3>
             <input type="email" name="email" placeholder="entrer votre email" id="" class="box">
             <input type="password" name="password" placeholder="entrer votre mot de passe" id="" class="box">
             <div class="remember">
@@ -156,7 +156,7 @@ if (isset($_POST['submit'])) {
             </div>
             <input type="submit" name="submit" value="login now" class="btn btn-primary">
             <p>vous n'avez pas de compte ?</p>
-            <a href="register.php" class="btn link">register now</a>
+            <a href="register.php" class="btn link">enregistrer vous</a>
         </form>
 
     </section>
@@ -187,7 +187,7 @@ if (isset($_POST['submit'])) {
     </section> -->
 
     <section class="credit">
-        <p>made by <span>TWF students</span> | all right reserved!</p>
+        <p>fait par les <span>étudiants de TWF</span> | tous droits reservés!</p>
         <img src="images/card_img.jpg" alt="" />
     </section>
     <!-- Footer section ends -->
