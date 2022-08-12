@@ -170,6 +170,19 @@ if (isset($_GET['logout'])) {
                     </div>
                 </div>
 
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <img src="images/Nervis-imprimante-3D.jpeg" alt="">
+                    </div>
+                    <div class="content">
+                        <span>Nervis Tetsop Nzometiah</span>
+                        <span>
+                            <p>Imprimante 3D</p>
+                        </span>
+                        <h3>Imprimante camerounaise à base des déchets électroniques</h3>
+                    </div>
+                </div>
+
             </div>
 
             <div class="swiper-button-next"></div>
@@ -207,8 +220,8 @@ if (isset($_GET['logout'])) {
                     <img src="images/Yannick Edouard Mekongopi.jpg" class="hover-img" alt="">
                 </div>
                 <div class="content">
-                    <h3>le robot Pi-car b Mars rover </h3>
-                    <div class="price">Yannick Edouard Mekongopi</div>
+                    <h3>Yannick Edouard Mekongopi </h3>
+                    <div class="price">le robot Pi-car b Mars rover</div>
                 </div>
             </div>
 
@@ -225,12 +238,12 @@ if (isset($_GET['logout'])) {
 
             <div class="box">
                 <div class="image">
-                    <img src="images/arrival-4.jpg" class="main-img" alt="">
-                    <img src="images/arrival-4-hover.jpg" class="hover-img" alt="">
+                    <img src="images/Nervis-imprimante-3D.jpeg" class="main-img" alt="">
+                    <img src="images/Nervis-Tetsop.jpeg" class="hover-img" alt="">
                 </div>
                 <div class="content">
-                    <h3>imprimante</h3>
-                    <div class="price">200000 FCFA</div>
+                    <h3>Nervis Tetsop Nzometiah</h3>
+                    <div class="price">Imprimante 3D</div>
                 </div>
             </div>
 
