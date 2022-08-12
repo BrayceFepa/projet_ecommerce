@@ -71,7 +71,7 @@ if (isset($_GET['logout'])) {
                             <a class="nav-link active" href="contacts.php">contacts</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">made in cameroon</a>
+                            <a class="nav-link" href="cmr.php">made in cameroon</a>
                         </li>
                     </ul>
                 </div>

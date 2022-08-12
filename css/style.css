@@ -800,6 +800,43 @@ section {
   color: #333;
 }
 
+.home.cmr {
+  padding-bottom: 0;
+  background: #fff;
+}
+.home.cmr .slide {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  min-height: 40rem;
+  padding: 2rem 0;
+}
+.home.cmr .slide .image {
+  flex: 1 1 42rem;
+  text-align: center;
+}
+.home.cmr .slide .image img {
+  height: 30rem;
+}
+.home.cmr .slide .content {
+  flex: 1 1 42rem;
+}
+.home.cmr .slide .content span {
+  font-size: 2rem;
+  color: #e01cf1;
+}
+.home.cmr .slide .content h3 {
+  padding-top: 0.5rem;
+  color: #333;
+  font-size: 2rem;
+}
+.home.cmr .swiper-button-next::after,
+.home.cmr .swiper-button-prev::after {
+  font-size: 3rem;
+  color: #333;
+}
+
 .shopping-cart .box-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
@@ -1028,6 +1065,57 @@ section {
   text-decoration: line-through;
 }
 .arrivals .box-container .box .content .stars i {
+  font-size: 1.5rem;
+  color: gold;
+}
+
+.arrivals.cmr .box-container {
+  padding-top: 0;
+  padding-bottom: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(33rem, 1fr));
+  gap: 2rem;
+}
+.arrivals.cmr .box-container .box {
+  border-radius: 0.5rem;
+  border: 0.1rem solid #333;
+  padding: 2rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #fff;
+}
+.arrivals.cmr .box-container .box:hover .image .main-img {
+  display: none;
+}
+.arrivals.cmr .box-container .box:hover .image .hover-img {
+  display: inline-block;
+}
+.arrivals.cmr .box-container .box .image img {
+  width: 15rem;
+  -webkit-animation: fadeIn 0.2s linear;
+          animation: fadeIn 0.2s linear;
+}
+.arrivals.cmr .box-container .box .image .hover-img {
+  display: none;
+}
+.arrivals.cmr .box-container .box .content h3 {
+  font-size: 1.7rem;
+  color: #333;
+}
+.arrivals.cmr .box-container .box .content .price {
+  padding-top: 0.5rem;
+  font-size: 1.7rem;
+  color: #e01cf1;
+  padding-bottom: 0.7rem;
+}
+.arrivals.cmr .box-container .box .content .price span {
+  font-size: 1.3rem;
+  color: #666;
+  text-decoration: line-through;
+}
+.arrivals.cmr .box-container .box .content .stars i {
   font-size: 1.5rem;
   color: gold;
 }

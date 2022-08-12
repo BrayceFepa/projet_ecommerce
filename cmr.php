@@ -17,6 +17,7 @@ if (isset($_GET['logout'])) {
 
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,7 +25,7 @@ if (isset($_GET['logout'])) {
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>accueil</title>
+    <title>Cameroun</title>
 
     <!-- Font awesom cdn links -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -57,7 +58,7 @@ if (isset($_GET['logout'])) {
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="home.php">Accueil</a>
+                            <a class="nav-link" aria-current="page" href="home.php">Accueil</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="about.php">à propos</a>
@@ -72,7 +73,7 @@ if (isset($_GET['logout'])) {
                             <a class="nav-link" href="contacts.php">contacts</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="cmr.php">made in cameroon</a>
+                            <a class="nav-link active" href="#">made in cameroon</a>
                         </li>
                     </ul>
                 </div>
@@ -120,77 +121,52 @@ if (isset($_GET['logout'])) {
     <!-- Header section ends  -->
 
 
-    <!-- Sidebar section starts -->
-
-    <div class="side-bar">
-
-        <div id="close-side-bar" class="fa fa-times"></div>
-
-        <div class="user">
-            <img src="uploads/<?php
-                                // $row = $db->query("SELECT * FROM `clients` WHERE id_client = '$user_id'")->fetch(PDO::FETCH_ASSOC);
-                                // echo $row['client_img'];
-                                ?>" alt="">
-            <h3><?php echo $row['name']; ?></h3>
-            <a href="register.php?logout=<?php echo $user_id; ?>">déconnexion</a>
-        </div>
-
-        <!-- <nav class="navbar">
-            <div>
-                <a href="home.php"> <i class="fa fa-angle-right"></i> accueil</a>
-                <a href="about.php"> <i class="fa fa-angle-right"></i> à propos</a>
-                <a href="products.php"> <i class="fa fa-angle-right"></i> produits</a>
-                <a href="contacts.php"> <i class="fa fa-angle-right"></i> contacts</a>
-                <a href="login.php"> <i class="fa fa-angle-right"></i> connexion</a>
-                <a href="register.php"> <i class="fa fa-angle-right"></i> inscription</a>
-                <a href="cart.php"> <i class="fa fa-angle-right"></i> panier</a>
-            </div>
-        </nav> -->
-
-    </div>
-
-    <!-- Sidebar section ends -->
-
-
-
     <!-- Home section starts -->
 
-    <section class="home">
+    <section class="home cmr">
 
-        <div class="swiper home-slider">
+
+
+        <div class="swiper cmr">
 
             <div class="swiper-wrapper">
 
                 <div class="swiper-slide slide">
                     <div class="image">
-                        <img src="images/home-img-1.jpg" alt="">
+                        <img src="images/Yannick Edouard Mekongopi.jpg" alt="">
                     </div>
                     <div class="content">
-                        <span>reduction de 50%</span>
-                        <h3>Smartphones</h3>
-                        <a href="#" class="btn">acheter</a>
+                        <span>Yannick Edouard Mekongopi</span>
+                        <span>
+                            <p>le robot Pi-car b Mars rover</p>
+                        </span>
+                        <h3>la surveillance (sécurité) la médecine</h3>
                     </div>
                 </div>
 
                 <div class="swiper-slide slide">
                     <div class="image">
-                        <img src="images/home-img-2.jpg" alt="">
+                        <img src="images/tchaks-tv2.jpg" alt="">
                     </div>
                     <div class="content">
-                        <span>reduction de 50%</span>
-                        <h3>montre connectée</h3>
-                        <a href="#" class="btn">acheter</a>
+                        <span>Colbert Tchakoute</span>
+                        <span>
+                            <p>LE TCHAK’S TV GUARD</p>
+                        </span>
+                        <h3>contourner les surtensions de la foudre, les fluctuations du courant électrique partant des délestages récurrents dans toutes les régions. </h3>
                     </div>
                 </div>
 
                 <div class="swiper-slide slide">
                     <div class="image">
-                        <img src="images/home-img-3.jpg" alt="">
+                        <img src="images/Arthur-Zang-cardio.jpg" alt="">
                     </div>
                     <div class="content">
-                        <span>reduction de 50%</span>
-                        <h3>Casque audio</h3>
-                        <a href="#" class="btn">acheter</a>
+                        <span>Arthur Zang</span>
+                        <span>
+                            <p>Le cardiopad</p>
+                        </span>
+                        <h3>la première tablette médicale d’Afrique voit le jour</h3>
                     </div>
                 </div>
 
@@ -207,105 +183,43 @@ if (isset($_GET['logout'])) {
 
     <!-- Home section ends -->
 
-    <!-- Banner section starts -->
-
-
-    <section class="banner">
-
-        <div class="box-container">
-
-            <a href="#" class="box">
-                <img src="images/banner-1.jpg" alt="">
-                <div class="content">
-                    <span>offre spéciale</span>
-                    <h3>reduction de 50%</h3>
-                </div>
-            </a>
-
-
-            <a href="#" class="box">
-                <img src="images/banner-2.jpg" alt="">
-                <div class="content">
-                    <span>offre spéciale</span>
-                    <h3>reduction de 50%</h3>
-                </div>
-            </a>
-
-
-            <a href="#" class="box">
-                <img src="images/banner-3.jpg" alt="">
-                <div class="content">
-                    <span>offre spéciale</span>
-                    <h3>reduction de 50%</h3>
-                </div>
-            </a>
-
-        </div>
-
-    </section>
-
-
-    <!-- Banner section ends -->
 
     <!-- arrivals section starts -->
 
-    <section class="arrivals">
-
-        <h1 class="heading"> <span>nouveautés</span></h1>
-
+    <section class="arrivals cmr">
+        <h1 class="heading">Innovations <span>camerounaises</span></h1>
         <div class="box-container">
 
             <div class="box">
                 <div class="image">
-                    <img src="images/arrival-1.jpg" class="main-img" alt="">
-                    <img src="images/arrival-1-hover.jpg" class="hover-img" alt="">
+                    <img src="images/cardiopad.png" class="main-img" alt="">
+                    <img src="images/Arthur-Zang-cardio.jpg" class="hover-img" alt="">
                 </div>
                 <div class="content">
-                    <h3>Television HD</h3>
-                    <div class="price">124000 FCFA <span>150000 FCFA</span></div>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
+                    <h3>Arthur Zang</h3>
+                    <div class="price">le cardiopad</span></div>
                 </div>
             </div>
 
             <div class="box">
                 <div class="image">
-                    <img src="images/arrival-2.jpg" class="main-img" alt="">
-                    <img src="images/arrival-2-hover.jpg" class="hover-img" alt="">
+                    <img src="images/robotpi.jpg" class="main-img" alt="">
+                    <img src="images/Yannick Edouard Mekongopi.jpg" class="hover-img" alt="">
                 </div>
                 <div class="content">
-                    <h3>laptop lenovo </h3>
-                    <div class="price">150000 FCFA <span>180000 FCFA</span></div>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
+                    <h3>le robot Pi-car b Mars rover </h3>
+                    <div class="price">Yannick Edouard Mekongopi</div>
                 </div>
             </div>
 
             <div class="box">
                 <div class="image">
-                    <img src="images/arrival-3.jpg" class="main-img" alt="">
-                    <img src="images/arrival-3-hover.jpg" class="hover-img" alt="">
+                    <img src="images/tchaks-tv2.jpg" class="main-img" alt="">
+                    <img src="images/Colbert-Tchakoute.jpg" class="hover-img" alt="">
                 </div>
                 <div class="content">
-                    <h3>smartphone</h3>
-                    <div class="price">80000 FCFA <span>100000 FCFA</span></div>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
+                    <h3>Colbert Tchakoute</h3>
+                    <div class="price">LE TCHAK’S TV GUARD</div>
                 </div>
             </div>
 
@@ -316,14 +230,7 @@ if (isset($_GET['logout'])) {
                 </div>
                 <div class="content">
                     <h3>imprimante</h3>
-                    <div class="price">200000 FCFA <span>250000 FCFA</span></div>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
+                    <div class="price">200000 FCFA</div>
                 </div>
             </div>
 
@@ -334,14 +241,7 @@ if (isset($_GET['logout'])) {
                 </div>
                 <div class="content">
                     <h3>casque</h3>
-                    <div class="price">15000 FCFA <span>20000 FCFA</span></div>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
+                    <div class="price">15000 FCFA</div>
                 </div>
             </div>
 
@@ -352,14 +252,7 @@ if (isset($_GET['logout'])) {
                 </div>
                 <div class="content">
                     <h3>haut-parleur</h3>
-                    <div class="price">40000 FCFA <span>50000 FCFA</span></div>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
+                    <div class="price">40000 FCFA</div>
                 </div>
             </div>
 
@@ -368,6 +261,7 @@ if (isset($_GET['logout'])) {
     </section>
 
     <!-- arrivals section ends -->
+
 
 
     <!-- Footer section starts -->
