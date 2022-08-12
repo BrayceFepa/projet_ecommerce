@@ -163,33 +163,33 @@ if (isset($_GET['logout'])) {
 
                 <div class="swiper-slide slide">
                     <div class="image">
-                        <img src="images/home-img-1.jpg" alt="">
+                        <img src="images/home/home-img-1.jpg" alt="">
                     </div>
                     <div class="content">
                         <span>reduction de 50%</span>
-                        <h3>Smartphones</h3>
+                        <h3>Chocolat noir</h3>
                         <a href="#" class="btn">acheter</a>
                     </div>
                 </div>
 
                 <div class="swiper-slide slide">
                     <div class="image">
-                        <img src="images/home-img-2.jpg" alt="">
+                        <img src="images/home/home-img-2.jpg" alt="">
                     </div>
                     <div class="content">
                         <span>reduction de 50%</span>
-                        <h3>montre connectée</h3>
+                        <h3>Drone</h3>
                         <a href="#" class="btn">acheter</a>
                     </div>
                 </div>
 
                 <div class="swiper-slide slide">
                     <div class="image">
-                        <img src="images/home-img-3.jpg" alt="">
+                        <img src="images/home/home-img-3.jpg" alt="">
                     </div>
                     <div class="content">
                         <span>reduction de 50%</span>
-                        <h3>Casque audio</h3>
+                        <h3>Chips de plantain</h3>
                         <a href="#" class="btn">acheter</a>
                     </div>
                 </div>
@@ -215,7 +215,7 @@ if (isset($_GET['logout'])) {
         <div class="box-container">
 
             <a href="#" class="box">
-                <img src="images/banner-1.jpg" alt="">
+                <img src="images/banner/banner-1.jpg" alt="">
                 <div class="content">
                     <span>offre spéciale</span>
                     <h3>reduction de 50%</h3>
@@ -224,7 +224,7 @@ if (isset($_GET['logout'])) {
 
 
             <a href="#" class="box">
-                <img src="images/banner-2.jpg" alt="">
+                <img src="images/banner/banner-2.jpg" alt="">
                 <div class="content">
                     <span>offre spéciale</span>
                     <h3>reduction de 50%</h3>
@@ -233,7 +233,7 @@ if (isset($_GET['logout'])) {
 
 
             <a href="#" class="box">
-                <img src="images/banner-3.jpg" alt="">
+                <img src="images/banner/banner-3.jpg" alt="">
                 <div class="content">
                     <span>offre spéciale</span>
                     <h3>reduction de 50%</h3>
@@ -257,12 +257,12 @@ if (isset($_GET['logout'])) {
 
             <div class="box">
                 <div class="image">
-                    <img src="images/arrival-1.jpg" class="main-img" alt="">
-                    <img src="images/arrival-1-hover.jpg" class="hover-img" alt="">
+                    <img src="images/arrivals/arrival-1.jpg" class="main-img" alt="">
+                    <img src="images/arrivals/arrival-1-hover.jpg" class="hover-img" alt="">
                 </div>
                 <div class="content">
-                    <h3>Television HD</h3>
-                    <div class="price">124000 FCFA <span>150000 FCFA</span></div>
+                    <h3>Tablettes de Chocolat</h3>
+                    <div class="price">2000 FCFA <span>5000 FCFA</span></div>
                     <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -275,12 +275,12 @@ if (isset($_GET['logout'])) {
 
             <div class="box">
                 <div class="image">
-                    <img src="images/arrival-2.jpg" class="main-img" alt="">
-                    <img src="images/arrival-2-hover.jpg" class="hover-img" alt="">
+                    <img src="images/arrivals/arrival-2.jpg" class="main-img" alt="">
+                    <img src="images/arrivals/arrival-2-hover.jpg" class="hover-img" alt="">
                 </div>
                 <div class="content">
-                    <h3>laptop lenovo </h3>
-                    <div class="price">150000 FCFA <span>180000 FCFA</span></div>
+                    <h3>le jeune entrepreneur africain </h3>
+                    <div class="price">10000 FCFA <span>20000 FCFA</span></div>
                     <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -293,47 +293,11 @@ if (isset($_GET['logout'])) {
 
             <div class="box">
                 <div class="image">
-                    <img src="images/arrival-3.jpg" class="main-img" alt="">
-                    <img src="images/arrival-3-hover.jpg" class="hover-img" alt="">
+                    <img src="images/arrivals/arrival-3.jpg" class="main-img" alt="">
+                    <img src="images/arrivals/arrival-3-hover.jpg" class="hover-img" alt="">
                 </div>
                 <div class="content">
-                    <h3>smartphone</h3>
-                    <div class="price">80000 FCFA <span>100000 FCFA</span></div>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                </div>
-            </div>
-
-            <div class="box">
-                <div class="image">
-                    <img src="images/arrival-4.jpg" class="main-img" alt="">
-                    <img src="images/arrival-4-hover.jpg" class="hover-img" alt="">
-                </div>
-                <div class="content">
-                    <h3>imprimante</h3>
-                    <div class="price">200000 FCFA <span>250000 FCFA</span></div>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                </div>
-            </div>
-
-            <div class="box">
-                <div class="image">
-                    <img src="images/arrival-5.jpg" class="main-img" alt="">
-                    <img src="images/arrival-5-hover.jpg" class="hover-img" alt="">
-                </div>
-                <div class="content">
-                    <h3>casque</h3>
+                    <h3>Chips</h3>
                     <div class="price">15000 FCFA <span>20000 FCFA</span></div>
                     <div class="stars">
                         <i class="fas fa-star"></i>
@@ -347,11 +311,47 @@ if (isset($_GET['logout'])) {
 
             <div class="box">
                 <div class="image">
-                    <img src="images/arrival-6.jpg" class="main-img" alt="">
-                    <img src="images/arrival-6-hover.jpg" class="hover-img" alt="">
+                    <img src="images/arrivals/arrival-4.jpg" class="main-img" alt="">
+                    <img src="images/arrivals/arrival-4-hover.jpg" class="hover-img" alt="">
                 </div>
                 <div class="content">
-                    <h3>haut-parleur</h3>
+                    <h3>huile de beauté</h3>
+                    <div class="price">10000 FCFA <span>15000 FCFA</span></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="images/arrivals/arrival-5.jpg" class="main-img" alt="">
+                    <img src="images/arrivals/arrival-5-hover.jpg" class="hover-img" alt="">
+                </div>
+                <div class="content">
+                    <h3>champoing anti-pélliculaire</h3>
+                    <div class="price">7000 FCFA <span>10000 FCFA</span></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="images/arrivals/arrival-6.jpg" class="main-img" alt="">
+                    <img src="images/arrivals/arrival-6-hover.jpg" class="hover-img" alt="">
+                </div>
+                <div class="content">
+                    <h3>drones</h3>
                     <div class="price">40000 FCFA <span>50000 FCFA</span></div>
                     <div class="stars">
                         <i class="fas fa-star"></i>
