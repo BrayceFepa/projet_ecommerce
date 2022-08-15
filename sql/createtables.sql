@@ -62,7 +62,7 @@
                 );
 
 
-                -- insérer les images dans la table products
+                -- insérer les images dans la table produits
 
                 INSERT INTO products (product_name, product_price, product_img, product_hover) VALUES ('chips', 15000, 'images/products/product-1.jpg', 'images/products/product-1-hover.jpg'), ('tablette de chocolat', 2000, 'images/products/product-2.jpg', 'images/products/product-2-hover.jpg'), ('drones tagus', 500000, 'images/products/product-3.jpg', 'images/products/product-3-hover.jpg'), ("Accordé avec fraude", 13000, 'images/products/product-7.jpg', 'images/products/product-7-hover.jpg'), ('le jeune entrepreneur africain', 13000, 'images/products/product-5.jpg', 'images/products/product-5-hover.jpg'), ('détartrant ASA', 10000, 'images/products/product-6.jpg', 'images/products/product-6-hover.jpg'), ('crème Leave In', 10000, 'images/products/product-4.jpg', 'images/products/product-4-hover.jpg'), ('champoing ASA', 12000, 'images/products/product-8.jpg', 'images/products/product-8-hover.jpg'), ('pattes miondonini', 500, 'images/products/product-9.jpg', 'images/products/product-9-hover.jpg');
 
