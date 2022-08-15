@@ -112,7 +112,7 @@ if (isset($_GET['pay'])) {
                             <a class="nav-link" href="contacts.php">contacts</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="cmr.php">made in cameroon</a>
+                            <a class="nav-link" href="cmr.php">innovations</a>
                         </li>
                     </ul>
                 </div>

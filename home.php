@@ -72,7 +72,7 @@ if (isset($_GET['logout'])) {
                             <a class="nav-link" href="contacts.php">contacts</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="cmr.php">made in cameroon</a>
+                            <a class="nav-link" href="cmr.php">innovations</a>
                         </li>
                     </ul>
                 </div>
@@ -178,7 +178,7 @@ if (isset($_GET['logout'])) {
                     </div>
                     <div class="content">
                         <span>reduction de 50%</span>
-                        <h3>Drone</h3>
+                        <h3>Drones tagus</h3>
                         <a href="#" class="btn">acheter</a>
                     </div>
                 </div>
@@ -351,7 +351,7 @@ if (isset($_GET['logout'])) {
                     <img src="images/arrivals/arrival-6-hover.jpg" class="hover-img" alt="">
                 </div>
                 <div class="content">
-                    <h3>drones</h3>
+                    <h3>drones tagus</h3>
                     <div class="price">40000 FCFA <span>50000 FCFA</span></div>
                     <div class="stars">
                         <i class="fas fa-star"></i>

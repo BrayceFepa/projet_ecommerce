@@ -318,7 +318,8 @@ section {
 .products .container .box .image img {
   -webkit-animation: fadeIn 0.2s linear;
           animation: fadeIn 0.2s linear;
-  height: 18rem;
+  height: 16rem;
+  margin: 1.3rem 0;
 }
 .products .container .box .image .hover-img {
   display: none;

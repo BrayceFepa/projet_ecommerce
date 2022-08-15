@@ -73,7 +73,7 @@ if (isset($_GET['logout'])) {
                             <a class="nav-link" href="contacts.php">contacts</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">made in cameroon</a>
+                            <a class="nav-link active" href="#">innovations</a>
                         </li>
                     </ul>
                 </div>
@@ -133,7 +133,7 @@ if (isset($_GET['logout'])) {
 
                 <div class="swiper-slide slide">
                     <div class="image">
-                        <img src="images/Yannick Edouard Mekongopi.jpg" alt="">
+                        <img src="images/Yannick-Edouard-Mekongopi.jpg" alt="">
                     </div>
                     <div class="content">
                         <span>Yannick Edouard Mekongopi</span>
@@ -217,7 +217,7 @@ if (isset($_GET['logout'])) {
             <div class="box">
                 <div class="image">
                     <img src="images/robotpi.jpg" class="main-img" alt="">
-                    <img src="images/Yannick Edouard Mekongopi.jpg" class="hover-img" alt="">
+                    <img src="images/Yannick-Edouard-Mekongopi.jpg" class="hover-img" alt="">
                 </div>
                 <div class="content">
                     <h3>Yannick Edouard Mekongopi </h3>
@@ -232,7 +232,7 @@ if (isset($_GET['logout'])) {
                 </div>
                 <div class="content">
                     <h3>Colbert Tchakoute</h3>
-                    <div class="price">LE TCHAK’S TV GUARD</div>
+                    <div class="price">LE TCHAK’S TV GUARD (Régulateur de tension)</div>
                 </div>
             </div>
 
@@ -249,23 +249,23 @@ if (isset($_GET['logout'])) {
 
             <div class="box">
                 <div class="image">
-                    <img src="images/arrival-5.jpg" class="main-img" alt="">
-                    <img src="images/arrival-5-hover.jpg" class="hover-img" alt="">
+                    <img src="images/drone-solaire.jpg" class="main-img" alt="">
+                    <img src="images/taguia-kana.jpg" class="hover-img" alt="">
                 </div>
                 <div class="content">
-                    <h3>casque</h3>
-                    <div class="price">15000 FCFA</div>
+                    <h3>Taguia Kana</h3>
+                    <div class="price">Drone solaire</div>
                 </div>
             </div>
 
             <div class="box">
                 <div class="image">
-                    <img src="images/arrival-6.jpg" class="main-img" alt="">
-                    <img src="images/arrival-6-hover.jpg" class="hover-img" alt="">
+                    <img src="images/patouma.jpg" class="main-img" alt="">
+                    <img src="images/car-cmr.jpg" class="hover-img" alt="">
                 </div>
                 <div class="content">
-                    <h3>haut-parleur</h3>
-                    <div class="price">40000 FCFA</div>
+                    <h3>Hamadou Patouma</h3>
+                    <div class="price">Véhicule</div>
                 </div>
             </div>
 
