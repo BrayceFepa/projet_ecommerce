@@ -172,7 +172,7 @@ if (isset($_POST['submit'])) {
             <input type="text" name="district" placeholder="entrer votre quartier (Ville de Yaoundé)" id="" class="box">
             <!-- <input type="file" id="photo" name="photo" accept="image/*" required>  -->
             <!-- <label for="photo" class="btn-img">importer une image</label> -->
-            <input type="submit" name="submit" value="register now" class="btn btn-primary">
+            <input type="submit" name="submit" value="inscription" class="btn btn-primary">
             <p>vous avez déjà un compte ?</p>
             <a href="login.php" class="btn btn-primary link">connectez-vous</a>
         </form>
