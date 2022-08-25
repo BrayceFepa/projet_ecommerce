@@ -205,6 +205,30 @@ if (isset($_GET['logout'])) {
 
             <div class="box">
                 <div class="image">
+                    <img src="images/abccode.png" class="main-img" alt="">
+                    <img src="images/Arielle-Kitio.png" class="hover-img" alt="">
+                </div>
+                <div class="content">
+                    <h3>Arielle Kitio Tsamo</h3>
+                    <div class="price">ABCcode : Langage de programmation pour enfants</span></div>
+                </div>
+            </div>
+
+
+            <div class="box">
+                <div class="image">
+                    <img src="images/leelou.png" class="main-img" alt="">
+                    <img src="images/Naomi-Dinamora.png" class="hover-img" alt="">
+                </div>
+                <div class="content">
+                    <h3>Naomi Dinamora</h3>
+                    <div class="price">Leelou Baby Food</span></div>
+                </div>
+            </div>
+
+
+            <div class="box">
+                <div class="image">
                     <img src="images/cardiopad.png" class="main-img" alt="">
                     <img src="images/Arthur-Zang-cardio.jpg" class="hover-img" alt="">
                 </div>
@@ -213,6 +237,8 @@ if (isset($_GET['logout'])) {
                     <div class="price">le cardiopad</span></div>
                 </div>
             </div>
+
+
 
             <div class="box">
                 <div class="image">

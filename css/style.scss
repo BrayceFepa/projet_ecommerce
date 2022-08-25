@@ -946,13 +946,14 @@ section {
 .home.cmr {
   padding-bottom: 0;
   background: $white;
+  height: 60vh;
 
   .slide {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 2rem;
-    min-height: 40rem;
+    gap: 1rem;
+    min-height: 20rem;
     padding: 2rem 0;
 
     .image {

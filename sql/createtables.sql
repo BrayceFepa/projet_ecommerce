@@ -69,4 +69,4 @@
 
                 -- inserer les images dans la table categories
 
-                INSERT INTO categories (categ_name, categ_img) VALUES ('drones', 'images/categories/cat_img1.png'), ('technologie', 'images/categories/cat_img2.png'), ('lecture', 'images/categories/cat_img3.png'), ('agro-alimentaire','images/categories/cat_img4.png'), ('cosmétiques', 'images/categories/cat_img5.png'),('agriculture', 'images/categories/cat_img6.png'), ('auto-mobile', 'images/categories/cat_img7.png');
+                INSERT INTO categories (categ_name, categ_img) VALUES ('technologie', 'images/categories/cat_img2.png'), ('lecture', 'images/categories/cat_img3.png'), ('agro-alimentaire','images/categories/cat_img4.png'), ('cosmétiques', 'images/categories/cat_img5.png'), ('aéronotique', 'images/categories/cat_img1.png'),('agriculture', 'images/categories/cat_img6.png'), ('auto-mobile', 'images/categories/cat_img7.png');
