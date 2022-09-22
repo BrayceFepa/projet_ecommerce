@@ -58,4 +58,18 @@ var swiper = new Swiper(".home-slider", {
         prevEl: ".swiper-button-prev",
 
     },
+})  
+
+var swiper = new Swiper(".cmr", {
+    loop: true,
+    grabCursor: true,
+    autoplay: {
+        disableOnInteraction: false,
+      delay: 7000,  
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+
+    },
 })    

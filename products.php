@@ -104,7 +104,7 @@ if (isset($_POST['add'])) {
                             <a class="nav-link" href="contacts.php">contacts</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">made in cameroon</a>
+                            <a class="nav-link" href="cmr.php">innovations</a>
                         </li>
                     </ul>
                 </div>

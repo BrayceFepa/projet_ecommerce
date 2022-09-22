@@ -376,7 +376,8 @@ section {
       .image {
         img {
           animation: fadeIn 0.2s linear;
-          height: 18rem;
+          height: 16rem;
+          margin: 1.3rem 0;
         }
 
         .hover-img {
@@ -942,6 +943,51 @@ section {
   }
 }
 
+.home.cmr {
+  padding-bottom: 0;
+  background: $white;
+  height: 60vh;
+
+  .slide {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    min-height: 20rem;
+    padding: 2rem 0;
+
+    .image {
+      flex: 1 1 42rem;
+      text-align: center;
+
+      img {
+        height: 30rem;
+      }
+    }
+
+    .content {
+      flex: 1 1 42rem;
+
+      span {
+        font-size: 2rem;
+        color: $blue;
+      }
+
+      h3 {
+        padding-top: 0.5rem;
+        color: $black;
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    font-size: 3rem;
+    color: $black;
+  }
+}
+
 .shopping-cart {
   .box-container {
     @include grid(31rem);
@@ -1218,6 +1264,73 @@ section {
             color: $gold;
           }
               }
+    }
+  }
+}
+
+.arrivals.cmr {
+  .box-container {
+    padding-top: 0;
+    padding-bottom: 0;
+    @include grid(33rem);
+
+    .box {
+      border-radius: 0.5rem;
+      border: $border;
+      padding: 2rem;
+      box-shadow: $box-shadow;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background: $white;
+
+      &:hover {
+        .image {
+          .main-img {
+            display: none;
+          }
+
+          .hover-img {
+            display: inline-block;
+          }
+        }
+      }
+
+      .image {
+        img {
+          width: 15rem;
+          animation: fadeIn 0.2s linear;
+        }
+
+        .hover-img {
+          display: none;
+        }
+      }
+
+      .content {
+        h3 {
+          font-size: 1.7rem;
+          color: $black;
+        }
+
+        .price {
+          padding-top: 0.5rem;
+          font-size: 1.7rem;
+          color: $blue;
+          padding-bottom: 0.7rem;
+
+          span {
+            font-size: 1.3rem;
+            color: $light-color;
+            text-decoration: line-through;
+          }
+        }
+
+        .stars i {
+          font-size: 1.5rem;
+          color: $gold;
+        }
+      }
     }
   }
 }

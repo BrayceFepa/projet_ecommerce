@@ -4,9 +4,9 @@ require_once('./php/components.php');
 include('php/config.php');
 $user_id = $_SESSION['user_id'];
 
-if (!isset($user_id)) {
-    header('location:login.php');
-}
+// if (!isset($user_id)) {
+//     header('location:login.php');
+// }
 
 if (isset($_GET['logout'])) {
     unset($user_id);
@@ -71,7 +71,7 @@ if (isset($_GET['logout'])) {
                             <a class="nav-link active" href="contacts.php">contacts</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">made in cameroon</a>
+                            <a class="nav-link" href="cmr.php">innovations</a>
                         </li>
                     </ul>
                 </div>
