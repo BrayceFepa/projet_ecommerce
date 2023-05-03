@@ -70,3 +70,7 @@
                 -- inserer les images dans la table categories
 
                 INSERT INTO categories (categ_name, categ_img) VALUES ('technologie', 'images/categories/cat_img2.png'), ('lecture', 'images/categories/cat_img3.png'), ('agro-alimentaire','images/categories/cat_img4.png'), ('cosmétiques', 'images/categories/cat_img5.png'), ('aéronotique', 'images/categories/cat_img1.png'),('agriculture', 'images/categories/cat_img6.png'), ('auto-mobile', 'images/categories/cat_img7.png');
+                
+                                -- inserer quelques clients
+
+                INSERT INTO clients (name, email, password, client_district ) VALUES ('Alexandre', 'alexandre@gmail.com', '827ccb0eea8a706c4c34a16891f84e7b', 'douala'), ('John', 'john@gmail.com', '827ccb0eea8a706c4c34a16891f84e7b', 'douala'), ('Loic', 'loic@gmail.com', '827ccb0eea8a706c4c34a16891f84e7b', 'douala'), ('Thomas', 'thomas@gmail.com', '827ccb0eea8a706c4c34a16891f84e7b', 'douala');

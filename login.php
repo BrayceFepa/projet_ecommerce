@@ -22,11 +22,6 @@ if (isset($_POST['submit'])) {
     $statement->execute();
     $select_user = $statement->fetchColumn();
 
-    $statement->execute([
-        'mail' => $email,
-        'pass' => $pass,
-    ]);
-
 
     if ($select_user > 0) {
         $statement = $db->prepare("SELECT * FROM `clients` WHERE email=:mail AND password =:pass") or die('query failed');
@@ -196,7 +191,8 @@ if (isset($_POST['submit'])) {
 
 
     <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
+    </script>
 
     <!-- swiper js link  -->
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>

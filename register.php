@@ -11,13 +11,7 @@ if (isset($_POST['submit'])) {
     $cpass = md5($_POST['cpassword']);
 
 
-    $photo_name = $_FILES['photo']['name'];
-    $photo_tmp_name = $_FILES['photo']['tmp_name'];
-    $photo_size = $_FILES['photo']['size'];
 
-    if ($photo_size > 5242880) {
-        $messages[] = 'photo is very large';
-    }
 
 
     $statement = $db->prepare("SELECT SQL_CALC_FOUND_ROWS * FROM `clients` WHERE email=:mail AND password=:pass") or die('query failed');
@@ -32,23 +26,17 @@ if (isset($_POST['submit'])) {
     $statement->execute();
     $select_register = $statement->fetchColumn();
 
-    $statement->execute([
-        'mail' => $email,
-        'pass' => $pass,
-    ]);
-
 
 
     if ($select_register > 0) {
         $messages[] = 'Ce compte existe déjà!';
     } else {
-        $statement = $db->prepare("INSERT INTO `clients` (name, email, password, client_district, client_img) VALUES (:name, :mail, :pass, :district, '$photo_name')") or die('query failed!');
+        $statement = $db->prepare("INSERT INTO `clients` (name, email, password, client_district) VALUES (:name, :mail, :pass, :district)") or die('query failed!');
         $statement->bindParam(':name', $name);
         $statement->bindParam(':mail', $email);
         $statement->bindParam(':pass', $pass);
         $statement->bindParam(':district', $district);
         $statement->execute();
-        move_uploaded_file($photo_tmp_name, "uploads/" . $photo_name);
         $messages[] = 'inscription réussie!';
         header('location:login.php');
     }
@@ -214,7 +202,8 @@ if (isset($_POST['submit'])) {
 
 
     <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
+    </script>
 
     <!-- swiper js link  -->
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
